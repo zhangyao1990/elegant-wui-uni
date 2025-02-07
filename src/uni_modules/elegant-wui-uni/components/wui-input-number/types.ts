@@ -4,11 +4,12 @@
  * @LastEditTime: 2024-09-18 09:49:12
  * @LastEditors: Mr zhang
  * @Description:
- * @FilePath: \elegant-wui-uni\src\uni_modules\elegant-wui-uni\components\wui-input-number\types.ts
+ * @FilePath: /elegant-wui-uni/src/uni_modules/elegant-wui-uni/components/wui-input-number/types.ts
  * 记得注释
  */
+import type { PropType } from 'vue'
 import { baseProps, makeBooleanProp, makeNumberProp, makeNumericProp, makeRequiredProp, makeStringProp, numericProp } from '../common/props'
-
+export type InputNumberBeforeChange = (value: number | string) => boolean | Promise<boolean>
 export const inputNumberProps = {
   ...baseProps,
   /**
@@ -70,5 +71,9 @@ export const inputNumberProps = {
   /**
    * 原生属性，键盘弹起时，是否自动上推页面
    */
-  adjustPosition: makeBooleanProp(true)
+  adjustPosition: makeBooleanProp(true),
+  /**
+   * 输入值变化前的回调函数，返回 `false` 可阻止输入，支持返回 `Promise`
+   */
+  beforeChange: Function as PropType<InputNumberBeforeChange>
 }

@@ -33,11 +33,16 @@
     <demo-block title="允许空值，并设置 placeholder">
       <wui-input-number v-model="value9" allow-null placeholder="不限" input-width="70px" @change="handleChange9" />
     </demo-block>
+    <demo-block title="异步变更">
+      <wui-input-number v-model="value11" :before-change="beforeChange" />
+    </demo-block>
   </page-wraper>
 </template>
 <script lang="ts" setup>
+import { useToast } from '@/uni_modules/elegant-wui-uni'
+import type { InputNumberBeforeChange } from '@/uni_modules/elegant-wui-uni/components/wui-input-number/types'
 import { ref } from 'vue'
-
+const { loading, close } = useToast()
 const value1 = ref<number>(1)
 const value2 = ref<number>(1)
 const value3 = ref<number>(1)
@@ -48,6 +53,7 @@ const value7 = ref<number>(1)
 const value8 = ref<number>(2)
 const value9 = ref<string>('')
 const value10 = ref<number>(1)
+const value11 = ref<number>(1)
 
 function handleChange1({ value }: any) {
   console.log(value)
@@ -75,6 +81,15 @@ function handleChange8({ value }: any) {
 }
 function handleChange9({ value }: any) {
   console.log(value)
+}
+const beforeChange: InputNumberBeforeChange = (value: any) => {
+  loading({ msg: `正在更新到${value}...` })
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      close()
+      resolve(true)
+    }, 500)
+  })
 }
 </script>
 <style lang="scss" scoped>

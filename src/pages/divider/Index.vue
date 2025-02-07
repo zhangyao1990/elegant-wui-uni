@@ -22,6 +22,9 @@
     <demo-block title="自定义颜色" transparent>
       <wui-divider color="#4D80F0">自定义颜色</wui-divider>
     </demo-block>
+    <demo-block title="customClass" transparent>
+      <wui-divider customClass="custom-class">customClass</wui-divider>
+    </demo-block>
     <demo-block title="垂直分割线" transparent>
       <view class="content">
         文本
@@ -40,6 +43,10 @@
 <script lang="ts" setup></script>
 <style lang="scss" scoped>
 .content {
-  padding: 12rpx 15px;
+  padding: 12rpx 15rpx;
+}
+.custom-class {
+  margin: 0 auto;
+  width: 375rpx;
 }
 </style>

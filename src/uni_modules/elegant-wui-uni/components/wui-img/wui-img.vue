@@ -63,7 +63,7 @@ function handleError(event: any) {
   emit('error', event)
 }
 function handleClick(event: MouseEvent) {
-  if (props.enablePreview && props.src) {
+  if (props.enablePreview && props.src && status.value == 'success') {
     uni.previewImage({
       urls: [props.src]
     })

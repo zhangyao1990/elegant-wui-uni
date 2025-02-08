@@ -1,6 +1,4 @@
-<frame/>
-
-# Form 表单 <el-tag text style="vertical-align: middle;margin-left:8px;" effect="plain">0.2.0</el-tag>
+# Form 表单
 
 用于数据录入、校验，支持输入框、单选框、复选框、文件上传等类型，常见的 form 表单为`单元格`形式的展示，即左侧为表单的标题描述，右侧为表单的输入。
 
@@ -396,7 +394,7 @@ const submit = () => {
 
 ## 指定字段校验
 
-`validate` 方法可以传入一个 `prop` 参数，指定校验的字段，可以实现在表单组件的`blur`、`change`等事件触发时对该字段的校验。
+`validate` 方法可以传入一个 `prop` 参数，指定校验的字段，可以实现在表单组件的`blur`、`change`等事件触发时对该字段的校验。`prop` 参数也可以是一个字段数组，指定多个字段进行校验。
 
 ::: details 查看指定字段校验示例
 ::: code-group
@@ -426,6 +424,7 @@ const submit = () => {
   </wui-cell-group>
   <view class="footer">
     <wui-button type="primary" size="large" @click="handleSubmit" block>提交</wui-button>
+    <wui-button type="primary" size="large" @click="handleValidate" block>校验用户名和密码</wui-button>
   </view>
 </wui-form>
 ```
@@ -459,6 +458,85 @@ function handleSubmit() {
     })
     .catch((error) => {
       console.log(error, 'error')
+    })
+}
+
+function handleValidate() {
+  form
+    .value!.validate(['value1', 'value2'])
+    .then(({ valid, errors }) => {
+      if (valid) {
+        showSuccess({
+          msg: '校验通过'
+        })
+      }
+    })
+    .catch((error) => {
+      console.log(error, 'error')
+    })
+}
+</script>
+```
+
+```css [css]
+.footer {
+  padding: 12px;
+}
+```
+
+:::
+
+## 不对隐藏组件做校验
+
+在表单中，如果某个组件使用 `v-if` 隐藏，则不会对该组件进行校验。
+
+::: details 查看不对隐藏组件做校验示例
+::: code-group
+
+```html [vue]
+<wui-form ref="form" :model="model" :rules="rules">
+  <wui-cell-group border>
+    <wui-input
+      label="用户名"
+      label-width="100px"
+      prop="value1"
+      clearable
+      v-model="model.value1"
+      placeholder="请输入用户名"
+      :rules="[{ required: true, message: '请填写用户名' }]"
+    />
+    <wui-input
+      v-if="showPassword"
+      label="密码"
+      label-width="100px"
+      prop="value2"
+      show-password
+      clearable
+      v-model="model.value2"
+      placeholder="请输入密码"
+      :rules="[{ required: true, message: '请填写密码' }]"
+    />
+  </wui-cell-group>
+  <view class="footer">
+    <wui-button type="primary" size="large" @click="handleSubmit" block>提交</wui-button>
+  </view>
+</wui-form>
+```
+
+```typescript [typescript]
+<script lang="ts" setup>
+import { useToast } from '@/uni_modules/elegant-wui-uni'
+import type { FormInstance } from '@/uni_modules/elegant-wui-uni/components/wui-form/types'
+import { reactive, ref } from 'vue'
+
+const { success: showSuccess } = useToast()
+const model = reactive<{
+  value1: string
+  value2: string
+}>({
+  value1: '',
+  value2: ''
+})
     })
 }
 </script>
@@ -920,12 +998,12 @@ function handleIconClick() {
 
 ## Attributes
 
-| 参数          | 说明                                                                                | 类型                  | 可选值 | 默认值    | 最低版本         |
-| ------------- | ----------------------------------------------------------------------------------- | --------------------- | ------ | --------- | ---------------- |
-| model         | 表单数据对象                                                                        | `Record<string, any>` | -      | -         | 0.2.0            |
-| rules         | 表单验证规则                                                                        | `FormRules`           | -      | -         | 0.2.0            |
-| resetOnChange | 表单数据变化时是否重置表单提示信息（设置为 false 时需要开发者单独对变更项进行校验） | `boolean`             | -      | `true`    | 0.2.16           |
-| errorType     | 校验错误提示方式                                                                    | `toast/message/none`  | -      | `message` | 1.3.8 |
+| 参数          | 说明                                                                                | 类型                  | 可选值 | 默认值    | 最低版本 |
+| ------------- | ----------------------------------------------------------------------------------- | --------------------- | ------ | --------- | -------- |
+| model         | 表单数据对象                                                                        | `Record<string, any>` | -      | -         | 0.2.0    |
+| rules         | 表单验证规则                                                                        | `FormRules`           | -      | -         | 0.2.0    |
+| resetOnChange | 表单数据变化时是否重置表单提示信息（设置为 false 时需要开发者单独对变更项进行校验） | `boolean`             | -      | `true`    | 0.2.16   |
+| errorType     | 校验错误提示方式                                                                    | `toast/message/none`  | -      | `message` | 1.3.8    |
 
 ### FormItemRule 数据结构
 
@@ -938,10 +1016,10 @@ function handleIconClick() {
 
 ## Events
 
-| 事件名称 | 说明                                                                           | 参数            | 最低版本 |
-| -------- | ------------------------------------------------------------------------------ | --------------- | -------- |
-| validate | 验证表单，支持传入一个 prop 来验证单个表单项，不传入 prop 时，会验证所有表单项 | `prop?: string` | 0.2.0    |
-| reset    | 重置校验结果                                                                   | -               | 0.2.0    |
+| 事件名称 | 说明                                                                                                                | 参数                      | 最低版本 |
+| -------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------- | -------- |
+| validate | 验证表单，支持传入一个 prop 来验证单个表单项，不传入 prop 时，会验证所有表单项，$LOWEST_VERSION$ 版本起支持传入数组 | `prop?: string\|string[]` | 0.2.0    |
+| reset    | 重置校验结果                                                                                                        | -                         | 0.2.0    |
 
 ## 外部样式类
 

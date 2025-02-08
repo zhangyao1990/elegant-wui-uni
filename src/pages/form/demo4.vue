@@ -3,23 +3,23 @@
     <wui-form ref="form" :model="model" errorType="toast">
       <wui-cell-group border>
         <wui-input
-          label="歪比巴卜"
+          label="汪汪队"
           label-width="100px"
           prop="value1"
           clearable
           v-model="model.value1"
-          placeholder="请输入歪比巴卜"
-          :rules="[{ required: true, message: '请填写歪比巴卜' }]"
+          placeholder="请输入汪汪队"
+          :rules="[{ required: true, message: '请填写汪汪队' }]"
         />
         <wui-input
-          label="沙卡拉卡"
+          label="汪汪队"
           label-width="100px"
           prop="value2"
           show-password
           clearable
           v-model="model.value2"
-          placeholder="请输入沙卡拉卡"
-          :rules="[{ required: true, message: '请填写沙卡拉卡' }]"
+          placeholder="请输入汪汪队"
+          :rules="[{ required: true, message: '请填写汪汪队' }]"
         />
       </wui-cell-group>
       <view class="footer">
@@ -59,3 +59,8 @@ function handleSubmit() {
     })
 }
 </script>
+<style lang="scss" scoped>
+.footer {
+  padding: 0 30rpx;
+}
+</style>

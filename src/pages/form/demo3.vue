@@ -90,17 +90,30 @@
             </view>
           </wui-cell>
           <wui-input
-            label="歪比巴卜"
+            label="折扣"
+            v-if="model.switchVal"
+            label-width="100px"
+            prop="discount"
+            placeholder="请输入优惠金额"
+            clearable
+            v-model="model.discount"
+          />
+          <wui-input
+            label="汪汪队"
             label-width="100px"
             prop="cardId"
             suffix-icon="camera"
-            placeholder="请输入歪比巴卜"
+            placeholder="请输入汪汪队"
             clearable
             v-model="model.cardId"
           />
           <wui-input label="玛卡巴卡" label-width="100px" prop="phone" placeholder="请输入玛卡巴卡" clearable v-model="model.phone" />
           <wui-cell title="活动图片" title-width="100px" prop="fileList">
-            <wui-upload :file-list="model.fileList" action="https://ftf.jd.com/api/uploadImg" @change="handleFileChange"></wui-upload>
+            <wui-upload
+              :file-list="model.fileList"
+              action="https://mockapi.eolink.com/zhTuw2P8c29bc981a741931bdd86eb04dc1e8fd64865cb5/upload"
+              @change="handleFileChange"
+            ></wui-upload>
           </wui-cell>
         </wui-cell-group>
         <view class="tip">
@@ -144,6 +157,7 @@ const model = reactive<{
   phone: string
   read: boolean
   fileList: UploadFileItem[]
+  discount: number
 }>({
   couponName: '',
   platform: [],
@@ -159,7 +173,8 @@ const model = reactive<{
   cardId: '',
   phone: '',
   read: false,
-  fileList: []
+  fileList: [],
+  discount: 1
 })
 
 const rules: FormRules = {
@@ -284,12 +299,12 @@ const rules: FormRules = {
   cardId: [
     {
       required: true,
-      message: '请输入歪比巴卜',
+      message: '请输入汪汪队',
       validator: (value) => {
         if (value) {
           return Promise.resolve()
         } else {
-          return Promise.reject('请输入歪比巴卜')
+          return Promise.reject('请输入汪汪队')
         }
       }
     }
@@ -313,6 +328,19 @@ const rules: FormRules = {
       message: '请选择活动图片',
       validator: (value) => {
         if (isArray(value) && value.length) {
+          return Promise.resolve()
+        } else {
+          return Promise.reject()
+        }
+      }
+    }
+  ],
+  discount: [
+    {
+      required: true,
+      message: '请输入优惠金额',
+      validator: (value) => {
+        if (value) {
           return Promise.resolve()
         } else {
           return Promise.reject()
@@ -397,6 +425,9 @@ function handleSubmit() {
   form
     .value!.validate()
     .then(({ valid, errors }) => {
+      if (valid) {
+        toast.success('提交成功')
+      }
       console.log(valid)
       console.log(errors)
     })

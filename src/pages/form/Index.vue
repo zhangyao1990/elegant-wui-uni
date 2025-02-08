@@ -1,26 +1,26 @@
 <template>
-  <page-wraper>
+  <page-wraper class="page-wraper">
     <demo-block title="基础表单" transparent>
       <wui-form ref="form1" :model="model1">
         <wui-cell-group border>
           <wui-input
-            label="歪比巴卜"
+            label="汪汪队"
             label-width="100px"
             prop="value1"
             clearable
             v-model="model1.value1"
-            placeholder="请输入歪比巴卜"
-            :rules="[{ required: true, message: '请填写歪比巴卜' }]"
+            placeholder="请输入汪汪队"
+            :rules="[{ required: true, message: '请填写汪汪队' }]"
           />
           <wui-input
-            label="沙卡拉卡"
+            label="汪汪队"
             label-width="100px"
             prop="value2"
             show-password
             clearable
             v-model="model1.value2"
-            placeholder="请输入沙卡拉卡"
-            :rules="[{ required: true, message: '请填写沙卡拉卡' }]"
+            placeholder="请输入汪汪队"
+            :rules="[{ required: true, message: '请填写汪汪队' }]"
           />
         </wui-cell-group>
         <view class="footer">
@@ -211,6 +211,9 @@ function handleClick4() {
 }
 </script>
 <style lang="scss" scoped>
+.page-wraper {
+  padding-bottom: 30rpx;
+}
 .demo-button {
   width: 100%;
   box-sizing: border-box;

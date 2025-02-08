@@ -4,7 +4,7 @@
  * @LastEditTime: 2024-03-18 12:50:41
  * @LastEditors: Mr zhang
  * @Description:
- * @FilePath: \elegant-wui-uni\src\uni_modules\elegant-wui-uni\components\wui-form\types.ts
+ * @FilePath: /elegant-wui-uni/src/uni_modules/elegant-wui-uni/components/wui-form/types.ts
  * 记得注释
  */
 import { type ComponentPublicInstance, type ExtractPropTypes, type InjectionKey, type PropType } from 'vue'
@@ -72,7 +72,7 @@ export type FormExpose = {
    * 表单校验
    * @param prop 指定校验字段
    */
-  validate: (prop?: string) => Promise<{
+  validate: (prop?: string | Array<string>) => Promise<{
     valid: boolean
     errors: ErrorMessage[]
   }>

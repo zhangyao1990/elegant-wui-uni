@@ -3,24 +3,24 @@
     <wui-form ref="form" :model="model">
       <wui-cell-group border>
         <wui-input
-          label="歪比巴卜名"
+          label="汪汪队名"
           label-width="100px"
           prop="name"
           clearable
           v-model="model.name"
-          placeholder="请输入歪比巴卜"
-          :rules="[{ required: true, message: '请填写歪比巴卜' }]"
+          placeholder="请输入汪汪队"
+          :rules="[{ required: true, message: '请填写汪汪队' }]"
         />
         <wui-input
           v-for="(item, index) in model.phoneNumbers"
           :key="item.key"
-          :label="'玛卡巴卡单号' + index"
+          :label="'汪汪队单号' + index"
           :prop="'phoneNumbers.' + index + '.value'"
           label-width="100px"
           clearable
           v-model="item.value"
-          placeholder="玛卡巴卡单号"
-          :rules="[{ required: true, message: '请填写玛卡巴卡单号' + index }]"
+          placeholder="汪汪队单号"
+          :rules="[{ required: true, message: '请填写汪汪队单号' + index }]"
         />
 
         <wui-cell title-width="0px">

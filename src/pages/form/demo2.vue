@@ -19,7 +19,7 @@
           clearable
           @blur="handleBlur('phoneNumber')"
           v-model="model.phoneNumber"
-          placeholder="玛卡巴卡单号"
+          placeholder="汪汪队单号"
           :rules="[{ required: true, message: '请填写汪汪队单号' }]"
         />
 
@@ -30,7 +30,7 @@
           clearable
           @blur="handleBlur('id')"
           v-model="model.id"
-          placeholder="玛卡巴卡id"
+          placeholder="汪汪队id"
           :rules="[{ required: true, message: '请填写汪汪队id' }]"
         />
       </wui-cell-group>

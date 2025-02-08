@@ -52,7 +52,7 @@
               {
                 required: false,
                 validator: validatorMessage,
-                message: '请输入正确的玛卡巴卡'
+                message: '请输入正确的汪汪队'
               }
             ]"
           />

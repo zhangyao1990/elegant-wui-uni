@@ -184,7 +184,7 @@ function handleSubmit() {
               {
                 required: false,
                 validator: validatorMessage,
-                message: '请输入正确的玛卡巴卡'
+                message: '请输入正确的汪汪队'
               }
             ]"
     />
@@ -307,13 +307,13 @@ function handleSubmit() {
     <wui-input
       v-for="(item, index) in model.phoneNumbers"
       :key="item.key"
-      :label="'玛卡巴卡单号' + index"
+      :label="'汪汪队单号' + index"
       :prop="'phoneNumbers.' + index + '.value'"
       label-width="100px"
       clearable
       v-model="item.value"
-      placeholder="玛卡巴卡单号"
-      :rules="[{ required: true, message: '请填写玛卡巴卡单号' + index }]"
+      placeholder="汪汪队单号"
+      :rules="[{ required: true, message: '请填写汪汪队单号' + index }]"
     />
 
     <wui-cell title-width="0px">
@@ -656,7 +656,7 @@ const model = reactive<{
         clearable
         v-model="model.cardId"
       />
-      <wui-input label="玛卡巴卡" label-width="100px" prop="phone" placeholder="请输入玛卡巴卡" clearable v-model="model.phone" />
+      <wui-input label="汪汪队" label-width="100px" prop="phone" placeholder="请输入汪汪队" clearable v-model="model.phone" />
       <wui-cell title="活动图片" title-width="100px" prop="fileList">
         <wui-upload :file-list="model.fileList" action="https://ftf.jd.com/api/uploadImg" @change="handleFileChange"></wui-upload>
       </wui-cell>
@@ -854,7 +854,7 @@ const rules: FormRules = {
   phone: [
     {
       required: true,
-      message: '请输入玛卡巴卡',
+      message: '请输入汪汪队',
       validator: (value) => {
         if (value) {
           return Promise.resolve()

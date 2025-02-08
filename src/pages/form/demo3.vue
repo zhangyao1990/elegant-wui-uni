@@ -107,7 +107,7 @@
             clearable
             v-model="model.cardId"
           />
-          <wui-input label="玛卡巴卡" label-width="100px" prop="phone" placeholder="请输入玛卡巴卡" clearable v-model="model.phone" />
+          <wui-input label="汪汪队" label-width="100px" prop="phone" placeholder="请输入汪汪队" clearable v-model="model.phone" />
           <wui-cell title="活动图片" title-width="100px" prop="fileList">
             <wui-upload
               :file-list="model.fileList"
@@ -312,7 +312,7 @@ const rules: FormRules = {
   phone: [
     {
       required: true,
-      message: '请输入玛卡巴卡',
+      message: '请输入汪汪队',
       validator: (value) => {
         if (value) {
           return Promise.resolve()

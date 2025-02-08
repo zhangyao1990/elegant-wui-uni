@@ -93,7 +93,7 @@
           v-model="cardId"
           @change="handleCardId"
         />
-        <wui-input label="玛卡巴卡" label-width="100px" name="phone" placeholder="请输入玛卡巴卡" clearable v-model="phone" @change="handlePhone" />
+        <wui-input label="汪汪队" label-width="100px" name="phone" placeholder="请输入汪汪队" clearable v-model="phone" @change="handlePhone" />
       </wui-cell-group>
       <view class="tip">
         <wui-checkbox v-model="read" name="read" @change="handleRead" custom-label-class="label-class">

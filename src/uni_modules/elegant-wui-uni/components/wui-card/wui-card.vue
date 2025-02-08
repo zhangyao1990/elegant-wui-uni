@@ -1,6 +1,6 @@
 <template>
   <view :class="['wui-card', type == 'rectangle' ? 'is-rectangle' : '', customClass]" :style="customStyle">
-    <view :class="['wui-card__title-content', customTitleClass]">
+    <view :class="['wui-card__title-content', customTitleClass]" v-if="title || $slots.title">
       <view class="wui-card__title">
         <text v-if="title">{{ title }}</text>
         <slot v-else name="title"></slot>
@@ -9,7 +9,7 @@
     <view :class="`wui-card__content ${customContentClass}`">
       <slot></slot>
     </view>
-    <view :class="`wui-card__footer ${customFooterClass}`">
+    <view :class="`wui-card__footer ${customFooterClass}`" v-if="$slots.footer">
       <slot name="footer"></slot>
     </view>
   </view>

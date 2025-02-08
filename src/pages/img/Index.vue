@@ -12,11 +12,11 @@
     <demo-block title="基本用法">
       <wui-img :width="100" :height="100" :src="joy" />
       <!-- 以组件位置为定位原点 -->
-      <wui-img :width="100" :height="100" :src="img" custom-class="border" />
+      <wui-img :width="100" :height="100" :src="joy" custom-class="border" />
     </demo-block>
 
     <demo-block title="插槽用法">
-      <wui-img :width="100" :height="100" src="https://www.123.com/a.jpg">
+      <wui-img :width="100" :height="100" src="https:www.123.com/abc.png">
         <template #error>
           <view class="error-wrap">加载失败</view>
         </template>
@@ -89,7 +89,7 @@ const modes: ImageMode[] = [
   text-align: center;
 }
 :deep(.border) {
-  border: 1px solid red;
+  border: 1px solid #667eea;
   margin: 0 10px;
 }
 

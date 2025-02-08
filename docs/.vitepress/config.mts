@@ -286,6 +286,9 @@ export default defineConfig({
           }, {
             link: "/component/password-input",
             text: "PasswordInput 密码输入框"
+          }, {
+            link: "/component/signature",
+            text: "Signature 签名"
           }]
         }, {
           text: "反馈",

@@ -217,6 +217,10 @@ const list = ref([
       {
         id: 'passwordInput',
         name: 'PasswordInput 密码输入框'
+      },
+      {
+        id: 'signature',
+        name: 'Signature 签名'
       }
     ]
   },

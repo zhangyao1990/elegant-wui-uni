@@ -57,7 +57,7 @@
           <view v-if="showWordCount" class="wui-input__count">
             <text
               :class="[
-                inputValue && String(inputValue).length > 0 ? 'wd-input__count-current' : '',
+                inputValue && String(inputValue).length > 0 ? 'wui-input__count-current' : '',
                 String(inputValue).length > maxlength! ? 'is-error' : ''
               ]"
             >

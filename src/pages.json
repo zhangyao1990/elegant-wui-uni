@@ -803,6 +803,16 @@
       }
     },
     {
+      "path": "pages/signature/Index",
+      "name": "signature",
+      "style": {
+        "mp-alipay": {
+          "allowsBounceVertical": "NO"
+        },
+        "navigationBarTitleText": "Signature 签名"
+      }
+    },
+    {
       "path": "pages/backtop/Index",
       "name": "backtop",
       "style": {

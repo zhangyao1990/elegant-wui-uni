@@ -8,15 +8,21 @@
 
 ## 扫码体验
 
-
 <div style="display:flex;gap:24px">
 
 <div style="display: inline-block;">
-
-  <img style="width: 150px; height: 150px;" :src="WxQrcode" />
+  <div style="padding:5px;width: 150px; height: 150px;">
+    <img style="width: 100%;height: 100%;" :src="H5Qrcode" />
+  </div>
+  <div style="margin-top: 10px; height: 40px; font-size: 16px; color: #1b1b1b; text-align: center; font-weight: bold;">H5</div>
 
 </div>
-
+<div style="display: inline-block;">
+  <div style="width: 150px; height: 150px;">
+    <img style="width: 100%;height: 100%;"  :src="WeChatQrcode" />
+  </div>
+  <div style="margin-top: 10px; height: 40px;  font-size: 16px; color: #1b1b1b; text-align: center; font-weight: bold;">微信小程序</div>
+</div>
 
 </div>
 
@@ -45,5 +51,6 @@
 本项目基于 [MIT](https://zh.wikipedia.org/wiki/MIT%E8%A8%B1%E5%8F%AF%E8%AD%89) 协议，请自由地享受和参与开源。
 
 <script setup>
-import WxQrcode from '/WeChat.png'
+import H5Qrcode from '/H5Qrcode.png'
+import WeChatQrcode from '/WeChatQrcode.jpg'
 </script>

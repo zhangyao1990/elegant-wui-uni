@@ -5,13 +5,13 @@
       <view class="wui-search__field">
         <view v-if="!placeholderLeft" :style="coverStyle" class="wui-search__cover" @click="closeCover">
           <wui-icon name="search" custom-class="wui-search__search-icon"></wui-icon>
-          <text class="wui-search__placeholder-txt">{{ placeholder || translate('search') }}</text>
+          <text :class="`wui-search__placeholder-txt ${placeholderClass}`">{{ placeholder || translate('search') }}</text>
         </view>
         <wui-icon v-if="showInput || str || placeholderLeft" name="search" custom-class="wui-search__search-left-icon"></wui-icon>
         <input
           v-if="showInput || str || placeholderLeft"
           :placeholder="placeholder || translate('search')"
-          :placeholder-class="`wui-search__placeholder-txt', ${placeholderClass}`"
+          :placeholder-class="`wui-search__placeholder-txt ${placeholderClass}`"
           :placeholder-style="placeholderStyle"
           confirm-type="search"
           v-model="str"

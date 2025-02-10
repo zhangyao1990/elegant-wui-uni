@@ -13,6 +13,13 @@ export const searchProps = {
   ...baseProps,
 
   /**
+   * 外部自定义样式
+   * 类型: string
+   * 默认值: ''
+   */
+  customInputClass: makeStringProp(''),
+
+  /**
    * 输入框内容，双向绑定
    * 类型: string
    * 默认值: ''
@@ -88,5 +95,13 @@ export const searchProps = {
    * 默认值: false
    * 最低版本: 0.1.63
    */
-  focusWhenClear: makeBooleanProp(false)
+  focusWhenClear: makeBooleanProp(false),
+  /**
+   * 原生属性，指定 placeholder 的样式，目前仅支持color,font-size和font-weight
+   */
+  placeholderStyle: String,
+  /**
+   * 原生属性，指定 placeholder 的样式类
+   */
+  placeholderClass: makeStringProp('')
 }

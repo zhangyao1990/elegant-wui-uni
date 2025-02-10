@@ -11,10 +11,11 @@
         <input
           v-if="showInput || str || placeholderLeft"
           :placeholder="placeholder || translate('search')"
-          placeholder-class="wui-search__placeholder-txt"
+          :placeholder-class="`wui-search__placeholder-txt', ${placeholderClass}`"
+          :placeholder-style="placeholderStyle"
           confirm-type="search"
           v-model="str"
-          class="wui-search__input"
+          :class="['wui-search__input', customInputClass]"
           @focus="searchFocus"
           @input="inputValue"
           @blur="searchBlur"

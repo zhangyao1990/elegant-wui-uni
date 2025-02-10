@@ -114,6 +114,18 @@ export const swiperProps = {
    * 默认值：true
    */
   loop: makeBooleanProp(true),
+  /**
+   * 视频是否循环播放
+   * 类型：boolean
+   * 默认值：true
+   */
+  videoLoop: makeBooleanProp(true),
+  /**
+   * 视频是否静音播放
+   * 类型：boolean
+   * 默认值：true
+   */
+  muted: makeBooleanProp(true),
 
   /**
    * 后边距

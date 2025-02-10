@@ -2,6 +2,8 @@
 
 # DropMenu 下拉菜单
 
+向下或向上弹出的菜单列表。
+
 ## 代码演示
 
 ## 基础用法
@@ -201,7 +203,7 @@ const handleBeforeToggle: DropMenuItemBeforeToggle = ({ status, resolve }) => {
 | v-model       | 当前选中项对应选中的 value                                             | string / number               | -      | -          | -        |
 | disabled      | 禁用菜单                                                               | boolean                       | -      | false      | -        |
 | options       | 列表数据，对应数据结构 `[{text: '标题', value: '0', tip: '提示文字'}]` | array                         | -      | -          | -        |
-| icon-name     | 选中的图标名称(可选名称在 wui-icon 组件中)                              | string                        | -      | check      | -        |
+| icon-name     | 选中的图标名称(可选名称在 wui-icon 组件中)                             | string                        | -      | check      | -        |
 | title         | 菜单标题                                                               | string                        | -      | -          | -        |
 | icon          | 菜单图标                                                               | string                        | -      | arrow-down | -        |
 | icon-size     | 菜单图标尺寸                                                           | string                        | -      | 14px       | \_       |
@@ -249,10 +251,10 @@ const handleBeforeToggle: DropMenuItemBeforeToggle = ({ status, resolve }) => {
 
 ## DropMenuItem 外部样式类
 
-| 类名               | 说明                        | 最低版本         |
-| ------------------ | --------------------------- | ---------------- |
-| custom-class       | DropMenuItem 根节点样式     | -                |
-| custom-title       | DropMenuItem 左侧文字样式   | -                |
-| custom-icon        | DropMenuItem 右侧 icon 样式 | -                |
-| custom-popup-class | 自定义下拉菜单 popup 样式类 | 1.5.0 |
-| custom-popup-style | 自定义下拉菜单 popup 样式   | 1.5.0 |
+| 类名               | 说明                        | 最低版本 |
+| ------------------ | --------------------------- | -------- |
+| custom-class       | DropMenuItem 根节点样式     | -        |
+| custom-title       | DropMenuItem 左侧文字样式   | -        |
+| custom-icon        | DropMenuItem 右侧 icon 样式 | -        |
+| custom-popup-class | 自定义下拉菜单 popup 样式类 | 1.5.0    |
+| custom-popup-style | 自定义下拉菜单 popup 样式   | 1.5.0    |

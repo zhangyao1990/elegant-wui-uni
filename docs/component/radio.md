@@ -2,6 +2,8 @@
 
 # Radio 单选框
 
+单选框，用于在一组备选项中进行单选。
+
 ## 基本用法
 
 `v-model` 为绑定值，即选中的 `wui-radio` 的 `value` 值。
@@ -151,17 +153,17 @@ radio 设置的 props 优先级比 radioGroup 上设置的 props 优先级更高
 
 ## RadioGroup Attributes
 
-| 参数           | 说明                          | 类型                      | 可选值               | 默认值  | 最低版本         |
-| -------------- | ----------------------------- | ------------------------- | -------------------- | ------- | ---------------- |
-| v-model        | 会自动选中 value 对应的单选框 | string / number / boolean | -                    | -       | -                |
-| shape          | 单选框形状                    | string                    | dot / button / check | check   | -                |
-| size           | 设置大小                      | string                    | large                | -       | -                |
-| checked-color  | 选中的颜色                    | string                    | -                    | #4D80F0 | -                |
-| disabled       | 禁用                          | boolean                   | -                    | false   | -                |
-| max-width      | 文字位置最大宽度              | string                    | -                    | -       | -                |
-| inline         | 同行展示                      | boolean                   | -                    | false   | -                |
-| cell           | 表单模式                      | boolean                   | -                    | false   | -                |
-| icon-placement | 勾选图标对齐方式              | string                    | left / right/ auto   | auto    | 1.5.0 |
+| 参数           | 说明                          | 类型                      | 可选值               | 默认值  | 最低版本 |
+| -------------- | ----------------------------- | ------------------------- | -------------------- | ------- | -------- |
+| v-model        | 会自动选中 value 对应的单选框 | string / number / boolean | -                    | -       | -        |
+| shape          | 单选框形状                    | string                    | dot / button / check | check   | -        |
+| size           | 设置大小                      | string                    | large                | -       | -        |
+| checked-color  | 选中的颜色                    | string                    | -                    | #4D80F0 | -        |
+| disabled       | 禁用                          | boolean                   | -                    | false   | -        |
+| max-width      | 文字位置最大宽度              | string                    | -                    | -       | -        |
+| inline         | 同行展示                      | boolean                   | -                    | false   | -        |
+| cell           | 表单模式                      | boolean                   | -                    | false   | -        |
+| icon-placement | 勾选图标对齐方式              | string                    | left / right/ auto   | auto    | 1.5.0    |
 
 ## RadioGroup Events
 

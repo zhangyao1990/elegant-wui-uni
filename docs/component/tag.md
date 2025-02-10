@@ -2,6 +2,8 @@
 
 # Tag 标签
 
+用于标记状态或者概括主要内容。
+
 ## 基本用法
 
 设置 `type` 修改标签类型。
@@ -107,7 +109,9 @@
 <wui-tag v-for="(tag, index) in tags" :key="index" custom-class="space" round closable @close="handleClose(index)">{{item}}</wui-tag>
 <wui-tag custom-class="space" round dynamic @confirm="handleConfirm"></wui-tag>
 ```
+
 如果想自定义新增样式的话，可以使用`add`插槽实现。
+
 ```html
 <wui-tag custom-class="space" round dynamic @confirm="handleConfirm">
   <template #add>
@@ -158,18 +162,18 @@ function handleClose(order) {
 
 ## Attributes
 
-| 参数          | 说明                     | 类型    | 可选值                                       | 默认值 | 最低版本 |
-| ------------- | ------------------------ | ------- | -------------------------------------------- | ------ | -------- |
-| type          | 标签类型                 | string  | `default` / `primary` / `danger` / `warning` / `success` | default      | -        |
-| plain         | 幽灵类型                 | boolean | -                                            | false  | -        |
-| mark          | 标记类型                 | boolean | -                                            | false  | -        |
-| round         | 圆角类型                 | boolean | -                                            | false  | -        |
-| icon          | 左侧图标                 | string  | -                                            | -      | -        |
-| color         | 文字颜色                 | string  | -                                            | -      | -        |
-| bg-color      | 背景色和边框色           | string  | -                                            | -      | -        |
-| closable      | 可关闭(只对圆角类型支持) | boolean | -                                            | false  | -        |
-| use-icon-slot | 开启图标插槽             | boolean | -                                            | false  | -        |
-| dynamic       | 是否为新增标签           | boolean | -                                            | false  | -        |
+| 参数          | 说明                     | 类型    | 可选值                                                   | 默认值  | 最低版本 |
+| ------------- | ------------------------ | ------- | -------------------------------------------------------- | ------- | -------- |
+| type          | 标签类型                 | string  | `default` / `primary` / `danger` / `warning` / `success` | default | -        |
+| plain         | 幽灵类型                 | boolean | -                                                        | false   | -        |
+| mark          | 标记类型                 | boolean | -                                                        | false   | -        |
+| round         | 圆角类型                 | boolean | -                                                        | false   | -        |
+| icon          | 左侧图标                 | string  | -                                                        | -       | -        |
+| color         | 文字颜色                 | string  | -                                                        | -       | -        |
+| bg-color      | 背景色和边框色           | string  | -                                                        | -       | -        |
+| closable      | 可关闭(只对圆角类型支持) | boolean | -                                                        | false   | -        |
+| use-icon-slot | 开启图标插槽             | boolean | -                                                        | false   | -        |
+| dynamic       | 是否为新增标签           | boolean | -                                                        | false   | -        |
 
 ## Events
 

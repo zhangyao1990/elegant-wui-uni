@@ -1,6 +1,6 @@
 <frame/>
 
-# Navbar 导航栏 <el-tag text style="vertical-align: middle;margin-left:8px;" effect="plain">0.1.33</el-tag>
+# Navbar 导航栏
 
 为页面提供导航功能，常用于页面顶部。
 
@@ -22,7 +22,6 @@
 
 `video`为原生组件，层级较高，目前无法遮盖，需要具体平台具体分析。
 :::
-
 
 ## 基础用法
 
@@ -61,13 +60,13 @@ import { useToast } from '@/uni_modules/elegant-wui-uni'
 
 const { show: showToast } = useToast()
 
-
 function handleClickRight() {
   showToast('按钮')
 }
 ```
 
 ## 使用插槽
+
 可以通过 `left` 和 `right` 插槽自定义导航栏两侧的内容。
 
 ```html
@@ -84,9 +83,7 @@ function handleClickRight() {
 
 ```html
 <wui-navbar fixed placeholder title="Navbar 导航条" left-arrow safeAreaInsetTop></wui-navbar>
-
 ```
-
 
 ## 禁用按钮
 
@@ -107,6 +104,7 @@ function handleClickRight() {
   </template>
 </wui-navbar>
 ```
+
 ```ts
 function handleBack() {
   uni.navigateBack({})
@@ -118,6 +116,7 @@ function handleBackHome() {
 ```
 
 ## 带搜索栏
+
 通过 `title` 插槽，自定义标题。
 
 ```html
@@ -129,6 +128,7 @@ function handleBackHome() {
   </template>
 </wui-navbar>
 ```
+
 ```scss
 .search-box {
   display: flex;
@@ -144,51 +144,48 @@ function handleBackHome() {
 }
 ```
 
+## Tabbar Attributes
 
-## Attributes
+| 参数             | 说明                                           | 类型    | 可选值      | 默认值 | 最低版本 |
+| ---------------- | ---------------------------------------------- | ------- | ----------- | ------ | -------- |
+| title            | 卡片标题                                       | string  | -           | ''     | 0.1.33   |
+| leftText         | 左侧文案                                       | string  | -           | ''     | 0.1.33   |
+| rightText        | 右侧文案                                       | string  | -           | ''     | 0.1.33   |
+| leftArrow        | 显示左侧箭头                                   | boolean | true, false | false  | 0.1.33   |
+| bordered         | 显示下边框                                     | boolean | true, false | true   | 0.1.33   |
+| fixed            | 固定到顶部                                     | boolean | true, false | false  | 0.1.33   |
+| placeholder      | 固定在顶部时，在标签位置生成一个等高的占位元素 | boolean | true, false | false  | 0.1.33   |
+| zIndex           | 导航栏 z-index                                 | number  | -           | 1      | 0.1.33   |
+| safeAreaInsetTop | 开启顶部安全区适配                             | boolean | true, false | false  | 0.1.33   |
+| leftDisabled     | 禁用左侧按钮，禁用时透明度降低，且无法点击     | boolean | true, false | false  | 0.1.33   |
+| rightDisabled    | 禁用右侧按钮，禁用时透明度降低，且无法点击     | boolean | true, false | false  | 0.1.33   |
 
-| 参数          | 说明     | 类型    | 可选值 | 默认值 | 最低版本 |
-| ------------- | -------- | ------- | ------ | ------ | -------- |
-| title         | 卡片标题 | string  | -      | ''     | 0.1.33   |
-| leftText      | 左侧文案 | string  | -      | ''     | 0.1.33   |
-| rightText     | 右侧文案 | string  | -      | ''     | 0.1.33   |
-| leftArrow     | 显示左侧箭头 | boolean | true, false | false | 0.1.33   |
-| bordered      | 显示下边框 | boolean | true, false | true  | 0.1.33   |
-| fixed         | 固定到顶部 | boolean | true, false | false | 0.1.33   |
-| placeholder   | 固定在顶部时，在标签位置生成一个等高的占位元素 | boolean | true, false | false | 0.1.33   |
-| zIndex        | 导航栏 z-index | number | -      | 1      | 0.1.33   |
-| safeAreaInsetTop | 开启顶部安全区适配 | boolean | true, false | false | 0.1.33   |
-| leftDisabled  | 禁用左侧按钮，禁用时透明度降低，且无法点击 | boolean | true, false | false | 0.1.33   |
-| rightDisabled | 禁用右侧按钮，禁用时透明度降低，且无法点击 | boolean | true, false | false | 0.1.33   |
+## Tabbar Events
 
+| 事件名称    | 说明               | 参数 | 最低版本 |
+| ----------- | ------------------ | ---- | -------- |
+| click-left  | 点击左侧按钮时触发 | -    | 0.1.33   |
+| click-right | 点击右侧按钮时触发 | -    | 0.1.33   |
 
-## Events
+## TabbarCapsule Events
 
-| 事件名称     | 说明                          | 参数                                           | 最低版本 |
-| ------------ | ----------------------------- | ---------------------------------------------- | --------- |
-| click-left   | 点击左侧按钮时触发            | -                                              | 0.1.33    |
-| click-right  | 点击右侧按钮时触发            | -                                              | 0.1.33    |
+| 事件名称  | 说明                   | 参数 | 最低版本 |
+| --------- | ---------------------- | ---- | -------- |
+| back      | 点击返回按钮时触发     | -    | 0.1.33   |
+| back-home | 点击返回首页按钮时触发 | -    | 0.1.33   |
 
-## Capsule Events
+## Tabbar Slot
 
-| 事件名称     | 说明                          | 参数                                           | 最低版本 |
-| ------------ | ----------------------------- | ---------------------------------------------- | --------- |
-| back         | 点击返回按钮时触发             | -                                              | 0.1.33    |
-| back-home    | 点击返回首页按钮时触发          | -                                              | 0.1.33    |
-
-## Slot
-
-| 名称    | 说明     | 最低版本 |
-| ------- | -------- | -------- |
-| capsule | 自定义胶囊（当存在胶囊时，left不生效）   | 0.1.33         |
-| left    | 左侧内容                                | 0.1.33         |
-| title   | 标题内容                                | 0.1.33         |
-| right   | 右侧内容                                | 0.1.33         |
-
+| 名称    | 说明                                    | 最低版本 |
+| ------- | --------------------------------------- | -------- |
+| capsule | 自定义胶囊（当存在胶囊时，left 不生效） | 0.1.33   |
+| left    | 左侧内容                                | 0.1.33   |
+| title   | 标题内容                                | 0.1.33   |
+| right   | 右侧内容                                | 0.1.33   |
 
 ## 外部样式类
 
-| 类名 | 说明 | 最低版本 |
-|-----|------|--------|
-| custom-class | 根节点样式类 | 0.1.33 |
-| custom-style | 根节点样式 | 0.1.33 |
+| 类名         | 说明         | 最低版本 |
+| ------------ | ------------ | -------- |
+| custom-class | 根节点样式类 | 0.1.33   |
+| custom-style | 根节点样式   | 0.1.33   |

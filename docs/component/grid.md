@@ -2,7 +2,7 @@
 
 # Grid 宫格
 
-## 代码演示
+宫格可以在水平方向上把页面分隔成等宽度的区块，用于展示内容或进行页面导航。
 
 ## 基础用法
 
@@ -237,7 +237,7 @@
 | 参数          | 说明                                                                                                                      | 类型           | 可选值                                      | 默认值 | 最低版本 |
 | ------------- | ------------------------------------------------------------------------------------------------------------------------- | -------------- | ------------------------------------------- | ------ | -------- |
 | text          | 文字 value                                                                                                                | string         | -                                           | -      | -        |
-| icon          | 图标名称，可选值见 `wui-icon` 组件                                                                                         | string         | -                                           | -      | -        |
+| icon          | 图标名称，可选值见 `wui-icon` 组件                                                                                        | string         | -                                           | -      | -        |
 | is-dot        | 是否显示图标右上角小红点                                                                                                  | boolean        | -                                           | false  | -        |
 | type          | 图标右上角显示的 `badge` 类型                                                                                             | string         | primary / success / warning / danger / info | -      | -        |
 | value         | 图标右上角 `badge` 显示值                                                                                                 | string, number | -                                           | -      | -        |
@@ -248,12 +248,12 @@
 | use-icon-slot | 是否开启 `GridItem` icon 插槽                                                                                             | boolean        | -                                           | false  | -        |
 | use-text-slot | 是否开启 `GridItem` text 内容插槽                                                                                         | boolean        | -                                           | false  | -        |
 | icon-size     | 图标大小                                                                                                                  | string         | -                                           | 26px   | -        |
-| badge-props | 自定义徽标的属性，传入的对象会被透传给 [Badge 组件的 props](/component/badge#attributes)	| BadgeProps    | -      | -  | 0.1.50   |
+| badge-props   | 自定义徽标的属性，传入的对象会被透传给 [Badge 组件的 props](/component/badge#attributes)                                  | BadgeProps     | -                                           | -      | 0.1.50   |
 
 ## GridItem Events
 
-| 方法名         | 说明           | 参数  | 返回值 | 最低版本 |
-| -------------- | -------------- | ----- | ------ | -------- |
+| 方法名    | 说明           | 参数  | 返回值 | 最低版本 |
+| --------- | -------------- | ----- | ------ | -------- |
 | itemclick | 点击(跳转)事件 | event | -      | -        |
 
 ## Grid Slot

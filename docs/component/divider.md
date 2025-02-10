@@ -2,6 +2,8 @@
 
 # Divider 分割线
 
+用于将内容分隔为多个区域。
+
 :::danger 请注意
 `hairline`、`dashed`、`content-position`、`vertical`属性为 1.5.0 版本新增支持，在此之前仅支持默认插槽显示文本和自定义`color`。
 :::
@@ -84,13 +86,13 @@
 
 ## Attributes
 
-| 参数             | 说明                           | 类型    | 可选值                  | 默认值   | 最低版本         |
-| ---------------- | ------------------------------ | ------- | ----------------------- | -------- | ---------------- |
-| color            | 自定义颜色，支持所有颜色的写法 | string  | -                       | -        | -                |
-| hairline         | 是否显示边框                   | boolean | -                       | true     | 1.5.0 |
-| dashed           | 是否显示为虚线                 | boolean | -                       | false    | 1.5.0 |
-| content-position | 内容位置                       | string  | `left`/`center`/`right` | `center` | 1.5.0 |
-| vertical         | 是否显示为垂直分割线           | boolean | -                       | false    | 1.5.0 |
+| 参数             | 说明                           | 类型    | 可选值                  | 默认值   | 最低版本 |
+| ---------------- | ------------------------------ | ------- | ----------------------- | -------- | -------- |
+| color            | 自定义颜色，支持所有颜色的写法 | string  | -                       | -        | -        |
+| hairline         | 是否显示边框                   | boolean | -                       | true     | 1.5.0    |
+| dashed           | 是否显示为虚线                 | boolean | -                       | false    | 1.5.0    |
+| content-position | 内容位置                       | string  | `left`/`center`/`right` | `center` | 1.5.0    |
+| vertical         | 是否显示为垂直分割线           | boolean | -                       | false    | 1.5.0    |
 
 ## Slot
 

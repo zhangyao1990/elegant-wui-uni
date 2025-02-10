@@ -1,7 +1,8 @@
 <frame/>
 
-#  Sticky 粘性布局
+# Sticky 粘性布局
 
+粘性布局组件，用于在页面滚动时将元素固定在指定位置。
 
 ## 基本用法
 
@@ -40,21 +41,19 @@ function display() {
 onShow(() => {
   setTimeout(display, 5000)
 })
-
 ```
 
 ```scss
-page{
+page {
   height: 200vh;
 }
 ```
-
 
 ## 吸顶距离
 
 通过 `offset-top` 属性可以设置组件在吸顶时与顶部的距离。
 ::: tip 提醒
-由于在`H5`端导航栏为普通元素，所以吸顶距离会自动在`offset-top`的基础上增加`44px`，当开发者在`H5`端使用自定义导航栏时`offset-top`就需要先减去`44`。例如期望吸顶距离为20px，那么`offset-top = 20 - 44 = -24`
+由于在`H5`端导航栏为普通元素，所以吸顶距离会自动在`offset-top`的基础上增加`44px`，当开发者在`H5`端使用自定义导航栏时`offset-top`就需要先减去`44`。例如期望吸顶距离为 20px，那么`offset-top = 20 - 44 = -24`
 :::
 
 ```html
@@ -69,7 +68,6 @@ page{
 
 > 注意：被包裹的自定义容器在样式中使用百分比单位 `width:xx%;height:xx%;` 无效，建议使用 `vh`、`vw`。
 
-
 ```html
 <wui-sticky-box>
   <view class="container">
@@ -81,26 +79,27 @@ page{
 ```
 
 ```scss
-.container{
-    height: 150px;width: 100vw;
+.container {
+  height: 150px;
+  width: 100vw;
 }
 ```
 
 ## Sticky Attributes
 
-| 参数 | 说明 | 类型 | 可选值 | 默认值 | 最低版本 |
-|-----|------|-----|-------|-------|--------|
-| z-index | 堆叠顺序 | number | - | 1 | - |
-| offset-top | 吸顶距离 | number | - | 0 | - |
+| 参数       | 说明     | 类型   | 可选值 | 默认值 | 最低版本 |
+| ---------- | -------- | ------ | ------ | ------ | -------- |
+| z-index    | 堆叠顺序 | number | -      | 1      | -        |
+| offset-top | 吸顶距离 | number | -      | 0      | -        |
 
 ## Sticky 外部样式类
 
-| 类名 | 说明 | 最低版本 |
-|-----|------|--------|
-| custom-class | 根节点样式 | - |
+| 类名         | 说明       | 最低版本 |
+| ------------ | ---------- | -------- |
+| custom-class | 根节点样式 | -        |
 
 ## Sticky Box 外部样式类
 
-| 类名 | 说明 | 最低版本 |
-|-----|------|--------|
-| custom-class | 根节点样式 | - |
+| 类名         | 说明       | 最低版本 |
+| ------------ | ---------- | -------- |
+| custom-class | 根节点样式 | -        |

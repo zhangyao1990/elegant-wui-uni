@@ -1,14 +1,16 @@
 <frame/>
 
-# Backtop 回到顶部 `1.2.21`
+# Backtop 回到顶部
+
+用于返回页面顶部的操作按钮。
 
 ## 基本用法
 
-由于返回顶部需要实时监听滚动条位置，但是在uniapp的组件中不能获取页面的滚动信息，
+由于返回顶部需要实时监听滚动条位置，但是在 uniapp 的组件中不能获取页面的滚动信息，
 所以只能在页面的`onPageScroll`生命周期中获取滚动条位置，再通过`Props`传递给组件。
 
 ```html
-  <wui-backtop :scrollTop="scrollTop"></wui-backtop>
+<wui-backtop :scrollTop="scrollTop"></wui-backtop>
 ```
 
 ```typescript
@@ -29,7 +31,7 @@ onPageScroll((e) => {
 ## 自定义样式
 
 ```html
-  <wui-backtop :scrollTop="scrollTop" customStyle="background: #007aff;color:white;"></wui-backtop>
+<wui-backtop :scrollTop="scrollTop" customStyle="background: #007aff;color:white;"></wui-backtop>
 ```
 
 ## Attributes
@@ -39,7 +41,7 @@ onPageScroll((e) => {
 | scrollTop | 页面滚动距离                     | number | -      | -      | -        |
 | top       | 距离顶部多少距离时显示，单位`px` | number | -      | 300    | -        |
 | duration  | 返回顶部滚动时间，单位`ms`       | number | -      | 100    | -        |
-| zIndex    | 组件z-index属性                  | number | -      | 10     | -        |
+| zIndex    | 组件 z-index 属性                | number | -      | 10     | -        |
 | iconStyle | 自定义`icon`样式                 | string | -      | -      | -        |
 | shape     | 按钮形状                         | string | square | circle | -        |
 | bottom    | 距离屏幕顶部的距离，单位`px`     | number | -      | 100    | -        |

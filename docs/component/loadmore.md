@@ -2,6 +2,8 @@
 
 # loadmore 加载更多
 
+用于在列表底部展示加载状态。
+
 ## 基本用法
 
 在需要进行加载的列表的底部引入该组件即可。当滑动到列表底部时，通过设置`state`展示不同的文案。
@@ -57,7 +59,6 @@
 
 ```typescript
 import { onLoad, onReachBottom } from '@dcloudio/uni-app'
-
 
 const state = ref<string>('loading')
 const num = ref<number>(0)
@@ -120,15 +121,16 @@ image {
 
 ## Attributes
 
-| 参数          | 说明                 | 类型   | 可选值                 | 默认值             | 最低版本 |
-| ------------- | -------------------- | ------ | ---------------------- | ------------------ | -------- |
-| state         | 加载状态             | string | loading/finished/error | -                  | -        |
-| loading-text  | 加载提示文案         | string | -                      | 加载中...          | -        |
-| finished-text | 全部加载完的提示文案 | string | -                      | 没有更多了         | -        |
-| error-text    | 加载失败的提示文案   | string | -                      | 加载失败，点击重试 | -        |
-| loading-props  | loading加载组件属性| `Partial<LoadingProps>` | -         | -       | 1.3.14        |
+| 参数          | 说明                 | 类型                    | 可选值                 | 默认值             | 最低版本 |
+| ------------- | -------------------- | ----------------------- | ---------------------- | ------------------ | -------- |
+| state         | 加载状态             | string                  | loading/finished/error | -                  | -        |
+| loading-text  | 加载提示文案         | string                  | -                      | 加载中...          | -        |
+| finished-text | 全部加载完的提示文案 | string                  | -                      | 没有更多了         | -        |
+| error-text    | 加载失败的提示文案   | string                  | -                      | 加载失败，点击重试 | -        |
+| loading-props | loading 加载组件属性 | `Partial<LoadingProps>` | -                      | -                  | 1.3.14   |
 
 #### LoadingProps
+
 参见[LoadingProps](/component/loading.html#attributes)
 
 ## Events

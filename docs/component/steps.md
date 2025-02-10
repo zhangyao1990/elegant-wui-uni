@@ -1,11 +1,12 @@
 <frame/>
 
-#  Steps 步骤条
+# Steps 步骤条
+
+用于引导用户按照流程完成任务或向用户展示当前状态。
 
 :::tip 破坏性更新提醒
 `1.2.10`版本`step`组件废弃了`title-slot`、`icon-slot`和`description-slot`等三个控制插槽使用的字段，新增支持直接使用`title`、`icon`和`description`插槽，同时废弃了`default`插槽。
 :::
-
 
 ## 基本用法
 
@@ -25,7 +26,6 @@ const active = ref<number>(0)
 function nextStep() {
   active.value = active.value + 1
 }
-
 ```
 
 ## 水平居中
@@ -52,13 +52,13 @@ function nextStep() {
 </wui-steps>
 <wui-button size="small" @click="nextStep">下一步</wui-button>
 ```
+
 ```ts
 const active = ref<number>(0)
 
 function nextStep() {
   active.value = active.value + 1
 }
-
 ```
 
 ## 修改图标
@@ -111,42 +111,42 @@ function nextStep() {
 
 ## Steps Attributes
 
-| 参数 | 说明 | 类型 | 可选值 | 默认值 | 最低版本 |
-|-----|------|-----|-------|-------|--------|
-| active | 步骤进度 | number | - | 0 | - |
-| vertical | 垂直方向 | boolean | - | false | - |
-| dot | 点状步骤条 | dot | - | false | - |
-| space | 步骤条间距，默认为自动计算 | string | - | - | - |
-| align-center | 是否水平居中，只对横向步骤条有效 | boolean | - | false | - |
+| 参数         | 说明                             | 类型    | 可选值 | 默认值 | 最低版本 |
+| ------------ | -------------------------------- | ------- | ------ | ------ | -------- |
+| active       | 步骤进度                         | number  | -      | 0      | -        |
+| vertical     | 垂直方向                         | boolean | -      | false  | -        |
+| dot          | 点状步骤条                       | dot     | -      | false  | -        |
+| space        | 步骤条间距，默认为自动计算       | string  | -      | -      | -        |
+| align-center | 是否水平居中，只对横向步骤条有效 | boolean | -      | false  | -        |
 
 ## Step Attributes
 
-| 参数 | 说明 | 类型 | 可选值 | 默认值 | 最低版本 |
-|-----|------|-----|-------|-------|--------|
-| title | 标题，如果没有则为默认文案。当只有标题而没有描述时，标题的字号会小2号 | string | - | - | - |
-| <s>title-slot</s> |<s> 使用 title 插槽时需要设置该属性</s>，已废弃，直接使用title插槽即可 | boolean | - | false | - |
-| description | 描述 | string | - | - | - |
-| <s>description-slot</s> | <s>使用 description 插槽时需要设置该属性</s>，已废弃，直接使用description插槽即可 | boolean | - | false | - |
-| icon | 图标 | string | - | - | - |
-| <s>icon-slot</s> | <s>使用 icon 插槽时需要设置该属性</s>，已废弃，直接使用icon插槽即可 | boolean | - | false | - |
-| status | 步骤状态 | string | finished / process / error | - | - |
+| 参数                    | 说明                                                                                | 类型    | 可选值                     | 默认值 | 最低版本 |
+| ----------------------- | ----------------------------------------------------------------------------------- | ------- | -------------------------- | ------ | -------- |
+| title                   | 标题，如果没有则为默认文案。当只有标题而没有描述时，标题的字号会小 2 号             | string  | -                          | -      | -        |
+| <s>title-slot</s>       | <s> 使用 title 插槽时需要设置该属性</s>，已废弃，直接使用 title 插槽即可            | boolean | -                          | false  | -        |
+| description             | 描述                                                                                | string  | -                          | -      | -        |
+| <s>description-slot</s> | <s>使用 description 插槽时需要设置该属性</s>，已废弃，直接使用 description 插槽即可 | boolean | -                          | false  | -        |
+| icon                    | 图标                                                                                | string  | -                          | -      | -        |
+| <s>icon-slot</s>        | <s>使用 icon 插槽时需要设置该属性</s>，已废弃，直接使用 icon 插槽即可               | boolean | -                          | false  | -        |
+| status                  | 步骤状态                                                                            | string  | finished / process / error | -      | -        |
 
 ## Step Slot
 
-| name | 说明 | 最低版本 |
-|------|-----|---------|
-| icon | 图标 | 1.2.10 |
-| title | 标题 | 1.2.10 |
-| description | 描述 | 1.2.10 |
+| name        | 说明 | 最低版本 |
+| ----------- | ---- | -------- |
+| icon        | 图标 | 1.2.10   |
+| title       | 标题 | 1.2.10   |
+| description | 描述 | 1.2.10   |
 
 ## Steps 外部样式类
 
-| 类名 | 说明 | 最低版本 |
-|-----|-----|---------|
-| custom-class | 根节点样式 | - |
+| 类名         | 说明       | 最低版本 |
+| ------------ | ---------- | -------- |
+| custom-class | 根节点样式 | -        |
 
 ## Step 外部样式类
 
-| 类名 | 说明 | 最低版本 |
-|-----|------|--------|
-| custom-class | 根节点样式 | - |
+| 类名         | 说明       | 最低版本 |
+| ------------ | ---------- | -------- |
+| custom-class | 根节点样式 | -        |

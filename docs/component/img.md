@@ -2,7 +2,7 @@
 
 # Img 图片
 
-增强版的 img 标签，提供多种图片填充模式，支持图片懒加载、加载完成、加载失败
+增强版的 img 标签，提供多种图片填充模式，支持图片懒加载、加载完成、加载失败。
 
 ## 基本用法
 
@@ -91,16 +91,16 @@ mode 为小程序原生属性，参考[微信小程序 image 官方文档](https
 
 ## Attributes
 
-| 参数                   | 说明                                               | 类型            | 可选值                                                                                                                                                                             | 默认值        | 最低版本         |
-| ---------------------- | -------------------------------------------------- | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- | ---------------- |
-| src                    | 图片链接                                           | string          | -                                                                                                                                                                                  | -             | -                |
-| width                  | 宽度，默认单位为 px                                | number / string | -                                                                                                                                                                                  | -             | -                |
-| height                 | 高度，默认单位为 px                                | number / string | -                                                                                                                                                                                  | -             | -                |
-| mode                   | 填充模式                                           | ImageMode       | 'top left' / 'top right' / 'bottom left' / 'bottom right' / 'right' / 'left' / 'center' / 'bottom' / 'top' / 'heightFix' / 'widthFix' / 'aspectFill' / 'aspectFit' / 'scaleToFill' | 'scaleToFill' | -                |
-| round                  | 是否显示为圆形                                     | boolean         | -                                                                                                                                                                                  | false         | -                |
-| radius                 | 圆角大小，默认单位为 px                            | number / string | -                                                                                                                                                                                  | -             | -                |
-| enable-preview         | 是否支持点击预览                                   | boolean         | -                                                                                                                                                                                  | false         | 1.2.11           |
-| show-menu-by-longpress | 开启长按图片显示识别小程序码菜单，仅微信小程序支持 | boolean         | -                                                                                                                                                                                  | false         | 1.3.11 |
+| 参数                   | 说明                                               | 类型            | 可选值                                                                                                                                                                             | 默认值        | 最低版本 |
+| ---------------------- | -------------------------------------------------- | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- | -------- |
+| src                    | 图片链接                                           | string          | -                                                                                                                                                                                  | -             | -        |
+| width                  | 宽度，默认单位为 px                                | number / string | -                                                                                                                                                                                  | -             | -        |
+| height                 | 高度，默认单位为 px                                | number / string | -                                                                                                                                                                                  | -             | -        |
+| mode                   | 填充模式                                           | ImageMode       | 'top left' / 'top right' / 'bottom left' / 'bottom right' / 'right' / 'left' / 'center' / 'bottom' / 'top' / 'heightFix' / 'widthFix' / 'aspectFill' / 'aspectFit' / 'scaleToFill' | 'scaleToFill' | -        |
+| round                  | 是否显示为圆形                                     | boolean         | -                                                                                                                                                                                  | false         | -        |
+| radius                 | 圆角大小，默认单位为 px                            | number / string | -                                                                                                                                                                                  | -             | -        |
+| enable-preview         | 是否支持点击预览                                   | boolean         | -                                                                                                                                                                                  | false         | 1.2.11   |
+| show-menu-by-longpress | 开启长按图片显示识别小程序码菜单，仅微信小程序支持 | boolean         | -                                                                                                                                                                                  | false         | 1.3.11   |
 
 ## Events
 

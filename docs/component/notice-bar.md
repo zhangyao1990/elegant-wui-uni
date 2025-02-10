@@ -2,6 +2,8 @@
 
 # NoticeBar 通知栏
 
+通知栏组件，用于在页面顶部展示通知提醒。
+
 ## 基本用法
 
 设置 `text` 文本内容和 `prefix` 左侧图标。
@@ -116,11 +118,12 @@ const onNext = (index: number) => {
 ```
 
 ## 重置播放动画 <el-tag text style="vertical-align: middle;margin-left:8px;" effect="plain">1.3.13</el-tag>
-通过`ref`获取组件实例，调用`reset`方法即可重置播放动画。当你遇到`NoticeBar`的播放动画异常的情况时，可以调用`reset`方法重置动画。  
+
+通过`ref`获取组件实例，调用`reset`方法即可重置播放动画。当你遇到`NoticeBar`的播放动画异常的情况时，可以调用`reset`方法重置动画。
 
 例如：在`APP-VUE`端，`Tabbar`页面使用`NoticeBar`时，从其它界面返回到`NoticeBar`页面，会偶发`NoticeBar`动画异常，此时可以调用`reset`方法重置动画。
 
-参考issues：[#358](https://github.com/zhangyao1990/elegant-wui-uni/issues/358)、[#650](https://github.com/zhangyao1990/elegant-wui-uni/issues/650)
+参考 issues：[#358](https://github.com/zhangyao1990/elegant-wui-uni/issues/358)、[#650](https://github.com/zhangyao1990/elegant-wui-uni/issues/650)
 
 ```html
 <wui-notice-bar ref="notice" prefix="warn-bold" direction="vertical" :text="textArray" :delay="3" />
@@ -175,9 +178,9 @@ function handleReset() {
 
 ## Methods
 
-| 方法名称 | 说明 | 参数 | 最低版本 |
-|---------|-----|-----|---------|
-| reset | 用于重置播放动画| - | 1.3.13 |
+| 方法名称 | 说明             | 参数 | 最低版本 |
+| -------- | ---------------- | ---- | -------- |
+| reset    | 用于重置播放动画 | -    | 1.3.13   |
 
 ## Slot
 

@@ -486,69 +486,9 @@ function handleValidate() {
 
 :::
 
-## 不对隐藏组件做校验
+## 不对隐藏组件做校验 <el-tag text style="vertical-align: middle;margin-left:8px;" effect="plain">1.6.0</el-tag>
 
 在表单中，如果某个组件使用 `v-if` 隐藏，则不会对该组件进行校验。
-
-::: details 查看不对隐藏组件做校验示例
-::: code-group
-
-```html [vue]
-<wui-form ref="form" :model="model" :rules="rules">
-  <wui-cell-group border>
-    <wui-input
-      label="用户名"
-      label-width="100px"
-      prop="value1"
-      clearable
-      v-model="model.value1"
-      placeholder="请输入用户名"
-      :rules="[{ required: true, message: '请填写用户名' }]"
-    />
-    <wui-input
-      v-if="showPassword"
-      label="密码"
-      label-width="100px"
-      prop="value2"
-      show-password
-      clearable
-      v-model="model.value2"
-      placeholder="请输入密码"
-      :rules="[{ required: true, message: '请填写密码' }]"
-    />
-  </wui-cell-group>
-  <view class="footer">
-    <wui-button type="primary" size="large" @click="handleSubmit" block>提交</wui-button>
-  </view>
-</wui-form>
-```
-
-```typescript [typescript]
-<script lang="ts" setup>
-import { useToast } from '@/uni_modules/elegant-wui-uni'
-import type { FormInstance } from '@/uni_modules/elegant-wui-uni/components/wui-form/types'
-import { reactive, ref } from 'vue'
-
-const { success: showSuccess } = useToast()
-const model = reactive<{
-  value1: string
-  value2: string
-}>({
-  value1: '',
-  value2: ''
-})
-    })
-}
-</script>
-```
-
-```css [css]
-.footer {
-  padding: 12px;
-}
-```
-
-:::
 
 ## 复杂表单
 
@@ -647,15 +587,7 @@ const model = reactive<{
           <wui-switch v-model="model.switchVal" />
         </view>
       </wui-cell>
-      <wui-input
-        label="歪比巴卜"
-        label-width="100px"
-        prop="cardId"
-        suffix-icon="camera"
-        placeholder="请输入歪比巴卜"
-        clearable
-        v-model="model.cardId"
-      />
+      <wui-input label="汪汪队" label-width="100px" prop="cardId" suffix-icon="camera" placeholder="请输入汪汪队" clearable v-model="model.cardId" />
       <wui-input label="汪汪队" label-width="100px" prop="phone" placeholder="请输入汪汪队" clearable v-model="model.phone" />
       <wui-cell title="活动图片" title-width="100px" prop="fileList">
         <wui-upload :file-list="model.fileList" action="https://ftf.jd.com/api/uploadImg" @change="handleFileChange"></wui-upload>
@@ -841,12 +773,12 @@ const rules: FormRules = {
   cardId: [
     {
       required: true,
-      message: '请输入歪比巴卜',
+      message: '请输入汪汪队',
       validator: (value) => {
         if (value) {
           return Promise.resolve()
         } else {
-          return Promise.reject('请输入歪比巴卜')
+          return Promise.reject('请输入汪汪队')
         }
       }
     }
@@ -1016,10 +948,10 @@ function handleIconClick() {
 
 ## Events
 
-| 事件名称 | 说明                                                                                                                | 参数                      | 最低版本 |
-| -------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------- | -------- |
+| 事件名称 | 说明                                                                                                     | 参数                      | 最低版本 |
+| -------- | -------------------------------------------------------------------------------------------------------- | ------------------------- | -------- |
 | validate | 验证表单，支持传入一个 prop 来验证单个表单项，不传入 prop 时，会验证所有表单项，1.6.0 版本起支持传入数组 | `prop?: string\|string[]` | 0.2.0    |
-| reset    | 重置校验结果                                                                                                        | -                         | 0.2.0    |
+| reset    | 重置校验结果                                                                                             | -                         | 0.2.0    |
 
 ## 外部样式类
 

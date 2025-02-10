@@ -84,11 +84,11 @@
           <wui-switch v-model="switchVal" name="switchVal" @change="handleSwitch" />
         </wui-cell>
         <wui-input
-          label="歪比巴卜"
+          label="汪汪队"
           label-width="100px"
           name="cardId"
           suffix-icon="camera"
-          placeholder="请输入歪比巴卜"
+          placeholder="请输入汪汪队"
           clearable
           v-model="cardId"
           @change="handleCardId"

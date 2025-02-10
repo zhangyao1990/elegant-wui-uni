@@ -26,6 +26,3 @@ yarn-error.log*
 *.sln
 *.sw*
 .history
-tags.json
-attributes.json
-web-types.json

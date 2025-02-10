@@ -1,5 +1,41 @@
 # 更新日志
 
+## [1.6.0](https://github.com/zhangyao1990/elegant-wui-uni/compare/v1.5.1...v1.6.0) (2025-02-10)
+
+### ✏️ Documentation | 文档
+
+- ✏️ 常见问题添加 Vue 3.3+使用 defineOptions 设置 styleIsolation 规则的介绍
+- ✏️ 更新组件库互助群二维码
+- ✏️ 添加互助交流 QQ 群 3 群二维码
+- ✏️ 微信小程序演示 demo 提供激励视频广告页面
+- ✏️ 修复 Tooltip 文档显示异常的问题
+- ✏️ 演示 demo 小程序支持分享
+- ✏️ 优化演示 demo 支持在顶部显示对应页面微信小程序的二维码
+- ✏️ 修改自定义样式描述
+
+### 🐛 Bug Fixes | Bug 修复
+
+- 🐛 修复 Calendar 为周选择时跨年周的单元格值显示错误的问题
+- 🐛 修复 Divider 分割线组件 CustomClass 未生效的问题
+- 🐛 修复 Form 表单 validator 校验不通过且未指定错误信息时无法显示校验信息的问题
+- 🐛 修复 Button 初始化 margin 的问题
+- 🐛 修复 Card footer 或者 header 没写的时候，不会自动隐藏占位
+- 🐛 修复 Form 组件 rules 属性，没有按照顺序执行问题
+- 🐛 修复 Input 初始化修改失败的问题
+- 🐛 修复 Picker 文档初始选项 code 错误的问题
+- 🐛 修复 popover tooltip 组件 visibleArrow=false 时弹出框距离元素间距过远的问题
+
+### ✨ Features | 新功能
+
+- ✨ 新增 Signature 签名组件
+- ✨ 修复 InputNumber 在设置为 allow-null 时被赋值为空时未触发更新的问题并支持异步更新
+- ✨ 修复 Img 组件在错误状态下可以预览的问题
+- ✨ Calendar 确认事件 confirm 增加 `type` 参数
+- ✨ Form 表单 validate 方法支持传入数组
+- ✨ Search 新增 customInputClass，placeholderClass 等属性
+- ✨ Swiper 轮播视频支持控制静音播放和循环播放
+- ✨ Swiper 轮播项 type 字段的处理逻辑限制在可选值范围内
+
 ## ## [1.5.0](/compare/v1.4.0...v1.5.0) (2024-12-09)
 
 ### 🐛 Bug Fixes | Bug 修复

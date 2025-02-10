@@ -1,32 +1,69 @@
 # 更新日志
 
-## ## [1.5.0](/compare/v1.4.0...v1.5.0) (2024-12-09)
-### 🐛 Bug Fixes | Bug 修复
-* 🐛 修复 Button 按钮设置为 block 无效的问题 
-* 🐛 修复 Cell 设置 label 过长时影响页面结构的问题
-* 🐛 修复 Collapse v-model绑定数据变化时未更新折叠面板状态的问题
-* 🐛 修复 GridItem 徽标属性类型标注错误的问题
-* 🐛 修复 Progress 无法设置进度为 0 的问题 
-* 🐛 修复 Swiper 在支付宝小程序平台点击事件无效的问题
-* 🐛 修复 Tab 未渲染项高度会影响整体高度的问题
-* 🐛 修复 vue-tsc 校验不通过的问题
-* 🐛 修复微信小程序在iOS设备上处于后台一段时间后抖动的问题
+## [1.6.0](https://github.com/zhangyao1990/elegant-wui-uni/compare/v1.5.1...v1.6.0) (2025-02-10)
+
 ### ✏️ Documentation | 文档
-* ✏️  添加 MessageBox 自定义按钮样式的文档
-* ✏️  优化 Cell 关于 clickable 和 is-link 的介绍
-* ✏️  增加 ConfigProvider 组件设定全局共享示例 
-* ✏️  Table 表格组件提供结合分页器使用的demo 
+
+- ✏️ 常见问题添加 Vue 3.3+使用 defineOptions 设置 styleIsolation 规则的介绍
+- ✏️ 修复 Tooltip 文档显示异常的问题
+- ✏️ 修改自定义样式描述
+
+### 🐛 Bug Fixes | Bug 修复
+
+- 🐛 修复 Calendar 为周选择时跨年周的单元格值显示错误的问题
+- 🐛 修复 Divider 分割线组件 CustomClass 未生效的问题
+- 🐛 修复 Form 表单 validator 校验不通过且未指定错误信息时无法显示校验信息的问题
+- 🐛 修复 Button 初始化 margin 的问题
+- 🐛 修复 Card footer 或者 header 没写的时候，不会自动隐藏占位
+- 🐛 修复 Form 组件 rules 属性，没有按照顺序执行问题
+- 🐛 修复 Input 初始化修改失败的问题
+- 🐛 修复 Picker 文档初始选项 code 错误的问题
+- 🐛 修复 popover tooltip 组件 visibleArrow=false 时弹出框距离元素间距过远的问题
+
 ### ✨ Features | 新功能
-* ✨ 优化 Divider 分割线功能支持虚线、垂直等功能 
-* ✨ Calendar 优化选中样式和滚动位置处理并支持屏蔽内置cell
-* ✨ Curtain 幕帘新增 close 插槽和自定义关闭插槽样式类 
-* ✨ DropMenuItem 增加自定 Popup 样式参数 
-* ✨ Input、Textarea在APP-VUE和H5端支持inputmode
-* ✨ MessageBox 新增确认、取消按钮的 ButtonProps 属性
-* ✨ Radio添加icon-placement属性用于控制图标方向
-* ✨ Segmented 提供 updateActiveStyle 方法设置激活样式 
-* ✨ Table 支持设置不固定表头
-* ✨ Upload 支持文件重传
+
+- ✨ 新增 Signature 签名组件
+- ✨ 修复 InputNumber 在设置为 allow-null 时被赋值为空时未触发更新的问题并支持异步更新
+- ✨ 修复 Img 组件在错误状态下可以预览的问题
+- ✨ Calendar 确认事件 confirm 增加 `type` 参数
+- ✨ Form 表单 validate 方法支持传入数组
+- ✨ Search 新增 customInputClass，placeholderClass 等属性
+- ✨ Swiper 轮播视频支持控制静音播放和循环播放
+- ✨ Swiper 轮播项 type 字段的处理逻辑限制在可选值范围内
+
+## ## [1.5.0](/compare/v1.4.0...v1.5.0) (2024-12-09)
+
+### 🐛 Bug Fixes | Bug 修复
+
+- 🐛 修复 Button 按钮设置为 block 无效的问题
+- 🐛 修复 Cell 设置 label 过长时影响页面结构的问题
+- 🐛 修复 Collapse v-model 绑定数据变化时未更新折叠面板状态的问题
+- 🐛 修复 GridItem 徽标属性类型标注错误的问题
+- 🐛 修复 Progress 无法设置进度为 0 的问题
+- 🐛 修复 Swiper 在支付宝小程序平台点击事件无效的问题
+- 🐛 修复 Tab 未渲染项高度会影响整体高度的问题
+- 🐛 修复 vue-tsc 校验不通过的问题
+- 🐛 修复微信小程序在 iOS 设备上处于后台一段时间后抖动的问题
+
+### ✏️ Documentation | 文档
+
+- ✏️ 添加 MessageBox 自定义按钮样式的文档
+- ✏️ 优化 Cell 关于 clickable 和 is-link 的介绍
+- ✏️ 增加 ConfigProvider 组件设定全局共享示例
+- ✏️ Table 表格组件提供结合分页器使用的 demo
+
+### ✨ Features | 新功能
+
+- ✨ 优化 Divider 分割线功能支持虚线、垂直等功能
+- ✨ Calendar 优化选中样式和滚动位置处理并支持屏蔽内置 cell
+- ✨ Curtain 幕帘新增 close 插槽和自定义关闭插槽样式类
+- ✨ DropMenuItem 增加自定 Popup 样式参数
+- ✨ Input、Textarea 在 APP-VUE 和 H5 端支持 inputmode
+- ✨ MessageBox 新增确认、取消按钮的 ButtonProps 属性
+- ✨ Radio 添加 icon-placement 属性用于控制图标方向
+- ✨ Segmented 提供 updateActiveStyle 方法设置激活样式
+- ✨ Table 支持设置不固定表头
+- ✨ Upload 支持文件重传
 
 [1.4.0](https://github.com/zhangyao1990/elegant-wui-uni/compare/v1.3.14...v1.4.0) (2024-11-24)
 

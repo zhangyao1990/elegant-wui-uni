@@ -21,22 +21,20 @@
 ```html
 <view @click.stop="closeOutside">
   <wui-swipe-action>
-    <wui-cell title="标题文字" value="内容"/>
+    <wui-cell title="标题文字" value="内容" />
     <template #right>
       <view class="action">
-        <view class="button" style="background: #C8C7CD;" @click="handleAction("操作1")">操作1</view>
+        <view class="button" style="background: #C8C7CD;" @click="handleAction('操作1')">操作1</view>
         <view class="button" style="background: #FFB300;" @click="handleAction('操作2')">操作2</view>
         <view class="button" style="background: #E2231A;" @click="handleAction('操作3')">操作3</view>
       </view>
     </template>
-
   </wui-swipe-action>
 </view>
 ```
 
 ```typescript
 import { useToast, useQueue } from '@/uni_modules/elegant-wui-uni'
-
 
 const { closeOutside } = useQueue()
 
@@ -62,7 +60,7 @@ function handleAction(action: string) {
 
 ## 左右滑动
 
-> `wui-swipe-action`组件提供`left`/`right`两个滑动按钮，通过设置插槽`v-slot:left`和`v-slot:right`开启
+> `wui-swipe-action`组件提供`left`/`right`两个滑动按钮，通过设置插槽`left`和`right`开启
 
 ```html
 <wui-swipe-action>
@@ -226,7 +224,7 @@ function handleClick({ value }) {
 
 | 参数         | 说明                     | 类型     | 可选值               | 默认值 | 最低版本 |
 | ------------ | ------------------------ | -------- | -------------------- | ------ | -------- |
-| v-model        | 滑动按钮的状态           | string   | left / close / right | close  | -        |
+| v-model      | 滑动按钮的状态           | string   | left / close / right | close  | -        |
 | disabled     | 是否禁用滑动操作         | boolean  | -                    | false  | -        |
 | before-close | 关闭滑动按钮前的钩子函数 | function | -                    | -      | -        |
 

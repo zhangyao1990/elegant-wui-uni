@@ -951,3 +951,5 @@ $-floating-panel-content-bg: var(--wui-floating-panel-content-bg, $-color-white)
 $-signature-bg: var(--wui-signature-bg, $-color-white) !default; // 背景色
 $-signature-radius: var(--wui-signature-radius, 4px) !default; // 圆角
 $-signature-border: var(--wui-signature-border, 1px solid $-color-gray-5) !default; // 边框圆角
+$-signature-footer-margin-top: var(--wui-signature-footer-margin-top, 8px) !default; // 底部按钮上边距
+$-signature-button-margin-left: var(--wui-signature-button-margin-left, 8px) !default; // 底部按钮左边距

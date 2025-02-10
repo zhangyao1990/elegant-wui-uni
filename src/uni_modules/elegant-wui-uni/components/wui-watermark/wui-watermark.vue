@@ -31,7 +31,7 @@ export default {
 </script>
 
 <script lang="ts" setup>
-import { computed, onMounted, ref, watch, nextTick } from 'vue'
+import { computed, onMounted, ref, watch, nextTick, type CSSProperties } from 'vue'
 import { addUnit, buildUrlWithParams, isBase64Image, objToStyle, uuid } from '../common/util'
 import { watermarkProps } from './types'
 
@@ -68,7 +68,7 @@ const rootClass = computed(() => {
  * 水印样式
  */
 const rootStyle = computed(() => {
-  const style: Record<string, string | number> = {
+  const style: CSSProperties = {
     opacity: props.opacity,
     backgroundSize: addUnit(props.width + props.gutterX)
   }

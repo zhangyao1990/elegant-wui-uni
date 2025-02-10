@@ -4,7 +4,7 @@
  * @LastEditTime: 2024-01-26 14:00:48
  * @LastEditors: Mr zhang
  * @Description:
- * @FilePath: \elegant-wui-uni\src\uni_modules\elegant-wui-uni\components\composables\useTranslate.ts
+ * @FilePath: /elegant-wui-uni/src/uni_modules/elegant-wui-uni/components/composables/useTranslate.ts
  * 记得注释
  */
 import { camelCase, getPropByPath, isFunction } from '../common/util'

@@ -1,7 +1,7 @@
 @import '../common/abstracts/variable';
 @import '../common/abstracts/mixin';
 @include b(signature) {
-  @include e(context) {
+  @include e(content) {
     justify-content: center;
     align-items: center;
     display: flex;
@@ -10,12 +10,17 @@
     border-radius: $-signature-radius;
     border: $-signature-border;
   }
+  @include e(content-canvas) {
+    width: 100%;
+  }
   @include e(footer) {
-    margin-top: 4px;
+    margin-top: $-signature-footer-margin-top;
     justify-content: flex-end;
     display: flex;
-    &:deep(.wui-button + .wui-button) {
-      margin-left: 4px;
+    :deep() {
+      .wui-button {
+        margin-left: $-signature-button-margin-left;
+      }
     }
   }
 }

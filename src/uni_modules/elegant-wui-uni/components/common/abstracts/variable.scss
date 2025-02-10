@@ -477,7 +477,7 @@ $-overlay-bg: var(--wui-overlay-bg, rgba(0, 0, 0, 0.65)) !default;
 $-overlay-bg-dark: var(--wui-overlay-bg-dark, rgba(0, 0, 0, 0.75)) !default;
 
 /* popup */
-$-popup-close-size: var(--wui-popup-close-size, 18px) !default; // 关闭按钮尺寸
+$-popup-close-size: var(--wui-popup-close-size, 14px) !default; // 关闭按钮尺寸
 $-popup-close-color: var(--wui-popup-close-color, #777) !default; // 关闭按钮颜色
 
 /* progress */

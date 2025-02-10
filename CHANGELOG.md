@@ -1,5 +1,11 @@
 # 更新日志
 
+### [1.6.1](https://github.com/zhangyao1990/elegant-wui-uni/compare/v1.6.0...v1.6.1) (2025-01-20)
+
+### 🐛 Bug Fixes | Bug 修复
+
+- 🐛 修复 Search placeholder 样式丢失的问题
+
 ## [1.6.0](https://github.com/zhangyao1990/elegant-wui-uni/compare/v1.5.1...v1.6.0) (2025-02-10)
 
 ### ✏️ Documentation | 文档

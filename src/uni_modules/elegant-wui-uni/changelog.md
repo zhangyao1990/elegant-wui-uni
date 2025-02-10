@@ -1,11 +1,22 @@
 # 更新日志
 
+### [1.6.1](https://github.com/zhangyao1990/elegant-wui-uni/compare/v1.6.0...v1.6.1) (2025-01-20)
+
+### 🐛 Bug Fixes | Bug 修复
+
+- 🐛 修复 Search placeholder 样式丢失的问题
+
 ## [1.6.0](https://github.com/zhangyao1990/elegant-wui-uni/compare/v1.5.1...v1.6.0) (2025-02-10)
 
 ### ✏️ Documentation | 文档
 
 - ✏️ 常见问题添加 Vue 3.3+使用 defineOptions 设置 styleIsolation 规则的介绍
+- ✏️ 更新组件库互助群二维码
+- ✏️ 添加互助交流 QQ 群 3 群二维码
+- ✏️ 微信小程序演示 demo 提供激励视频广告页面
 - ✏️ 修复 Tooltip 文档显示异常的问题
+- ✏️ 演示 demo 小程序支持分享
+- ✏️ 优化演示 demo 支持在顶部显示对应页面微信小程序的二维码
 - ✏️ 修改自定义样式描述
 
 ### 🐛 Bug Fixes | Bug 修复

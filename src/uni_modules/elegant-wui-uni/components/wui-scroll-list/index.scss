@@ -1,0 +1,32 @@
+@import './../common/abstracts/_mixin.scss';
+@import '../common/abstracts/variable.scss';
+@include b(scroll-list) {
+  padding-bottom: 20rpx;
+  @include e(scroll-view) {
+    display: flex;
+    flex-direction: row;
+  }
+  @include e(content) {
+    display: flex;
+    flex-direction: row;
+  }
+  @include e(indicator) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 30rpx;
+  }
+  @include e(indicator-line) {
+    width: 120rpx;
+    height: 8rpx;
+    border-radius: 200rpx;
+    overflow: hidden;
+    background-color: $-scroll-list-indicator-color;
+  }
+  @include e(indicator-line-bar) {
+    width: 40rpx;
+    height: 8rpx;
+    border-radius: 200rpx;
+    background-color: $-scroll-list-indicator-active-color;
+  }
+}

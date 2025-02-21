@@ -1,0 +1,19 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.json",
+  "compilerOptions": {
+    "verbatimModuleSyntax": true,
+    "noImplicitAny": false, // 是否在表达式和声明上有隐含的any类型时报错
+    "ignoreDeprecations": "5.0",
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "types": ["node", "@dcloudio/types", "mini-types", "@uni-helper/uni-types", "miniprogram-api-typings"],
+    "sourceMap": true
+  },
+  "vueCompilerOptions": {
+    "plugins": ["@uni-helper/uni-types/volar-plugin"]
+  },
+  "exclude": ["node_modules", "unpackage", "src/**/*.nvue"]
+}

@@ -1,0 +1,15 @@
+@import '../common/abstracts/_mixin.scss';
+
+@include b(water-fall) {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+
+  /* 左右两边容器 start */
+  @include e(container) {
+    width: calc(100% / 2);
+    height: fit-content;
+  }
+  /* 左右两边容器 end */
+}

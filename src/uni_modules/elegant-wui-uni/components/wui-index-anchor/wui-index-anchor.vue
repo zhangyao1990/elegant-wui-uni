@@ -13,9 +13,9 @@
 </template>
 
 <script setup lang="ts">
-import { indexAnchorProps } from './type'
+import { indexAnchorProps } from './types'
 import { onMounted, getCurrentInstance, ref, computed } from 'vue'
-import { indexBarInjectionKey } from '../wui-index-bar/type'
+import { indexBarInjectionKey } from '../wui-index-bar/types'
 import { getRect, isDef, uuid } from '../common/util'
 import { useParent } from '../composables/useParent'
 

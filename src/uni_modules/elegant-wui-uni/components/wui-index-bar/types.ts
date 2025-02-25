@@ -10,6 +10,11 @@ export const indexBarProps = {
    */
   sticky: makeBooleanProp(false)
 }
+export interface KeyListRectInfo {
+  top: number
+  height: number
+  index: string
+}
 
 export type IndexBarProps = ExtractPropTypes<typeof indexBarProps>
 

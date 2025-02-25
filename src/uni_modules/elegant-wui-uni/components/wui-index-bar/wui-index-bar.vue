@@ -7,14 +7,25 @@
         <slot></slot>
       </scroll-view>
       <view
+        :id="indexBarKeyId"
         class="wui-index-bar__sidebar"
         @touchstart.stop.prevent="handleTouchStart"
         @touchmove.stop.prevent="handleTouchMove"
         @touchend.stop.prevent="handleTouchEnd"
         @touchcancel.stop.prevent="handleTouchEnd"
       >
-        <view class="wui-index-bar__index" :class="{ 'is-active': item.index === state.activeIndex }" v-for="item in children" :key="item.index">
+        <view
+          class="wui-index-bar__index key-value"
+          :class="{ 'is-active': item.index === state.activeIndex }"
+          v-for="item in children"
+          :key="item.index"
+        >
           {{ item.index }}
+        </view>
+        <!-- 提示框 -->
+        <view v-if="scrollState.touching" class="wui-index-bar__tips-value" :style="{ top: `${state.keyListTipsTopValue}px` }">
+          {{ state.activeIndex }}
+          <view class="wui-index-bar__auxiliary-element" />
         </view>
       </view>
       <!-- #ifdef MP-DINGTALK -->
@@ -24,20 +35,21 @@
 </template>
 
 <script setup lang="ts">
-import type { AnchorIndex } from './type'
-import { indexBarInjectionKey, indexBarProps } from './type'
+import { indexBarInjectionKey, indexBarProps, type KeyListRectInfo, type AnchorIndex } from './types'
 import { ref, getCurrentInstance, onMounted, reactive, nextTick, watch } from 'vue'
 import { getRect, isDef, uuid, pause } from '../common/util'
 import { useChildren } from '../composables/useChildren'
+import { debugWarn } from '../common/error'
 
 const props = defineProps(indexBarProps)
 
 const indexBarId = ref<string>(`indexBar${uuid()}`)
-
+const indexBarKeyId = `indexBarKey${uuid()}`
 const { proxy } = getCurrentInstance()!
 
 const state = reactive({
-  activeIndex: null as AnchorIndex | null
+  activeIndex: null as AnchorIndex | null,
+  keyListTipsTopValue: 0
 })
 
 const { linkChildren, children } = useChildren(indexBarInjectionKey)
@@ -91,8 +103,17 @@ function init() {
 
 onMounted(() => {
   init()
+  // #ifndef APP-PLUS || MP-ALIPAY
+  nextTick(() => {
+    getKeyListNodeInfo()
+  })
+  // #endif
+  // #ifdef APP-PLUS || MP-ALIPAY
+  setTimeout(() => {
+    getKeyListNodeInfo()
+  }, 500)
+  // #endif
 })
-
 function hanleScroll(scrollEvent: any) {
   if (scrollState.touching) {
     return
@@ -100,9 +121,10 @@ function hanleScroll(scrollEvent: any) {
   const { detail } = scrollEvent
   const scrolltop = Math.floor(detail.scrollTop)
   const anchor = children.find((item, index) => {
-    if (!isDef(children[index + 1])) return true
-    if (item.$.exposed!.top.value - offsetTop <= scrolltop && children[index + 1].$.exposed!.top.value - offsetTop > scrolltop) return true
-    return false
+    if (!isDef(children[index + 1])) {
+      return true
+    }
+    return item.$.exposed!.top.value - offsetTop <= scrolltop && children[index + 1].$.exposed!.top.value - offsetTop > scrolltop
   })
   if (isDef(anchor) && state.activeIndex !== anchor.index) {
     state.activeIndex = anchor.index
@@ -121,13 +143,43 @@ function getAnchorByPageY(pageY: number) {
 function handleTouchStart() {
   scrollState.touching = true
 }
-
+let initCount = 0
+const keyListItemRectInfo = ref<KeyListRectInfo[]>([])
+async function getKeyListNodeInfo() {
+  try {
+    const keyListNodeInfo = await getRect(`#${indexBarKeyId}`, false, proxy)
+    const keyListItemNodeInfo = await getRect(`#${indexBarKeyId} .key-value`, true, proxy)
+    initCount = 0
+    let keyListTop = keyListNodeInfo.top || 0
+    keyListItemRectInfo.value = keyListItemNodeInfo.map((item: any, index: number) => {
+      return {
+        top: (item.top || 0) - keyListTop,
+        height: item.height || 0,
+        index: children[index].index
+      }
+    })
+  } catch (err) {
+    if (initCount > 10) {
+      initCount = 0
+      debugWarn('WuiIndexList', `获取索引列表的容器信息失败：${err}`)
+      return
+    }
+    initCount++
+    setTimeout(() => {
+      getKeyListNodeInfo()
+    }, 150)
+  }
+}
 function handleTouchMove(e: TouchEvent) {
   const clientY = e.touches[0].pageY
   if (state.activeIndex === getAnchorByPageY(clientY).index) {
     return
   }
   state.activeIndex = getAnchorByPageY(clientY).index
+  if (keyListItemRectInfo.value?.length) {
+    const keyListRectItem: any = keyListItemRectInfo.value.find((item) => item.index === state.activeIndex)
+    state.keyListTipsTopValue = keyListRectItem.top + keyListRectItem.height / 2
+  }
   setScrollTop(getAnchorByPageY(clientY).$.exposed!.top.value - offsetTop)
 }
 async function handleTouchEnd(e: TouchEvent) {

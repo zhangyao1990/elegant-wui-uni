@@ -126,6 +126,7 @@ export default {
   },
   signature: {
     confirmText: 'OK',
-    clearText: 'Clear'
+    clearText: 'Clear',
+    promptText:'No handwriting Cant be saved'
   }
 }

@@ -37,7 +37,6 @@ export function useToast(selector: string = ''): Toast {
     }) as ToastOptions
     // 开始渲染，并在 duration ms之后执行清除
     timer && clearTimeout(timer)
-    console.log('toastOption.value.duration', toastOption.value)
     if (toastOption.value.duration && toastOption.value.duration > 0) {
       timer = setTimeout(() => {
         timer && clearTimeout(timer)

@@ -43,6 +43,7 @@
           ref="signRef"
           v-if="showSign"
           :showFooter="false"
+          :isRotate="true"
           :pen-color="currentSelectColor"
           @confirm="handleSignConfirm"
           :line-width="6"

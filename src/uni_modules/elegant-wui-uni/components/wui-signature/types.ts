@@ -1,4 +1,11 @@
 import { baseProps, numericProp } from '../common/props'
+export type SignBoardLine = {
+  x: number
+  y: number
+  r: number
+  time: number
+}
+
 export const signatureProps = {
   ...baseProps,
   /**
@@ -97,7 +104,22 @@ export const signatureProps = {
   showFooter: {
     type: Boolean,
     default: true
-  }
+  },
+  /**
+   * 生成签名图片是否旋转
+   * 类型：boolean
+   * 默认值：false
+   */
+  isRotate: {
+    type: Boolean,
+    default: false
+  },
+  /**
+   * 没有笔记时提交提示文案
+   * 类型：string
+   * 默认值：''
+   */
+  promptText: String
 }
 export type SignatureResult = {
   tempFilePath: string

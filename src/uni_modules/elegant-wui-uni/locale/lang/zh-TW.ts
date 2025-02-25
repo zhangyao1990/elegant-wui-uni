@@ -60,6 +60,7 @@ export default {
   },
   signature: {
     confirmText: '確認',
-    clearText: '清空'
+    clearText: '清空',
+    promptText: '沒有筆跡，無法保存',
   }
 }

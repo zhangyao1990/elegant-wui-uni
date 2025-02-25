@@ -47,7 +47,27 @@ $-color-tip: var(--wui-color-tip, #bfbfbf) !default; // 失效、默认提示文
 $-color-border: var(--wui-color-border, #d9d9d9) !default; // 控件边框线 d9d9d9
 $-color-border-light: var(--wui-color-border-light, #e8e8e8) !default; // 分割线颜色 e8e8e8
 $-color-bg: var(--wui-color-bg, #f5f5f5) !default; // 背景色、禁用填充色 f5f5f5
-// 渐变
+
+/* 暗黑模式 */
+$-dark-background: var(--wui-dark-background, #131313) !default;
+$-dark-background2: var(--wui-dark-background2, #1b1b1b) !default;
+$-dark-background3: var(--wui-dark-background3, #141414) !default;
+$-dark-background4: var(--wui-dark-background4, #323233) !default;
+$-dark-background5: var(--wui-dark-background5, #646566) !default;
+$-dark-background6: var(--wui-dark-background6, #380e08) !default;
+$-dark-background7: var(--wui-dark-background7, #707070) !default;
+$-dark-color: var(--wui-dark-color, $-color-white) !default;
+$-dark-color2: var(--wui-dark-color2, #f2270c) !default;
+$-dark-color3: var(--wui-dark-color3, rgba(232, 230, 227, 0.8)) !default;
+$-dark-color-gray: var(--wui-dark-color-gray, $-color-secondary) !default;
+$-dark-border-color: var(--wui-dark-border-color, #3a3a3c) !default;
+
+/* 图形颜色 */
+$-color-icon: var(--wui-color-icon, #d9d9d9) !default; // icon颜色
+$-color-icon-active: var(--wui-color-icon-active, #eee) !default; // icon颜色hover
+$-color-icon-disabled: var(--wui-color-icon-disabled, #a7a7a7) !default; // icon颜色disabled
+
+/* 渐变颜色 */
 $wui-cool-bg-color-1-start: #f5317f;
 $wui-cool-bg-color-1-end: #ff7c6e;
 
@@ -95,25 +115,6 @@ $wui-cool-bg-color-15-end: #ff8331;
 
 $wui-cool-bg-color-16-start: #ed1c24;
 $wui-cool-bg-color-16-end: #fece12;
-
-/* 暗黑模式 */
-$-dark-background: var(--wui-dark-background, #131313) !default;
-$-dark-background2: var(--wui-dark-background2, #1b1b1b) !default;
-$-dark-background3: var(--wui-dark-background3, #141414) !default;
-$-dark-background4: var(--wui-dark-background4, #323233) !default;
-$-dark-background5: var(--wui-dark-background5, #646566) !default;
-$-dark-background6: var(--wui-dark-background6, #380e08) !default;
-$-dark-background7: var(--wui-dark-background7, #707070) !default;
-$-dark-color: var(--wui-dark-color, $-color-white) !default;
-$-dark-color2: var(--wui-dark-color2, #f2270c) !default;
-$-dark-color3: var(--wui-dark-color3, rgba(232, 230, 227, 0.8)) !default;
-$-dark-color-gray: var(--wui-dark-color-gray, $-color-secondary) !default;
-$-dark-border-color: var(--wui-dark-border-color, #3a3a3c) !default;
-
-/* 图形颜色 */
-$-color-icon: var(--wui-color-icon, #d9d9d9) !default; // icon颜色
-$-color-icon-active: var(--wui-color-icon-active, #eee) !default; // icon颜色hover
-$-color-icon-disabled: var(--wui-color-icon-disabled, #a7a7a7) !default; // icon颜色disabled
 
 /*----------------------------------------- Theme color. end -------------------------------------------*/
 

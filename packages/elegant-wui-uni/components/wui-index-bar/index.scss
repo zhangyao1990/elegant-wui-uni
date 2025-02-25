@@ -6,6 +6,13 @@
     @include e(index) {
       color: $-color-white;
     }
+    @include e(tips-value) {
+      color: $-color-white;
+      background-color: $-dark-background5;
+    }
+    @include e(auxiliary-element) {
+      border-color: transparent transparent transparent $-dark-background5;
+    }
   }
 }
 
@@ -35,5 +42,33 @@
     @include when(active) {
       color: $-color-theme;
     }
+  }
+  @include e(tips-value) {
+    position: absolute;
+    top: 0;
+    left: -80rpx;
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 50%;
+    background-color: $-color-gray-3;
+    color: $-color-gray-7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-50%, -50%);
+    font-size: $-fs-big;
+    font-weight: $-fw-medium;
+    line-height: 1;
+  }
+  @include e(auxiliary-element) {
+    position: absolute;
+    height: 0;
+    width: 0;
+    right: 0;
+    top: 50%;
+    border-color: transparent transparent transparent $-color-gray-3;
+    border-width: 30rpx;
+    border-style: solid;
+    transform: translate(47rpx, -50%);
   }
 }

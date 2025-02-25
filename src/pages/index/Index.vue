@@ -36,13 +36,15 @@
 </template>
 <script lang="ts" setup>
 import { ref } from 'vue'
+import { onShareAppMessage, onShareTimeline } from '@dcloudio/uni-app'
+
 const imgModules: any = import.meta.glob('../../assets/images/*.png', { eager: true })
 
 const list = ref([
   {
     id: 'widget',
     name: '基础组件',
-    subPackages:'pages-base',
+    subPackages: 'pages-base',
     open: false,
     icon: imgModules['../../assets/images/icon_nav_widget.png'].default,
     pages: [
@@ -419,6 +421,21 @@ const titleFilter = (value: string) => {
   }
   return newString
 }
+// 分享
+onShareAppMessage(() => {
+  return {
+    title: '',
+    imageUrl: ''
+  }
+})
+// 朋友圈
+onShareTimeline(() => {
+  return {
+    title: '',
+    query: '', //'share=' + state.share, // 可不填 传递的参数，只能是这种格式
+    imageUrl: ''
+  }
+})
 </script>
 
 <style lang="scss" scoped>

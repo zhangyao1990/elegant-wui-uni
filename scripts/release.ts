@@ -68,8 +68,6 @@ inquirer
     }
     // 生成日志
     execSync('pnpm build:changelog')
-    // 生成npm文件
-    execSync('pnpm build-uni')
     // 更新版本
     const file = readFileSync(path.resolve(__dirname, '../package.json'))
     const packageJson = JSON.parse(file.toString())
@@ -82,6 +80,8 @@ inquirer
     const tarfetPackageJson = require('../src/uni_modules/elegant-wui-uni/package.json')
     tarfetPackageJson.version = newVersion
     writeFileSync(path.resolve(src, 'package.json'), JSON.stringify(tarfetPackageJson))
+    // 生成npm文件
+    execSync('pnpm build-uni')
     // 生成制品
     execSync('pnpm build:theme-vars')
     execSync('pnpm lint')

@@ -37,6 +37,7 @@
     </view>
     <wui-toast selector="wui-signature" />
   </view>
+  <canvas style="position: fixed; left: 9999px; bottom: 9999px" canvas-id="canvasRotateId"></canvas>
 </template>
 
 <script lang="ts">
@@ -50,9 +51,9 @@ export default {
 }
 </script>
 <script lang="ts" setup>
-import { computed, getCurrentInstance, onBeforeMount, onMounted, reactive, ref, watch, type CSSProperties, nextTick } from 'vue'
+import { computed, getCurrentInstance, onBeforeMount, onMounted, reactive, ref, watch, type CSSProperties } from 'vue'
 import { addUnit, getRect, isDef, objToStyle, uuid } from '../common/util'
-import { signatureProps, type SignatureExpose, type SignatureResult } from './types'
+import { signatureProps, type SignatureExpose, type SignatureResult, type SignBoardLine } from './types'
 import wuiToast from '../wui-toast/wui-toast.vue'
 import { useTranslate } from '../composables/useTranslate'
 // #ifdef MP-WEIXIN
@@ -102,6 +103,8 @@ const canvasStyle = computed(() => {
 })
 
 const disableScroll = computed(() => props.disableScroll)
+// 线条集合
+let lines: SignBoardLine[] = []
 
 /* 开始画线 */
 const startDrawing = (e: TouchEvent) => {
@@ -120,6 +123,19 @@ const stopDrawing = (e: TouchEvent) => {
   if (ctx) {
     ctx.beginPath()
     ctx.draw(true)
+    const touches = e.changedTouches[0] as any
+    const point: { x: number; y: number } = {
+      x: touches.x,
+      y: touches.y
+    }
+
+    // 一笔结束，保存笔迹的坐标点，清空，当前笔迹
+    lines.unshift({
+      x: point.x,
+      y: point.y,
+      r: 0,
+      time: Date.now()
+    })
   }
   emit('end', e)
 }
@@ -132,6 +148,7 @@ const initCanvas = () => {
       ctx.fillStyle = props.backgroundColor
       ctx.fillRect(0, 0, canvasState.canvasWidth, canvasState.canvasHeight)
       ctx.draw()
+      lines = []
     }
   })
 }
@@ -146,6 +163,7 @@ const clear = () => {
       ctx.fillRect(0, 0, canvasWidth, canvasHeight)
     }
     ctx.draw()
+    lines = []
   }
   emit('clear')
 }
@@ -224,7 +242,6 @@ function getContext() {
 function setcanvasState(width: number, height: number) {
   canvasState.canvasHeight = height * pixelRatio.value
   canvasState.canvasWidth = width * pixelRatio.value
-  console.log('canvasState', canvasState)
 }
 
 /* 设置线段 */
@@ -243,7 +260,13 @@ function setLine() {
  */
 function canvasToImage() {
   const { fileType, quality, exportScale } = props
-  const { canvasWidth, canvasHeight } = canvasState
+  const { canvasWidth, canvasHeight, ctx } = canvasState
+  if (!lines.length || !ctx) {
+    toast.show({
+      msg: props.promptText || translate('promptText')
+    })
+    return
+  }
   uni.canvasToTempFilePath(
     {
       width: canvasWidth * exportScale,
@@ -254,17 +277,21 @@ function canvasToImage() {
       quality,
       canvasId: canvasId.value,
       canvas: canvas,
-      success: (res) => {
-        const result: SignatureResult = {
-          tempFilePath: res.tempFilePath,
-          width: (canvasWidth * exportScale) / pixelRatio.value,
-          height: (canvasHeight * exportScale) / pixelRatio.value,
-          success: true
+      success: (res: any) => {
+        if (props.isRotate) {
+          generateRotateImage(res.tempFilePath)
+        } else {
+          const result: SignatureResult = {
+            tempFilePath: res.tempFilePath,
+            width: (canvasWidth * exportScale) / pixelRatio.value,
+            height: (canvasHeight * exportScale) / pixelRatio.value,
+            success: true
+          }
+          // #ifdef MP-DINGTALK
+          result.tempFilePath = (res as any).filePath
+          // #endif
+          emit('confirm', result)
         }
-        // #ifdef MP-DINGTALK
-        result.tempFilePath = (res as any).filePath
-        // #endif
-        emit('confirm', result)
       },
       fail: () => {
         const result: SignatureResult = {
@@ -279,7 +306,42 @@ function canvasToImage() {
     proxy
   )
 }
-
+function generateRotateImage(tempFilePaths: any) {
+  uni.getImageInfo({
+    src: tempFilePaths,
+    success: (res1) => {
+      let canvasContext = uni.createCanvasContext('canvasRotateId', proxy)
+      let rate = res1.height / res1.width
+      let width = 300 / rate
+      let height = 300
+      canvasContext.translate(height / 2, width / 2)
+      canvasContext.rotate((270 * Math.PI) / 180)
+      canvasContext.drawImage(res1.path, -width / 2, -height / 2, width, height)
+      canvasContext.draw(false, (data) => {
+        uni.canvasToTempFilePath(
+          {
+            canvasId: 'canvasRotateId',
+            fileType: 'png',
+            quality: 1,
+            success(res2) {
+              const result: SignatureResult = {
+                tempFilePath: res2.tempFilePath,
+                width: (width * props.exportScale) / pixelRatio.value,
+                height: (height * props.exportScale) / pixelRatio.value,
+                success: true
+              }
+              // #ifdef MP-DINGTALK
+              result.tempFilePath = (res2 as any).filePath
+              // #endif
+              emit('confirm', result)
+            }
+          },
+          proxy
+        )
+      })
+    }
+  })
+}
 defineExpose<SignatureExpose>({
   clear,
   confirm: confirmSignature

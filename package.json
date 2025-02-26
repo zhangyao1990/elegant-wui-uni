@@ -57,7 +57,7 @@
     "build:changelog": "esno ./scripts/changelog.ts",
     "deploy": "esno ./scripts/deploy.ts",
     "build:theme-vars": "esno ./scripts/buildThemeVars.ts",
-    "build-uni": "esno ./scripts/uni/build.ts",
+    "build:uni": "esno ./scripts/uni/build.ts",
     "publish:ci": "esno ./scripts/publish.ts",
     "commit": "git add -A && git-cz"
   },

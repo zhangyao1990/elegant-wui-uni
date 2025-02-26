@@ -81,7 +81,7 @@ inquirer
     tarfetPackageJson.version = newVersion
     writeFileSync(path.resolve(src, 'package.json'), JSON.stringify(tarfetPackageJson))
     // 生成npm文件
-    execSync('pnpm build-uni')
+    execSync('pnpm build:uni')
     // 生成制品
     execSync('pnpm build:theme-vars')
     execSync('pnpm lint')

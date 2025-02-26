@@ -126,6 +126,7 @@ export default {
   },
   signature: {
     confirmText: '确认',
-    clearText: '清空'
+    clearText: '清空',
+    promptText:'没有笔迹，无法保存'
   }
 }

@@ -2,8 +2,13 @@
   <page-wraper>
     <view class="container">
       <view v-for="index in num" :key="index" class="list-item">
-        <image src="https://img10.360buyimg.com/jmadvertisement/jfs/t1/70325/36/14954/36690/5dcd3e3bEee5006e0/aed1ccf6d5ffc764.png" />
-        <view class="right">这是一条测试{{ index + 1 }}</view>
+        <image
+          class="list-item__img"
+          src="https://img10.360buyimg.com/jmadvertisement/jfs/t1/70325/36/14954/36690/5dcd3e3bEee5006e0/aed1ccf6d5ffc764.png"
+        />
+        <view class="right">
+          <view>阿拉斯加犬{{ index }}</view>
+        </view>
       </view>
       <wui-loadmore :state="state" @reload="loadmore" />
     </view>
@@ -73,6 +78,7 @@ image {
   width: 120px;
   height: 78px;
   margin-right: 15px;
+  border-radius: 8px;
 }
 .right {
   -webkit-box-flex: 1;

@@ -310,7 +310,6 @@ function generateRotateImage(tempFilePaths: any) {
   uni.getImageInfo({
     src: tempFilePaths,
     success: (res1) => {
-      console.log(res1)
       let canvasContext = uni.createCanvasContext('canvasRotateId', proxy)
       let rate = res1.height / res1.width
       let width = 300 / rate
@@ -325,7 +324,6 @@ function generateRotateImage(tempFilePaths: any) {
             fileType: 'png',
             quality: 1,
             success(res2) {
-              console.log(res2)
               const result: SignatureResult = {
                 tempFilePath: res2.tempFilePath,
                 width: (width * props.exportScale) / pixelRatio.value,

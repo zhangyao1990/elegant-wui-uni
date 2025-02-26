@@ -83,23 +83,23 @@ function changeDisabled() {
 
 ## Attributes
 
-| 参数            | 说明                                                                                                                                                               | 类型    | 可选值 | 默认值  | 最低版本         |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------- | ------ | ------- | ---------------- |
-| penColor        | 签名笔颜色                                                                                                                                                         | String  | --     | #000000 | --               |
-| lineWidth       | 签名笔宽度                                                                                                                                                         | Number  | --     | 2       | --               |
-| height          | 画布的高度                                                                                                                                                         | Number  | --     | 200     | --               |
-| width           | 画布的宽度                                                                                                                                                         | Number  | --     | 300     | --               |
-| clearText       | 清空按钮的文本                                                                                                                                                     | String  | --     | 清空    | --               |
-| confirmText     | 确认按钮的文本                                                                                                                                                     | String  | --     | 确认    | --               |
-| fileType        | 目标文件的类型，[uni.canvasToTempFilePath 属性介绍](https://uniapp.dcloud.net.cn/api/canvas/canvasToTempFilePath.html)                                             | String  | --     | png     | --               |
-| quality         | 图片的质量，取值范围为 `(0, 1]`，不在范围内时当作 1.0 处理，[uni.canvasToTempFilePath 属性介绍](https://uniapp.dcloud.net.cn/api/canvas/canvasToTempFilePath.html) | Number  | --     | 1       | --               |
-| exportScale     | 导出图片的缩放比例                                                                                                                                                 | Number  | --     | 1       | --               |
-| disabled        | 是否禁用签名板                                                                                                                                                     | Boolean | --     | false   | --               |
-| backgroundColor | 画板的背景色                                                                                                                                                       | String  | --     | --      | --               |
-| disableScroll   | 是否禁用画布滚动                                                                                                                                                   | Boolean | --     | true    | --               |
-| showFooter      | 是否显示 Footer                                                                                                                                                    | Boolean | --     | true    | --               |
-| isRotate        | 生成签名图片是否旋转                                                                                                                                               | Boolean | --     | false   | $LOWEST_VERSION$ |
-| promptText      | 没有笔记时提交提示文案                                                                                                                                             | String  | --     | ''      | $LOWEST_VERSION$ |
+| 参数            | 说明                                                                                                                                                               | 类型    | 可选值 | 默认值  | 最低版本 |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------- | ------ | ------- | -------- |
+| penColor        | 签名笔颜色                                                                                                                                                         | String  | --     | #000000 | -        |
+| lineWidth       | 签名笔宽度                                                                                                                                                         | Number  | --     | 2       | -        |
+| height          | 画布的高度                                                                                                                                                         | Number  | --     | 200     | -        |
+| width           | 画布的宽度                                                                                                                                                         | Number  | --     | 300     | -        |
+| clearText       | 清空按钮的文本                                                                                                                                                     | String  | --     | 清空    | -        |
+| confirmText     | 确认按钮的文本                                                                                                                                                     | String  | --     | 确认    | -        |
+| fileType        | 目标文件的类型，[uni.canvasToTempFilePath 属性介绍](https://uniapp.dcloud.net.cn/api/canvas/canvasToTempFilePath.html)                                             | String  | --     | png     | -        |
+| quality         | 图片的质量，取值范围为 `(0, 1]`，不在范围内时当作 1.0 处理，[uni.canvasToTempFilePath 属性介绍](https://uniapp.dcloud.net.cn/api/canvas/canvasToTempFilePath.html) | Number  | --     | 1       | -        |
+| exportScale     | 导出图片的缩放比例                                                                                                                                                 | Number  | --     | 1       | -        |
+| disabled        | 是否禁用签名板                                                                                                                                                     | Boolean | --     | false   | -        |
+| backgroundColor | 画板的背景色                                                                                                                                                       | String  | --     | --      | -        |
+| disableScroll   | 是否禁用画布滚动                                                                                                                                                   | Boolean | --     | true    | -        |
+| showFooter      | 是否显示 Footer                                                                                                                                                    | Boolean | --     | true    | -        |
+| isRotate        | 生成签名图片是否旋转                                                                                                                                               | Boolean | --     | false   | -        |
+| promptText      | 没有笔记时提交提示文案                                                                                                                                             | String  | --     | ''      | -        |
 
 ## Slot
 

@@ -4,7 +4,7 @@
  * @LastEditTime: 2024-11-06 23:50:08
  * @LastEditors: Mr zhang
  * @Description:
- * @FilePath: \elegant-wui-uni\src\uni_modules\elegant-wui-uni\components\wui-transition\types.ts
+ * @FilePath: /elegant-wui-uni/src/uni_modules/elegant-wui-uni/components/wui-transition/types.ts
  * 记得注释
  */
 import type { ExtractPropTypes, PropType } from 'vue'

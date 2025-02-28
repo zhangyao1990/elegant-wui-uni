@@ -35,7 +35,7 @@ export default {
 <script setup lang="ts">
 import { ref, computed, onMounted, nextTick, getCurrentInstance } from 'vue'
 import { scrollListProps } from './types'
-import { getRect } from '@/uni_modules/elegant-wui-uni/components/common/util'
+import { getRect } from '../common/util'
 const { proxy } = getCurrentInstance() as any
 const props = defineProps(scrollListProps)
 

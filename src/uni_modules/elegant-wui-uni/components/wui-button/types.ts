@@ -4,7 +4,7 @@
  * @LastEditTime: 2024-11-04 21:33:52
  * @LastEditors: Mr zhang
  * @Description:
- * @FilePath: \elegant-wui-uni\src\uni_modules\elegant-wui-uni\components\wui-button\types.ts
+ * @FilePath: /elegant-wui-uni/src/uni_modules/elegant-wui-uni/components/wui-button/types.ts
  * 记得注释
  */
 import type { ExtractPropTypes, PropType } from 'vue'

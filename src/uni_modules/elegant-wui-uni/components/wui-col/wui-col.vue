@@ -4,7 +4,7 @@
  * @LastEditTime: 2024-03-15 16:49:17
  * @LastEditors: Mr zhang
  * @Description: 
- * @FilePath: \elegant-wui-uni\src\uni_modules\elegant-wui-uni\components\wui-col\wui-col.vue
+ * @FilePath: /elegant-wui-uni/src/uni_modules/elegant-wui-uni/components/wui-col/wui-col.vue
  * 记得注释
 -->
 <template>

@@ -4,7 +4,7 @@
  * @LastEditTime: 2024-03-18 16:01:19
  * @LastEditors: Mr zhang
  * @Description:
- * @FilePath: \elegant-wui-uni\src\uni_modules\elegant-wui-uni\components\wui-radio\types.ts
+ * @FilePath: /elegant-wui-uni/src/uni_modules/elegant-wui-uni/components/wui-radio/types.ts
  * 记得注释
  */
 import type { PropType } from 'vue'

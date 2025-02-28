@@ -4,7 +4,7 @@
  * @LastEditTime: 2024-09-19 14:45:29
  * @LastEditors: Mr zhang
  * @Description:
- * @FilePath: \elegant-wui-uni\src\uni_modules\elegant-wui-uni\components\wui-status-tip\types.ts
+ * @FilePath: /elegant-wui-uni/src/uni_modules/elegant-wui-uni/components/wui-status-tip/types.ts
  * 记得注释
  */
 import type { ExtractPropTypes, PropType } from 'vue'

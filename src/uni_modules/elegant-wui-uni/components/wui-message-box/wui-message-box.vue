@@ -56,7 +56,7 @@ export default {
 
 <script lang="ts" setup>
 import wuiPopup from '../wui-popup/wui-popup.vue'
-import wuiButton from '@/uni_modules/elegant-wui-uni/components/wui-button/wui-button.vue'
+import wuiButton from '../wui-button/wui-button.vue'
 import wuiInput from '../wui-input/wui-input.vue'
 import { computed, inject, reactive, ref, watch } from 'vue'
 import { messageBoxProps, type MessageOptionsWithCallBack, type MessageResult } from './types'

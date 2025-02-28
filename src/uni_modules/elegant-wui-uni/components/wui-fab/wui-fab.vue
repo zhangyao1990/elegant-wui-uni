@@ -40,7 +40,7 @@ export default {
 </script>
 
 <script lang="ts" setup>
-import wuiButton from '@/uni_modules/elegant-wui-uni/components/wui-button/wui-button.vue'
+import wuiButton from '../wui-button/wui-button.vue'
 import wuiIcon from '../wui-icon/wui-icon.vue'
 import wuiTransition from '../wui-transition/wui-transition.vue'
 import { type CSSProperties, computed, ref, watch, inject, getCurrentInstance, onBeforeUnmount, onMounted, nextTick } from 'vue'

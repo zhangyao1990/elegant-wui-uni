@@ -4,7 +4,7 @@
  * @LastEditTime: 2024-03-18 14:38:35
  * @LastEditors: Mr zhang
  * @Description:
- * @FilePath: \elegant-wui-uni\src\uni_modules\elegant-wui-uni\components\wui-grid\types.ts
+ * @FilePath: /elegant-wui-uni/src/uni_modules/elegant-wui-uni/components/wui-grid/types.ts
  * 记得注释
  */
 import { type ExtractPropTypes, type InjectionKey } from 'vue'

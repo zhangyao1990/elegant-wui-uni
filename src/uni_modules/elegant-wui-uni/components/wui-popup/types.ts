@@ -4,7 +4,7 @@
  * @LastEditTime: 2024-11-08 12:55:58
  * @LastEditors: Mr zhang
  * @Description:
- * @FilePath: \elegant-wui-uni\src\uni_modules\elegant-wui-uni\components\wui-popup\types.ts
+ * @FilePath: /elegant-wui-uni/src/uni_modules/elegant-wui-uni/components/wui-popup/types.ts
  * 记得注释
  */
 import type { PropType } from 'vue'

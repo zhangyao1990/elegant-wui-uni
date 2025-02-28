@@ -123,7 +123,7 @@ import wuiCheckbox from '../wui-checkbox/wui-checkbox.vue'
 import wuiCheckboxGroup from '../wui-checkbox-group/wui-checkbox-group.vue'
 import wuiRadio from '../wui-radio/wui-radio.vue'
 import wuiRadioGroup from '../wui-radio-group/wui-radio-group.vue'
-import wuiButton from '@/uni_modules/elegant-wui-uni/components/wui-button/wui-button.vue'
+import wuiButton from '../wui-button/wui-button.vue'
 import wuiLoading from '../wui-loading/wui-loading.vue'
 
 import { getCurrentInstance, onBeforeMount, ref, watch, nextTick, computed } from 'vue'

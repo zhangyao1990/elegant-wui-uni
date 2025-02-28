@@ -320,7 +320,7 @@ $-collapse-more-color: var(--wui-collapse-more-color, $-color-theme) !default; /
 
 /* divider */
 $-divider-padding: var(--wui-divider-padding, 0 $-size-side-padding) !default; // 两边间距
-$-divider-margin: var(--wui-divider-margin, 16px 0) !default; // 上下间距
+$-divider-margin: var(--wui-divider-margin, 12px 0) !default; // 上下间距
 $-divider-color: var(--wui-divider-color, rgba(0, 0, 0, 0.45)) !default; // 字体颜色
 $-divider-line-color: var(--wui-divider-line-color, currentColor) !default; // 线条颜色
 $-divider-line-height: var(--wui-divider-line-height, 1px) !default; // 线条高度

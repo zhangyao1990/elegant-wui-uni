@@ -4,7 +4,7 @@
  * @LastEditTime: 2024-11-05 23:17:06
  * @LastEditors: Mr zhang
  * @Description:
- * @FilePath: \elegant-wui-uni\src\uni_modules\elegant-wui-uni\components\wui-message-box\types.ts
+ * @FilePath: /elegant-wui-uni/src/uni_modules/elegant-wui-uni/components/wui-message-box/types.ts
  * 记得注释
  */
 import { baseProps, makeStringProp } from '../common/props'

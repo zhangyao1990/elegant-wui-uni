@@ -4,7 +4,7 @@
  * @LastEditTime: 2024-11-05 23:15:31
  * @LastEditors: Mr zhang
  * @Description:
- * @FilePath: \elegant-wui-uni\src\uni_modules\elegant-wui-uni\components\wui-message-box\index.ts
+ * @FilePath: /elegant-wui-uni/src/uni_modules/elegant-wui-uni/components/wui-message-box/index.ts
  * 记得注释
  */
 import { inject, provide, ref } from 'vue'

@@ -4,7 +4,7 @@
  * @LastEditTime: 2024-03-18 17:23:06
  * @LastEditors: Mr zhang
  * @Description:
- * @FilePath: \elegant-wui-uni\src\uni_modules\elegant-wui-uni\components\wui-steps\types.ts
+ * @FilePath: /elegant-wui-uni/src/uni_modules/elegant-wui-uni/components/wui-steps/types.ts
  * 记得注释
  */
 import { type ExtractPropTypes, type InjectionKey } from 'vue'

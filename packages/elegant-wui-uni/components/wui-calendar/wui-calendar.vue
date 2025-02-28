@@ -120,7 +120,7 @@ export default {
 import wuiIcon from '../wui-icon/wui-icon.vue'
 import wuiCalendarView from '../wui-calendar-view/wui-calendar-view.vue'
 import wuiActionSheet from '../wui-action-sheet/wui-action-sheet.vue'
-import wuiButton from '@/uni_modules/elegant-wui-uni/components/wui-button/wui-button.vue'
+import wuiButton from '../wui-button/wui-button.vue'
 import { ref, computed, watch } from 'vue'
 import { dayjs } from '../common/dayjs'
 import { deepClone, isArray, isEqual, padZero, pause } from '../common/util'

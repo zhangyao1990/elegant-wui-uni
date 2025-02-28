@@ -4,7 +4,7 @@
  * @LastEditTime: 2024-09-20 10:23:38
  * @LastEditors: jiaoxueyan
  * @Description: 
- * @FilePath: \elegant-wui-uni\src\uni_modules\elegant-wui-uni\components\wui-status-tip\wui-status-tip.vue
+ * @FilePath: /elegant-wui-uni/src/uni_modules/elegant-wui-uni/components/wui-status-tip/wui-status-tip.vue
  * 记得注释
 -->
 <template>

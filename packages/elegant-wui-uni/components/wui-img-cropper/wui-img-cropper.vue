@@ -78,7 +78,7 @@ export default {
 
 <script lang="ts" setup>
 import wuiIcon from '../wui-icon/wui-icon.vue'
-import wuiButton from '@/uni_modules/elegant-wui-uni/components/wui-button/wui-button.vue'
+import wuiButton from '../wui-button/wui-button.vue'
 import { computed, getCurrentInstance, ref, watch } from 'vue'
 import { addUnit, objToStyle } from '../common/util'
 import { useTranslate } from '../composables/useTranslate'

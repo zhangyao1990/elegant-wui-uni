@@ -4,7 +4,7 @@
  * @LastEditTime: 2024-03-15 16:55:30
  * @LastEditors: Mr zhang
  * @Description:
- * @FilePath: \elegant-wui-uni\src\uni_modules\elegant-wui-uni\index.ts
+ * @FilePath: /elegant-wui-uni/src/uni_modules/elegant-wui-uni/index.ts
  * 记得注释
  */
 

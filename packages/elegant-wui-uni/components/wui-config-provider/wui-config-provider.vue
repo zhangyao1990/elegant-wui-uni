@@ -4,7 +4,7 @@
  * @LastEditTime: 2024-03-15 17:00:16
  * @LastEditors: Mr zhang
  * @Description: 
- * @FilePath: \elegant-wui-uni\src\uni_modules\elegant-wui-uni\components\wui-config-provider\wui-config-provider.vue
+ * @FilePath: /elegant-wui-uni/src/uni_modules/elegant-wui-uni/components/wui-config-provider/wui-config-provider.vue
  * 记得注释
 -->
 <template>

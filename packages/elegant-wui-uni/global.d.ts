@@ -3,7 +3,7 @@ declare module 'vue' {
   export interface GlobalComponents {
     WuiActionSheet: typeof import('./components/wui-action-sheet/wui-action-sheet.vue')['default']
     WuiBadge: typeof import('./components/wui-badge/wui-badge.vue')['default']
-    WuiButton: typeof import('@/uni_modules/elegant-wui-uni/components/wui-button/wui-button.vue')['default']
+    WuiButton: typeof import('./components/wui-button/wui-button.vue')['default']
     WuiCalendar: typeof import('./components/wui-calendar/wui-calendar.vue')['default']
     WuiCalendarView: typeof import('./components/wui-calendar-view/wui-calendar-view.vue')['default']
     WuiCard: typeof import('./components/wui-card/wui-card.vue')['default']

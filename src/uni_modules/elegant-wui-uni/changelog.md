@@ -1,6 +1,18 @@
 # 更新日志 
 
 
+## [0.2.0](https://github.com/zhangyao1990/elegant-wui-uni/compare/v0.1.0...v0.2.0) (2025-02-28)
+
+
+### ✨ Features | 新功能
+
+* ✨ waterFall组件图片替换，方便微信小程序提审 ([6d980ed](https://github.com/zhangyao1990/elegant-wui-uni/commit/6d980ed721bc0ce42da1bd8eb567d07b0554bc3b))
+
+
+### 🐛 Bug Fixes | Bug 修复
+
+* 🐛 引入组路径调整 ([e7b201d](https://github.com/zhangyao1990/elegant-wui-uni/commit/e7b201d3ac94646a2742d019dd8a3926d71e7059))
+
 ## [0.1.0](https://github.com/zhangyao1990/elegant-wui-uni/compare/v0.0.2...v0.1.0) (2025-02-26)
 
 

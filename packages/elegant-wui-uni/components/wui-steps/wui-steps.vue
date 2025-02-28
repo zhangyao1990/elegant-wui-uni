@@ -4,7 +4,7 @@
  * @LastEditTime: 2024-03-15 13:42:55
  * @LastEditors: Mr zhang
  * @Description: 
- * @FilePath: \elegant-wui-uni\src\uni_modules\elegant-wui-uni\components\wui-steps\wui-steps.vue
+ * @FilePath: /elegant-wui-uni/src/uni_modules/elegant-wui-uni/components/wui-steps/wui-steps.vue
  * 记得注释
 -->
 <template>

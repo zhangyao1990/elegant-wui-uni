@@ -47,7 +47,7 @@
       />
       <view v-if="errorMessage" class="wui-textarea__error-message">{{ errorMessage }}</view>
 
-      <view v-if="readonly" class="wui-textarea__readonly-mask" />
+      <view v-if="props.readonly" class="wui-textarea__readonly-mask" />
       <view class="wui-textarea__suffix">
         <wui-icon v-if="showClear" custom-class="wui-textarea__clear" name="error-fill" @click="handleClear" />
         <view v-if="showWordCount" class="wui-textarea__count">

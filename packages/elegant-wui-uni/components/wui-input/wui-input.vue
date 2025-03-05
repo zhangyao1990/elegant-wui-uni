@@ -50,7 +50,7 @@
           @confirm="handleConfirm"
           @keyboardheightchange="handleKeyboardheightchange"
         />
-        <view v-if="readonly" class="wui-input__readonly-mask" />
+        <view v-if="props.readonly" class="wui-input__readonly-mask" />
         <view v-if="showClear || showPassword || suffixIcon || showWordCount || $slots.suffix" class="wui-input__suffix">
           <wui-icon v-if="showClear" custom-class="wui-input__clear" name="error-fill" @click="handleClear" />
           <wui-icon v-if="showPassword" custom-class="wui-input__icon" :name="isPwdVisible ? 'view' : 'eye-close'" @click="togglePwdVisible" />

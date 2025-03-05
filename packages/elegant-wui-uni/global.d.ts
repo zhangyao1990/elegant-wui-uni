@@ -80,6 +80,7 @@ declare module 'vue' {
     WuiFab: typeof import('./components/wui-fab/wui-fab.vue')['default']
     WuiCountDown: typeof import('./components/wui-count-down/wui-count-down.vue')['default']
     WuiNumberKeyboard: typeof import('./components/wui-number-keyboard/wui-number-keyboard.vue')['default']
+    WuiKeyboard: typeof import('./components/wui-keyboard/wui-keyboard.vue')['default']
     WuiGap: typeof import('./components/wui-gap/wui-gap.vue')['default']
     WuiPasswordInput: typeof import('./components/wui-password-input/wui-password-input.vue')['default']
     WuiForm: typeof import('./components/wui-form/wui-form.vue')['default']

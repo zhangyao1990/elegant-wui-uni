@@ -4,7 +4,7 @@
       <slot v-if="$slots.default"></slot>
       <view
         v-else
-        :class="`wui-calendar__cell ${disabled ? 'is-disabled' : ''} ${readonly ? 'is-readonly' : ''} ${alignRight ? 'is-align-right' : ''} ${
+        :class="`wui-calendar__cell ${disabled ? 'is-disabled' : ''} ${props.readonly ? 'is-readonly' : ''} ${alignRight ? 'is-align-right' : ''} ${
           error ? 'is-error' : ''
         } ${size ? 'is-' + size : ''} ${center ? 'is-center' : ''}`"
       >

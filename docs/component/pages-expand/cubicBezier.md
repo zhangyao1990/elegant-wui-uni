@@ -1,6 +1,6 @@
 <frame/>
 
-# CubicBezier 贝塞尔曲线 <el-tag text style="vertical-align: middle;margin-left:8px;" effect="plain">$LOWEST_VERSION$</el-tag>
+# CubicBezier 贝塞尔曲线 <el-tag text style="vertical-align: middle;margin-left:8px;" effect="plain">0.3.0</el-tag>
 
 可用于加入购物车动画。
 
@@ -54,23 +54,23 @@ bottom: 140
 
 | 参数      | 说明                                                                     | 类型            | 可选值                                         | 默认值 | 最低版本         |
 | --------- | ------------------------------------------------------------------------ | --------------- | ---------------------------------------------- | ------ | ---------------- |
-| direction | 动画方向                                                                 | string          | rt（右上）、rb（右下）、lb（左下）、lt（左上） | lb     | $LOWEST_VERSION$ |
-| top       | 购物车（终点）中心位置 top 值，单位 rpx，direction 值为 rt，lt 时传值    | number / string | -                                              | 100    | $LOWEST_VERSION$ |
-| bottom    | 购物车（终点）中心位置 bottom 值，单位 rpx，direction 值为 rb，lb 时传值 | number / string | -                                              | 100    | $LOWEST_VERSION$ |
-| left      | 购物车（终点）中心位置 left 值，单位 rpx，direction 值为 lb，lt 时传值   | number / string | -                                              | 60     | $LOWEST_VERSION$ |
-| right     | 购物车（终点）中心位置 right 值，单位 rpx，direction 值为 rt，rb 时传值  | number / string | -                                              | 60     | $LOWEST_VERSION$ |
-| navbar    | 页面是否使用了原生导航栏，使用了自定义导航栏时传 false                   | boolean         | -                                              | true   | $LOWEST_VERSION$ |
-| param     | 自定义参数                                                               | number / string | -                                              | 0      | $LOWEST_VERSION$ |
+| direction | 动画方向                                                                 | string          | rt（右上）、rb（右下）、lb（左下）、lt（左上） | lb     | 0.3.0 |
+| top       | 购物车（终点）中心位置 top 值，单位 rpx，direction 值为 rt，lt 时传值    | number / string | -                                              | 100    | 0.3.0 |
+| bottom    | 购物车（终点）中心位置 bottom 值，单位 rpx，direction 值为 rb，lb 时传值 | number / string | -                                              | 100    | 0.3.0 |
+| left      | 购物车（终点）中心位置 left 值，单位 rpx，direction 值为 lb，lt 时传值   | number / string | -                                              | 60     | 0.3.0 |
+| right     | 购物车（终点）中心位置 right 值，单位 rpx，direction 值为 rt，rb 时传值  | number / string | -                                              | 60     | 0.3.0 |
+| navbar    | 页面是否使用了原生导航栏，使用了自定义导航栏时传 false                   | boolean         | -                                              | true   | 0.3.0 |
+| param     | 自定义参数                                                               | number / string | -                                              | 0      | 0.3.0 |
 
 ## Events
 
 | 事件名称 | 说明                         | 参数                 | 最低版本         |
 | -------- | ---------------------------- | -------------------- | ---------------- |
-| click    | 点击目标（加号等）元素时触发 | `{param:自定义参数}` | $LOWEST_VERSION$ |
+| click    | 点击目标（加号等）元素时触发 | `{param:自定义参数}` | 0.3.0 |
 
 ## Slots
 
 | name    | 说明             | 最低版本         |
 | ------- | ---------------- | ---------------- |
-| default | 目标（点击）元素 | $LOWEST_VERSION$ |
-| badge   | 动画元素         | $LOWEST_VERSION$ |
+| default | 目标（点击）元素 | 0.3.0 |
+| badge   | 动画元素         | 0.3.0 |

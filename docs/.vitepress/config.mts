@@ -118,6 +118,9 @@ export default defineConfig({
           {
             text: '数据展示',
             link: '/component/pages-data/badge'
+          }  ,  {
+            text: '拓展组件',
+            link: '/component/pages-expand/cubicBezier'
           }
         ]
       },
@@ -503,7 +506,17 @@ export default defineConfig({
               text: 'Table 表格'
             }
           ]
-        }
+        },
+        {
+          text: '拓展组件',
+          collapsed: false,
+          items: [
+            {
+              link: '/component/pages-expand/cubicBezier',
+              text: 'CubicBezier 贝塞尔曲线'
+            },
+          ]
+        },
       ]
     }
   }

@@ -38,10 +38,12 @@
 </template>
 <script lang="ts">
 export default {
+  name: 'page-wraper',
   options: {
+    multipleSlots: true,
+    styleIsolation: 'shared',
     addGlobalClass: true,
-    virtualHost: true,
-    styleIsolation: 'shared'
+    virtualHost: true
   }
 }
 </script>

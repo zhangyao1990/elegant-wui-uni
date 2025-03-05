@@ -51,8 +51,6 @@ function kebabToCamel(input: string): string {
 function getPath(pathList: any) {
   const pathFirst = pathList[pathList.length - 2]
   const pathLast = kebabToCamel(pathList[pathList.length - 1])
-  console.log('pathFirst', pathFirst)
-  console.log('pathLast', pathLast)
   return `${pathFirst}/${pathLast}/Index`
 }
 </script>

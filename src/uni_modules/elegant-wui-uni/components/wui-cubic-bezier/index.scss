@@ -1,0 +1,37 @@
+@import '../common/abstracts/_mixin.scss';
+@import '../common/abstracts/variable.scss';
+
+@include b(cubic-bezier) {
+  position: relative;
+  @include e(ani-cb-x) {
+    /* #ifdef APP-NVUE */
+    position: fixed;
+    /* #endif */
+    /* #ifndef APP-NVUE */
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: inline-block;
+    z-index: 1008;
+    /* #endif */
+
+    transition-property: transform;
+    transition-duration: 0.5s;
+    transition-timing-function: cubic-bezier(0, 0, 0, 0);
+  }
+  @include e(ani-cb-y) {
+    /*#ifndef APP-NVUE */
+    display: inline-block;
+    /* #endif */
+    transition-property: transform;
+    transition-duration: 0.5s;
+    transition-timing-function: cubic-bezier(0.3, -0.2, 1, 0);
+  }
+  /* #ifdef APP-NVUE */
+  @include e(ani-cb-android) {
+    width: 600rpx;
+    height: 2000px;
+    transition-timing-function: cubic-bezier(0.3, -0.02, 1, 0);
+  }
+  /* #endif */
+}

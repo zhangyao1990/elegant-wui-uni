@@ -315,7 +315,7 @@ const list = ref([
     ]
   },
   {
-    id: 'show',
+    id: 'dataShow',
     name: '数据展示',
     subPackages: 'pages-data',
     open: false,
@@ -398,7 +398,20 @@ const list = ref([
         name: 'WaterFall 瀑布流'
       }
     ]
-  }
+  },
+  {
+    id: 'expand',
+    name: '拓展组件',
+    subPackages: 'pages-expand',
+    open: false,
+    icon: imgModules['../../assets/images/icon_nav_expand.png'].default,
+    pages: [
+      {
+        id: 'cubicBezier',
+        name: 'CubicBezier 贝塞尔曲线'
+      },
+    ]
+  },
 ])
 /**
  * 随机获取酷炫背景对应的类
@@ -500,7 +513,7 @@ onShareTimeline(() => {
         align-items: center;
       }
       .nav-link {
-        font-size: 32rpx;
+        font-size: 30rpx;
         line-height: 1.2;
         text-transform: capitalize;
         padding: 0 10rpx 0 0;

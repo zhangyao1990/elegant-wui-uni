@@ -91,11 +91,11 @@ const isRequired = computed(() => {
     const rules = form.props.rules
     for (const key in rules) {
       if (Object.prototype.hasOwnProperty.call(rules, key) && key === props.prop && Array.isArray(rules[key])) {
-        formRequired = rules[key].some((rule) => rule.required)
+        formRequired = rules[key]?.some((rule) => rule.required)
       }
     }
   }
-  return props.required || props.rules.some((rule) => rule.required) || formRequired
+  return props.required || props.rules?.some((rule) => rule.required) || formRequired
 })
 
 /**

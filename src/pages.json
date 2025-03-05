@@ -919,6 +919,21 @@
           }
         }
       ]
+    },
+    {
+      "root": "pages-expand",
+      "pages": [
+        {
+          "path": "cubicBezier/Index",
+          "name": "cubicBezier",
+          "style": {
+            "mp-alipay": {
+              "allowsBounceVertical": "NO"
+            },
+            "navigationBarTitleText": "CubicBezier 贝塞尔曲线"
+          }
+        }
+      ]
     }
   ],
   // "tabBar": {

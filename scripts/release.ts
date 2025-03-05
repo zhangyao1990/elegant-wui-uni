@@ -6,7 +6,7 @@ import path from 'path'
 const src = path.resolve(__dirname, '../src/uni_modules/elegant-wui-uni')
 
 const oldVersion = require('../package.json').version
-const LOWEST_VERSION = '1.0.0'
+const LOWEST_VERSION = '$LOWEST_VERSION$'
 
 const handleLowestVersion = (dir: string, version: string) => {
   const files = readdirSync(dir)
@@ -46,7 +46,7 @@ inquirer
       default: 'Y'
     }
   ])
-  .then((answers) => {
+  .then((answers: any) => {
     if (!answers['release'] || answers['release'].toLowerCase() != 'y') {
       console.log('🚨 操作取消')
       return
@@ -94,7 +94,7 @@ inquirer
     const tip = 'Run `git push --follow-tags origin ' + branch + '` ' + 'to publish'
     console.log(tip.replace(/\n/g, ''))
   })
-  .catch((error) => {
+  .catch((error: any) => {
     if (error.isTtyError) {
       // Prompt couldn't be rendered in the current environment
     } else {

@@ -1,6 +1,18 @@
 # 更新日志 
 
 
+### [0.3.1](https://github.com/zhangyao1990/elegant-wui-uni/compare/v0.3.0...v0.3.1) (2025-03-10)
+
+
+### 🐛 Bug Fixes | Bug 修复
+
+* 修复在template中使用readonly无法通过vue-ts校验的问题 ([4313b50](https://github.com/zhangyao1990/elegant-wui-uni/commit/4313b50910103b9659754dd9d035e8378304e670))
+
+
+### ⚡ Performance Improvements | 性能优化
+
+* ⚡ wui-icon组件图标地址修改 ([19d3703](https://github.com/zhangyao1990/elegant-wui-uni/commit/19d37031fb00bd46815f3fb91ef149e4b45fea4b))
+
 ## [0.3.0](https://github.com/zhangyao1990/elegant-wui-uni/compare/v0.2.0...v0.3.0) (2025-03-05)
 
 

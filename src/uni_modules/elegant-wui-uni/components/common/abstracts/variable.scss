@@ -842,11 +842,11 @@ $-tabbar-box-shadow: var(
 ) !default; // round类型tabbar阴影
 
 /* tabbar-item */
-$-tabbar-item-title-font-size: var(--wui-tabbar-item-title-font-size, 10px) !default; // tabbar选项文字大小
+$-tabbar-item-title-font-size: var(--wui-tabbar-item-title-font-size, 12px) !default; // tabbar选项文字大小
 $-tabbar-item-title-line-height: var(--wui-tabbar-item-title-line-height, initial) !default; // tabbar选项标题文字行高
 $-tabbar-inactive-color: var(--wui-tabbar-inactive-color, $-color-title) !default; // 标题文字和图标颜色
 $-tabbar-active-color: var(--wui-tabbar-active-color, $-color-theme) !default; // 选中文字和图标颜色
-$-tabbar-item-icon-size: var(--wui-tabbar-item-icon-size, 20px) !default; // tabbar选项图标大小
+$-tabbar-item-icon-size: var(--wui-tabbar-item-icon-size, 22px) !default; // tabbar选项图标大小
 
 /* navbar */
 $-navbar-height: var(--wui-navbar-height, 44px) !default; // navbar高度

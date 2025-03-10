@@ -336,7 +336,6 @@ function handleClear() {
 }
 
 function handleClick(icon: string) {
-  // #ifdef H5
   uni.setClipboardData({
     data: `<wui-icon name="${icon}" size="22px"></wui-icon>`,
     showToast: false,
@@ -348,8 +347,6 @@ function handleClick(icon: string) {
       })
     }
   })
-
-  // #endif
 }
 </script>
 <style lang="scss" scoped>

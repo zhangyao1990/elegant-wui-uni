@@ -1,0 +1,118 @@
+.wui-gallery__wrap {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #000;
+}
+
+.wui-gallery__img-wrap {
+  flex: 1;
+  position: relative;
+  font-size: 0;
+}
+
+.wui-gallery__swiper-item {
+  /* #ifndef APP-NVUE */
+  display: flex;
+  /* #endif */
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.wui-gallery__hidden {
+  /* #ifndef APP-NVUE */
+  display: none;
+  visibility: hidden;
+  /* #endif */
+}
+
+.wui-gallery__show {
+  /* #ifndef APP-NVUE */
+  display: flex;
+  visibility: visible;
+  /* #endif */
+  flex-direction: column;
+}
+
+.wui-gallery__index-wrap {
+  position: absolute;
+  left: 0;
+  right: 0;
+  /* #ifndef APP-NVUE */
+  display: flex;
+  /* #endif */
+  align-items: center;
+  justify-content: center;
+}
+
+.wui-gallery__index {
+  /* #ifndef APP-NVUE */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* #endif */
+  font-size: 34rpx;
+  line-height: 34rpx;
+  color: #fff;
+  text-align: center;
+  font-weight: normal;
+  padding: 6rpx 20rpx;
+  border-radius: 100px;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.wui-gallery__descr-wrap {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(17, 17, 17, 0.6);
+  /* #ifndef APP-NVUE || MP-TOUTIAO */
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+  /* #endif */
+}
+
+/* #ifdef APP-NVUE || MP-TOUTIAO */
+.wui-gallery__weex-safe {
+  padding-bottom: 34px;
+}
+
+/* #endif */
+
+.wui-gallery__descr {
+  flex: 1;
+  font-size: 30rpx;
+  color: #fff;
+  font-weight: normal;
+  padding: 26rpx 32rpx;
+  /* #ifndef APP-NVUE */
+  display: block;
+  box-sizing: border-box;
+  z-index: 10;
+  /* #endif */
+}
+
+.wui-gallery__text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* #ifndef APP-NVUE */
+  white-space: nowrap;
+  /* #endif */
+  /* #ifdef APP-NVUE */
+  lines: 1;
+  /* #endif */
+}
+
+.wui-gallery__img {
+  /* #ifndef APP-NVUE */
+  width: 100%;
+  /* #endif */
+  /* #ifdef APP-NVUE */
+  width: 750rpx;
+  /* #endif */
+  flex: 1;
+}

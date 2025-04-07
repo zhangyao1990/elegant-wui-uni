@@ -41,7 +41,7 @@
     "build:quickapp-webview-union": "uni build -p quickapp-webview-union",
     "type-check": "vue-tsc --noEmit",
     "docs:serve": "vitepress serve docs",
-    "dev:docs": "vitepress dev docs --port 5173 --host",
+    "dev:docs": "vitepress dev docs --port 5178 --host",
     "preinstall": "npx only-allow pnpm",
     "prepare": "husky install",
     "lint": "eslint --fix --ext .js,.vue,.ts src",

@@ -77,14 +77,14 @@
 
 ## Attributes
 
-| 参数 | 说明 | 类型 | 可选值 | 默认值 | 最低版本 |
-| -------------------- | ---------------- | --------------- | ------ | ------ | |
-| indicator | 是否显示指示器 | boolean | - | true | - |
-| indicatorWidth | 指示器宽度 | string / number | - | 60 | - |
-| indicatorBarWidth | 指示器滑块宽度 | string / number | - | 20 | - |
-| indicatorColor | 指示器颜色 | string | - | - | - |
-| indicatorActiveColor | 指示器滑块颜色 | string | - | - | - |
-| indicatorStyle | 指示器自定义样式 | string | - | - | - |
+| 参数                 | 说明             | 类型            | 可选值 | 默认值 | 最低版本 |
+| -------------------- | ---------------- | --------------- | ------ | ------ | -------- |
+| indicator            | 是否显示指示器   | boolean         | -      | true   | -        |
+| indicatorWidth       | 指示器宽度       | string / number | -      | 60     | -        |
+| indicatorBarWidth    | 指示器滑块宽度   | string / number | -      | 20     | -        |
+| indicatorColor       | 指示器颜色       | string          | -      | -      | -        |
+| indicatorActiveColor | 指示器滑块颜色   | string          | -      | -      | -        |
+| indicatorStyle       | 指示器自定义样式 | string          | -      | -      | -        |
 
 ## Slot
 

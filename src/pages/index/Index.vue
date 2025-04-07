@@ -354,6 +354,10 @@ const list = ref([
         name: 'Img 图片'
       },
       {
+        id: 'gallery',
+        name: 'Gallery 画廊'
+      },
+      {
         id: 'imgCropper',
         name: 'imgCropper 图片裁剪'
       },

@@ -164,7 +164,7 @@ const { theme, toggleTheme } = useTheme()
 
 ## 外部样式类
 
-| 类名 | 说明 | 最低版本 |
-| ------------ | ---------- | |
-| custom-class | 根节点样式 | - |
-| custom-style | 根节点样式 | - |
+| 类名         | 说明       | 最低版本 |
+| ------------ | ---------- | -------- |
+| custom-class | 根节点样式 | -        |
+| custom-style | 根节点样式 | -        |

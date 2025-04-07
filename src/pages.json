@@ -789,6 +789,16 @@
           }
         },
         {
+          "path": "gallery/Index",
+          "name": "gallery",
+          "style": {
+            "mp-alipay": {
+              "allowsBounceVertical": "NO"
+            },
+            "navigationBarTitleText": "Gallery 画廊"
+          }
+        },
+        {
           "path": "imgCropper/Index",
           "name": "imgCropper",
           "style": {

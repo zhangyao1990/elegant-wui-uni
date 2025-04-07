@@ -460,6 +460,9 @@ export default defineConfig({
             {
               link: '/component/pages-data/img',
               text: 'Img 图片'
+            },      {
+              link: '/component/pages-data/gallery',
+              text: 'Gallery 画廊'
             },
             {
               link: '/component/pages-data/img-cropper',

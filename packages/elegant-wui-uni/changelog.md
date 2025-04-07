@@ -1,6 +1,13 @@
 # 更新日志 
 
 
+### [0.3.3](https://github.com/zhangyao1990/elegant-wui-uni/compare/v0.3.2...v0.3.3) (2025-04-07)
+
+
+### ✨ Features | 新功能
+
+* ✨ 新增Gallery画廊组件 ([0fa896f](https://github.com/zhangyao1990/elegant-wui-uni/commit/0fa896f7266644573ecff341ec5bb6ac0663389d))
+
 ### [0.3.2](https://github.com/zhangyao1990/elegant-wui-uni/compare/v0.3.1...v0.3.2) (2025-03-10)
 
 ### [0.3.1](https://github.com/zhangyao1990/elegant-wui-uni/compare/v0.3.0...v0.3.1) (2025-03-10)

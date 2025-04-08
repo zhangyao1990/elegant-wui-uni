@@ -14,10 +14,14 @@
 
 ```html
 <page-wraper>
-  <demo-block title="基本用法" transparent>
-    <wui-button type="success" @click="showGallery">基础用法</wui-button>
+  <demo-block title="基本用法">
+    <view class="gallery-img-box">
+      <template v-for="(item,index) in urls" :key="index">
+        <image @click="showGallery(index)" class="gallery-img" :src="item" />
+      </template>
+    </view>
   </demo-block>
-  <wui-gallery :urls="urls" :show="show" @hide="hideGallery"></wui-gallery>
+  <wui-gallery :urls="urls" :show="show" :current="current" @hide="hideGallery"></wui-gallery>
 </page-wraper>
 ```
 
@@ -36,21 +40,24 @@ function hideGallery() {
   show.value = false
 }
 ```
+
 ```js
 // urls 数据格式说明
 
 //第一种格式，字符串数组
-urls:['https://specialdisease-oss.gjwlyy.com/prileImg/1654065014280_.jpg']
+urls: ['https://specialdisease-oss.gjwlyy.com/prileImg/1654065014280_.jpg']
 
 //第二种格式，以下为约定属性，其他属性值可自行扩展
-urls:[{
-	//图片链接地址
-	src: 'https://specialdisease-oss.gjwlyy.com/prileImg/1654065014280_.jpg',
-	//文字描述，可选
-	descr: 'wlyyui 是一套基于uni-app开发的组件化、可复用、易扩展、低耦合的跨平台移动端UI 组件库。'
-}]
-
+urls: [
+  {
+    //图片链接地址
+    src: 'https://specialdisease-oss.gjwlyy.com/prileImg/1654065014280_.jpg',
+    //文字描述，可选
+    descr: 'wlyyui 是一套基于uni-app开发的组件化、可复用、易扩展、低耦合的跨平台移动端UI 组件库。'
+  }
+]
 ```
+
 ## Attributes
 
 | 参数     | 说明                         | 类型           | 可选值 | 默认值 | 最低版本 |

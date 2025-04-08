@@ -1,6 +1,8 @@
 # 更新日志 
 
 
+### [0.3.4](https://github.com/zhangyao1990/elegant-wui-uni/compare/v0.3.3...v0.3.4) (2025-04-08)
+
 ### [0.3.3](https://github.com/zhangyao1990/elegant-wui-uni/compare/v0.3.2...v0.3.3) (2025-04-07)
 
 

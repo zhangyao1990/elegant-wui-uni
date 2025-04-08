@@ -12,7 +12,7 @@
 			@change="change"
 			:current="defActive"
 			:autoplay="false"
-			:duration="500"
+			:duration="50"
 		>
 			<swiper-item class="wui-gallery__swiper-item" v-for="(item, index) in imgUrls" :key="index">
 				<image mode="aspectFit" class="wui-gallery__img" :src="item.src"></image>

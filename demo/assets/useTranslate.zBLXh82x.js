@@ -1,0 +1,1 @@
+import{G as s,L as a,H as r,D as t}from"./page-wraper.D3DQHl2q.js";const e=e=>{const n=e?s(e)+".":"";return{translate:(s,...e)=>{const o=a.messages(),p=r(o,n+s);return t(p)?p(...e):p}}};export{e as u};

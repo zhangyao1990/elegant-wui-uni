@@ -35,7 +35,7 @@
 ### 🐛 Bug Fixes | Bug 修复
 
 * 🐛 修复在template中使用readonly无法通过vue-ts校验的问题 ([121fa80](https://github.com/zhangyao1990/elegant-wui-uni/commit/121fa801bbc859db358136a465c87db42439353f))
-* 🐛 添加WdKeyboard的类型声明 ([40974a6](https://github.com/zhangyao1990/elegant-wui-uni/commit/40974a65195f128b6b236c349c48fad311bcad3f))
+* 🐛 添加WuiKeyboard的类型声明 ([40974a6](https://github.com/zhangyao1990/elegant-wui-uni/commit/40974a65195f128b6b236c349c48fad311bcad3f))
 
 ## [0.2.0](https://github.com/zhangyao1990/elegant-wui-uni/compare/v0.1.0...v0.2.0) (2025-02-28)
 

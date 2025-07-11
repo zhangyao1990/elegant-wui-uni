@@ -144,7 +144,7 @@ function handleBackHome() {
 }
 ```
 
-## Tabbar Attributes
+## Navbar Attributes
 
 | 参数             | 说明                                           | 类型    | 可选值      | 默认值 | 最低版本 |
 | ---------------- | ---------------------------------------------- | ------- | ----------- | ------ | -------- |
@@ -160,21 +160,21 @@ function handleBackHome() {
 | leftDisabled     | 禁用左侧按钮，禁用时透明度降低，且无法点击     | boolean | true, false | false  | -        |
 | rightDisabled    | 禁用右侧按钮，禁用时透明度降低，且无法点击     | boolean | true, false | false  | -        |
 
-## Tabbar Events
+## Navbar Events
 
 | 事件名称    | 说明               | 参数 | 最低版本 |
 | ----------- | ------------------ | ---- | -------- |
 | click-left  | 点击左侧按钮时触发 | -    | -        |
 | click-right | 点击右侧按钮时触发 | -    | -        |
 
-## TabbarCapsule Events
+## NavbarCapsule Events
 
 | 事件名称  | 说明                   | 参数 | 最低版本 |
 | --------- | ---------------------- | ---- | -------- |
 | back      | 点击返回按钮时触发     | -    | -        |
 | back-home | 点击返回首页按钮时触发 | -    | -        |
 
-## Tabbar Slot
+## Navbar Slot
 
 | 名称    | 说明                                    | 最低版本 |
 | ------- | --------------------------------------- | -------- |

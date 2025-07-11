@@ -179,7 +179,6 @@ const isRequired = computed(() => {
 const currentLength = computed(() => {
   /**
    * 使用Array.from处理多码元字符以获取正确的长度
-   * @link https://github.com/Moonofweisheng/wot-design-uni/issues/933
    */
   return Array.from(String(formatValue(props.modelValue) || '')).length
 })

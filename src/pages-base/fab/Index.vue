@@ -15,6 +15,10 @@
         <wui-radio-group v-model="position" inline shape="dot">
           <wui-radio value="left-top" custom-class="custom-radio">左上</wui-radio>
           <wui-radio value="right-top" custom-class="custom-radio">右上</wui-radio>
+          <wui-radio value="left-center" custom-class="custom-radio">左中</wui-radio>
+          <wui-radio value="right-center" custom-class="custom-radio">右中</wui-radio>
+          <wui-radio value="top-center" custom-class="custom-radio">上中</wui-radio>
+          <wui-radio value="bottom-center" custom-class="custom-radio">下中</wui-radio>
           <wui-radio value="left-bottom" custom-class="custom-radio">左下</wui-radio>
           <wui-radio value="right-bottom" custom-class="custom-radio">右下</wui-radio>
         </wui-radio-group>
@@ -88,7 +92,9 @@ import { ref } from 'vue'
 const { show: showToast } = useToast()
 const active = ref<boolean>(false)
 const type = ref<'primary' | 'success' | 'info' | 'warning' | 'error' | 'default'>('primary')
-const position = ref<'left-top' | 'right-top' | 'left-bottom' | 'right-bottom'>('left-bottom')
+const position = ref<'left-top' | 'right-top' | 'left-bottom' | 'right-bottom' | 'left-center' | 'right-center' | 'top-center' | 'bottom-center'>(
+  'left-bottom'
+)
 const direction = ref<'top' | 'right' | 'bottom' | 'left'>('top')
 const disabled = ref<boolean>(false)
 const draggable = ref<boolean>(false)

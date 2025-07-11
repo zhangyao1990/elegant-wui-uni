@@ -1,5 +1,5 @@
-@import "../common/abstracts/variable";
-@import "../common/abstracts/mixin";
+@import '../common/abstracts/variable';
+@import '../common/abstracts/mixin';
 
 .wui-theme-dark {
   @include b(input) {
@@ -17,17 +17,12 @@
       }
     }
 
-
     @include e(inner) {
       color: $-dark-color;
 
       &::-webkit-input-placeholder {
         color: $-dark-color3;
       }
-    }
-
-    @include e(placeholder) {
-      color: $-dark-color3;
     }
 
     @include e(count) {
@@ -50,18 +45,16 @@
       line-height: $-cell-line-height;
 
       @include when(border) {
-        @include halfPixelBorder("top", $-input-cell-padding, $-dark-border-color);
+        @include halfPixelBorder('top', $-input-cell-padding, $-dark-border-color);
       }
     }
 
     @include when(disabled) {
-
       .wui-input__inner {
         color: $-dark-color-gray;
         background: transparent;
       }
     }
-
 
     @include e(label) {
       color: $-dark-color;
@@ -77,7 +70,7 @@
 
   &::after {
     position: absolute;
-    content: "";
+    content: '';
     bottom: 0;
     left: 0;
     right: 0;
@@ -112,7 +105,7 @@
         position: absolute;
         left: 0;
         top: 2px;
-        content: "*";
+        content: '*';
         font-size: $-cell-required-size;
         line-height: 1.1;
         color: $-cell-required-color;
@@ -137,7 +130,6 @@
     align-items: center;
   }
 
-
   @include e(prefix) {
     margin-right: $-input-icon-margin;
     font-size: $-input-fs;
@@ -155,7 +147,7 @@
     line-height: initial;
   }
 
-  @include e(error-message){
+  @include e(error-message) {
     color: $-form-item-error-message-color;
     font-size: $-form-item-error-message-font-size;
     line-height: $-form-item-error-message-line-height;
@@ -164,7 +156,6 @@
   }
 
   @include when(disabled) {
-
     .wui-input__inner {
       color: $-input-disabled-color;
       background: transparent;
@@ -172,7 +163,6 @@
   }
 
   @include when(error) {
-
     .wui-input__inner {
       color: $-input-error-color;
       background: transparent;
@@ -222,13 +212,12 @@
       display: none;
     }
 
-
     @include when(center) {
       align-items: center;
     }
 
     @include when(border) {
-      @include halfPixelBorder("top", $-input-cell-padding);
+      @include halfPixelBorder('top', $-input-cell-padding);
     }
   }
 
@@ -247,7 +236,6 @@
       font-size: $-input-fs-large;
     }
 
-
     .wui-input__count {
       font-size: $-input-count-fs-large;
     }
@@ -256,9 +244,7 @@
     :deep(.wui-input__clear) {
       font-size: $-input-icon-size-large;
     }
-
   }
-
 
   @include e(inner) {
     flex: 1;
@@ -289,7 +275,6 @@
     height: 100%;
   }
 
-
   @include edeep(icon) {
     margin-left: $-input-icon-margin;
     font-size: $-input-icon-size;
@@ -318,15 +303,6 @@
     color: $-input-count-current-color;
 
     @include when(error) {
-      color: $-input-error-color;
-    }
-  }
-
-
-  @include e(placeholder) {
-    color: $-input-placeholder-color;
-
-    &.is-error {
       color: $-input-error-color;
     }
   }

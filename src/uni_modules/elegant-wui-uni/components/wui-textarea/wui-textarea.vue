@@ -287,3 +287,6 @@ function onClickPrefixIcon() {
 <style lang="scss" scoped>
 @import './index.scss';
 </style>
+<style lang="scss">
+@import './placeholder.scss';
+</style>

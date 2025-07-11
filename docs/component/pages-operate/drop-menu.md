@@ -34,12 +34,12 @@ const { closeOutside } = useQueue()
 const value1 = ref<number>(0)
 const value2 = ref<number>(0)
 
-const option1 = ref<Record<string, any>>([
+const option1 = ref<Record<string, any>[]>([
   { label: '全部商品', value: 0 },
   { label: '新款商品', value: 1 },
   { label: '活动商品', value: 2 }
 ])
-const option2 = ref<Record<string, any>>([
+const option2 = ref<Record<string, any>[]>([
   { label: '综合', value: 0 },
   { label: '销量', value: 1 },
   { label: '上架时间', value: 2 }
@@ -81,7 +81,7 @@ const slider = ref<SliderInstance>()
 
 const value = ref<number>(0)
 const sliderValue = ref<number>(30)
-const option = ref<Record<string, any>>([
+const option = ref<Record<string, any>[]>([
   { label: '全部商品', value: 0 },
   { label: '新款商品', value: 1 },
   { label: '活动商品', value: 2 }
@@ -144,8 +144,7 @@ import { useMessage } from '@/uni_modules/elegant-wui-uni'
 const messageBox = useMessage()
 
 const value = ref<number>(0)
-
-const option = ref<Record<string, any>>([
+const option = ref<Record<string, any>[]>([
   { label: '全部商品', value: 0 },
   { label: '新款商品', value: 1 },
   { label: '活动商品', value: 2 }

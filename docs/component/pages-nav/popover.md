@@ -26,7 +26,7 @@ Popover 的属性与 [Tooltip](/component/pages-operate/tooltip.html) 很类似�
 import { useQueue } from '@/uni_modules/elegant-wui-uni'
 
 const { closeOutside } = useQueue()
-function handleChange1({ show }) {
+function handleChange({ show }) {
   console.log(show)
 }
 ```

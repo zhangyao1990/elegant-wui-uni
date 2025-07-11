@@ -126,7 +126,7 @@ const tabbar = ref(1)
 通过监听 `change` 事件，可以获取选中标签的值。
 
 ```html
-<wui-tabbar v-model="tabbar" @change="handleChange1" active-color="#ee0a24" inactive-color="#7d7e80">
+<wui-tabbar v-model="tabbar" @change="handleChange" active-color="#ee0a24" inactive-color="#7d7e80">
   <wui-tabbar-item title="首页" icon="home"></wui-tabbar-item>
   <wui-tabbar-item title="分类" icon="cart"></wui-tabbar-item>
   <wui-tabbar-item title="我的" icon="user"></wui-tabbar-item>
@@ -140,7 +140,7 @@ import { ref } from 'vue'
 
 const tabbar = ref(1)
 
-function handleChange1({ value }: { value: string }) {
+function handleChange({ value }: { value: string }) {
   show(`选中标签:${value}`)
 }
 ```

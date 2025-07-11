@@ -21,7 +21,7 @@
 `action` 设置上传的地址；
 
 ```html
-<wui-upload :file-list="fileList1" image-mode="aspectFill" :action="action" @change="handleChange1"></wui-upload>
+<wui-upload :file-list="fileList" image-mode="aspectFill" :action="action" @change="handleChange"></wui-upload>
 ```
 
 ```typescript
@@ -45,7 +45,7 @@ function handleChange({ fileList: files }) {
 上传、删除等操作会都会同步数据，不需要通过 `change` 事件进行绑定
 
 ```html
-<wui-upload v-model:file-list="fileList1" image-mode="aspectFill" :action="action"></wui-upload>
+<wui-upload v-model:file-list="fileList" image-mode="aspectFill" :action="action"></wui-upload>
 ```
 
 ```typescript

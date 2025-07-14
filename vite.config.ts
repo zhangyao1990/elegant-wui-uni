@@ -29,6 +29,7 @@ export default defineConfig({
     // #endif
   ],
   build: {
+    target: 'es2015',
     //   关闭生成map文件 可以达到缩小打包体积
     sourcemap: false, // 这个生产环境一定要关闭，不然打包的产物会很大
     chunkSizeWarningLimit: 4000 // 超过这个值会警告

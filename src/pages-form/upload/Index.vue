@@ -43,6 +43,9 @@
     <demo-block title="禁用">
       <wui-upload :file-list="fileList8" disabled :action="action" @change="handleChange8"></wui-upload>
     </demo-block>
+    <demo-block title="多选">
+      <wd-upload :file-list="fileList2" multiple :action="action" @change="handleChange2"></wd-upload>
+    </demo-block>
     <demo-block title="自定义唤起上传样式并限制上传5张">
       <wui-upload :file-list="fileList9" :action="action" @change="handleChange9" :limit="5">
         <wui-button>自定义唤起样式</wui-button>
@@ -241,15 +244,6 @@ const buildFormData = ({ file, formData, resolve }: any) => {
   resolve(formData)
 }
 
-const handleSuccess1 = (res: any) => {
-  console.log('成功', res)
-}
-const handleFail1 = (res: any) => {
-  console.log('失败', res)
-}
-const handleProgess1 = (res: any) => {
-  console.log('加载中', res)
-}
 
 function handleSuccess(event: any) {
   console.log('成功', event)

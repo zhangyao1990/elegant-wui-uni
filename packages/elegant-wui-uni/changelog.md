@@ -6,7 +6,7 @@
 
 ### ⚠ BREAKING CHANGES
 
-* 🧨 更新了wd-picker，当列为空时重置pickerValue和showValue、更新了wd-
+* 🧨 更新了wui-picker，当列为空时重置pickerValue和showValue、更新了wui-
 pickerview，当列为空时清除formatColumns和selectedIndex、-增强selectWithValue处理空列的情况
 
 ### ✏️ Documentation | 文档
@@ -19,7 +19,7 @@ pickerview，当列为空时清除formatColumns和selectedIndex、-增强selectW
 
 * ✨ img 组件添加 preview-src 属性 ([56214e0](https://github.com/zhangyao1990/elegant-wui-uni/commit/56214e0c5cc29aa889893e6058b5e0c655374d7f))
 * ✨ 废弃 DateTimePicker 开启插槽开关use-label-slot和use-default-slot ([5e4c305](https://github.com/zhangyao1990/elegant-wui-uni/commit/5e4c3053acdd5f14ed61e71438813dee7aea2ded))
-* ✨ 扩展wd-fab组件，增加4个新位置并更新文档 ([dae9783](https://github.com/zhangyao1990/elegant-wui-uni/commit/dae978363c7a628818a05143b210938dd3826077))
+* ✨ 扩展wui-fab组件，增加4个新位置并更新文档 ([dae9783](https://github.com/zhangyao1990/elegant-wui-uni/commit/dae978363c7a628818a05143b210938dd3826077))
 * ✨ 新增 InputNumber 组件支持长按加减功能 ([9d5c115](https://github.com/zhangyao1990/elegant-wui-uni/commit/9d5c115e914f5a4f7565533b17f229695ae8b558))
 
 

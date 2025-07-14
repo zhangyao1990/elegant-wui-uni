@@ -44,6 +44,14 @@ module.exports = {
     '@typescript-eslint/no-this-alias': 'off',
     '@typescript-eslint/no-empty-function': 'off',
     'vue/multi-word-component-names': 'off',
+    '@typescript-eslint/consistent-type-imports': [
+      'error',
+      {
+        prefer: 'type-imports',
+        disallowTypeAnnotations: false,
+        fixStyle: 'inline-type-imports'
+      }
+    ],
     'vue/no-dupe-v-else-if': 'off',
     'vue/no-v-text-v-html-on-component': 'off',
   }

@@ -1,6 +1,5 @@
 <frame/>
-
-# ImgCropper 图片裁剪
+#  ImgCropper 图片裁剪
 
 图片剪裁组件，用于图片裁剪，支持拖拽、缩放、旋转等操作。
 
@@ -53,19 +52,20 @@ function handleCancel(event) {
 
 ## Attributes
 
-| 参数                | 说明                                                                                                                                                                                             | 类型            | 可选值 | 默认值 | 最低版本 |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------- | ------ | ------ | -------- |
-| v-model             | 打开图片裁剪组件                                                                                                                                                                                 | boolean         | -      | false  | -        |
-| img-src             | 图片资源链接                                                                                                                                                                                     | string          | -      | -      | -        |
-| img-width           | 截屏预览图片的初始宽度; `1、设置宽度不设置高度，按照宽度等比缩放；2、如果都不设置，预览时图片大小会根据裁剪框大小进行等比缩放，进行锁边处理；`; string 类型只支持 % 单位，number 类型时单位为 px | number / string | -      | -      | -        |
-| img-height          | 截屏预览图片的初始高度; `1、设置高度不设置宽度，按照高度等比缩放；2、如果都不设置，预览时图片大小会根据裁剪框大小进行等比缩放，进行锁边处理；`; string 类型只支持 % 单位，number 类型时单位为 px | number / string | -      | -      | -        |
-| disabled-rotate     | 禁止图片旋转                                                                                                                                                                                     | boolean         | -      | false  | -        |
-| export-scale        | 设置导出图片尺寸                                                                                                                                                                                 | number          | -      | 2      | -        |
-| max-scale           | 最大缩放倍数                                                                                                                                                                                     | number          | -      | 3      | -        |
-| cancel-button-text  | 取消按钮文案                                                                                                                                                                                     | string          | -      | 取消   | -        |
-| confirm-button-text | 确认按钮文案                                                                                                                                                                                     | string          | -      | 完成   | -        |
-| quality             | 生成的图片质量 [wx.canvasToTempFilePath 属性介绍](https://developers.weixin.qq.com/miniprogram/dev/api/canvas/wx.canvasToTempFilePath.html#%E5%8F%82%E6%95%B0)                                   | number          | 0/1    | 1      | -        |
-| file-type           | 目标文件的类型，[wx.canvasToTempFilePath 属性介绍](https://developers.weixin.qq.com/miniprogram/dev/api/canvas/wx.canvasToTempFilePath.html#%E5%8F%82%E6%95%B0)                                  | string          | -      | png    | -        |
+| 参数                | 说明                                                                                                                                                                                             | 类型            | 可选值 | 默认值 | 最低版本         |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------- | ------ | ------ | ---------------- |
+| v-model             | 打开图片裁剪组件                                                                                                                                                                                 | boolean         | -      | false  | -                |
+| img-src             | 图片资源链接                                                                                                                                                                                     | string          | -      | -      | -                |
+| img-width           | 截屏预览图片的初始宽度; `1、设置宽度不设置高度，按照宽度等比缩放；2、如果都不设置，预览时图片大小会根据裁剪框大小进行等比缩放，进行锁边处理；`; string 类型只支持 % 单位，number 类型时单位为 px | number / string | -      | -      | -                |
+| img-height          | 截屏预览图片的初始高度; `1、设置高度不设置宽度，按照高度等比缩放；2、如果都不设置，预览时图片大小会根据裁剪框大小进行等比缩放，进行锁边处理；`; string 类型只支持 % 单位，number 类型时单位为 px | number / string | -      | -      | -                |
+| disabled-rotate     | 禁止图片旋转                                                                                                                                                                                     | boolean         | -      | false  | -                |
+| export-scale        | 设置导出图片尺寸                                                                                                                                                                                 | number          | -      | 2      | -                |
+| max-scale           | 最大缩放倍数                                                                                                                                                                                     | number          | -      | 3      | -                |
+| cancel-button-text  | 取消按钮文案                                                                                                                                                                                     | string          | -      | 取消   | -                |
+| confirm-button-text | 确认按钮文案                                                                                                                                                                                     | string          | -      | 完成   | -                |
+| quality             | 生成的图片质量 [wx.canvasToTempFilePath 属性介绍](https://developers.weixin.qq.com/miniprogram/dev/api/canvas/wx.canvasToTempFilePath.html#%E5%8F%82%E6%95%B0)                                   | number          | 0/1    | 1      | -                |
+| file-type           | 目标文件的类型，[wx.canvasToTempFilePath 属性介绍](https://developers.weixin.qq.com/miniprogram/dev/api/canvas/wx.canvasToTempFilePath.html#%E5%8F%82%E6%95%B0)                                  | string          | -      | png    | -                |
+| aspect-ratio        | 裁剪框宽高比，格式为 width:height                                                                                                                                                                | string          | -      | 1:1    | $LOWEST_VERSION$ |
 
 ## Events
 
@@ -90,3 +90,66 @@ function handleCancel(event) {
 | 类名         | 说明       | 最低版本 |
 | ------------ | ---------- | -------- |
 | custom-class | 根节点样式 | -        |
+
+## 基本用法
+
+```html
+<!-- 设置3:2的裁剪框 -->
+<wui-img-cropper v-model="show" :img-src="src" aspect-ratio="3:2" @confirm="handleConfirm" @cancel="handleCancel"></wui-img-cropper>
+```
+
+## 裁剪后上传
+
+结合 `useUpload` 可以实现裁剪完成后自动上传图片的功能。
+
+```html
+<wui-img-cropper v-model="show" :img-src="src" @confirm="handleConfirmUpload" @cancel="handleCancel"></wui-img-cropper>
+```
+
+```typescript
+import { ref } from 'vue'
+import { useUpload, useToast } from '@/uni_modules/elegant-wui-uni'
+import { type UploadFileItem } from '@/uni_modules/elegant-wui-uni/components/wui-upload/types'
+
+const { startUpload, UPLOAD_STATUS } = useUpload()
+const { show: showToast } = useToast()
+
+const show = ref(false)
+const src = ref('')
+const imgSrc = ref('')
+
+async function handleConfirmUpload(event) {
+  const { tempFilePath } = event
+
+  // 构建上传文件对象
+  const file: UploadFileItem = {
+    url: tempFilePath,
+    status: UPLOAD_STATUS.PENDING,
+    percent: 0,
+    uid: new Date().getTime()
+  }
+
+  try {
+    // 开始上传
+    await startUpload(file, {
+      action: 'https://your-upload-url',
+      onSuccess() {
+        imgSrc.value = tempFilePath
+        showToast({
+          msg: '上传成功'
+        })
+      },
+      onError() {
+        showToast({
+          msg: '上传失败'
+        })
+      },
+      onProgress(res) {
+        console.log('上传进度:', res.progress)
+      }
+    })
+  } catch (error) {
+    console.error('上传失败:', error)
+  }
+}
+```

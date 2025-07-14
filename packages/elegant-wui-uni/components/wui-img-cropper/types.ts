@@ -57,7 +57,11 @@ export const imgCropperProps = {
   /**
    * 最大缩放
    */
-  maxScale: makeNumberProp(3)
+  maxScale: makeNumberProp(3),
+  /**
+   * 裁剪框宽高比，格式为 width:height
+   */
+  aspectRatio: makeStringProp('1:1')
 }
 
 export type ImgCropperProps = ExtractPropTypes<typeof imgCropperProps>

@@ -1,6 +1,41 @@
 # 更新日志 
 
 
+## [0.4.0](https://github.com/zhangyao1990/elegant-wui-uni/compare/v0.3.5...v0.4.0) (2025-07-14)
+
+
+### ⚡ Performance Improvements | 性能优化
+
+* ⚡ 增强 wui-drop-menu 组件，优化遮罩层闪烁 ([57fe9a9](https://github.com/zhangyao1990/elegant-wui-uni/commit/57fe9a9f5baf8ac18fd75e8310d26655772e4296))
+
+
+### ✏️ Documentation | 文档
+
+* ✏️  badge-props跳转调整 ([81ebcba](https://github.com/zhangyao1990/elegant-wui-uni/commit/81ebcba76966b4e8520106e351069c7aea9726b8))
+* ✏️  优化 WuiConfigProvider 文档，解决组件命名风格问题导致失效问题 ([70c44e8](https://github.com/zhangyao1990/elegant-wui-uni/commit/70c44e81df23e8b76616673ae8667b82d6020bdd))
+
+
+### 🐛 Bug Fixes | Bug 修复
+
+* 🐛 修复 Curtain 幕帘组件 close 事件触发2次的问题 ([70eabcd](https://github.com/zhangyao1990/elegant-wui-uni/commit/70eabcd036003929084de1a892a0ddf158aaba78))
+* 🐛 修复 message-box 配合 layouts 使用全局 message-box 时，切换页面可能会显示上一 ([5c1f3f9](https://github.com/zhangyao1990/elegant-wui-uni/commit/5c1f3f9a035cd84079b28513ff684d3de8e1f955))
+* 🐛 修复 Textarea 设置为 null 时，显示字数限制显示错误问题 ([cfd0809](https://github.com/zhangyao1990/elegant-wui-uni/commit/cfd08094c8ca5b455697b5043352ffdb7dc52db9))
+* 🐛 修复多个 ImgCropper 存在时生成图片异常的问题 ([d522084](https://github.com/zhangyao1990/elegant-wui-uni/commit/d522084f6803b13e57f895d14026de696e9b07de))
+* 🐛 修复部分国际化文本不正确的问题 ([bddbae7](https://github.com/zhangyao1990/elegant-wui-uni/commit/bddbae77b23a22c0a65bfe461df59a326e49f021))
+
+
+### ✨ Features | 新功能
+
+* ✨ grid-item添加hover-class ([2e6fcac](https://github.com/zhangyao1990/elegant-wui-uni/commit/2e6fcac42341a17bafd9020d67a2cbc8a11cd046))
+* ✨ ImgCropper 图片剪裁支持设置裁剪框宽高比 ([5497b26](https://github.com/zhangyao1990/elegant-wui-uni/commit/5497b269a2765d51fccbfd9fb5dede613858b121))
+* ✨ Upload 上传组件支持根据扩展名过滤文件 ([cdb0ecc](https://github.com/zhangyao1990/elegant-wui-uni/commit/cdb0eccbf73f2cd545c769674d9634560e0895e8))
+* ✨ useUpload 添加选择文件的api ([a970641](https://github.com/zhangyao1990/elegant-wui-uni/commit/a970641bfd4b58163a8555f49c7df6a805d04966))
+* ✨ 将 Tabbar 和 Badge 设置为标准盒子模型 ([89ec1f3](https://github.com/zhangyao1990/elegant-wui-uni/commit/89ec1f3d8a768523d2af5346d7111f0d66614d60))
+* ✨ 提供 useUpload hooks 用于便捷上传 ([1912449](https://github.com/zhangyao1990/elegant-wui-uni/commit/1912449d2d7b274f13562386f3f3bda4668b4f18))
+* ✨ 添加input props.type可选类型 ([880c41f](https://github.com/zhangyao1990/elegant-wui-uni/commit/880c41fdde78d47e94d5b1c362bdca2a99cf6664))
+* ✨ 添加组合式API文档并提供相关API ([40141bf](https://github.com/zhangyao1990/elegant-wui-uni/commit/40141bfdaee4638df9ae34d8f60944ed7aa3fcee))
+* ✨ 移除 keyboard 虚拟键盘车牌号模式下不可用的 I、O 键 ([164e09c](https://github.com/zhangyao1990/elegant-wui-uni/commit/164e09c1896365ff57cb70363ea2ec2b74212eb6))
+
 ### [0.3.5](https://github.com/zhangyao1990/elegant-wui-uni/compare/v0.3.4...v0.3.5) (2025-07-14)
 
 

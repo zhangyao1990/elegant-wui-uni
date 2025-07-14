@@ -1,6 +1,18 @@
 # 更新日志 
 
 
+### [0.4.1](https://github.com/zhangyao1990/elegant-wui-uni/compare/v0.4.0...v0.4.1) (2025-07-14)
+
+
+### ✏️ Documentation | 文档
+
+* ✏️  icon地址调整 ([f519cac](https://github.com/zhangyao1990/elegant-wui-uni/commit/f519cac926abf3bf1cbdf78111cbe81a6b468544))
+
+
+### 🐛 Bug Fixes | Bug 修复
+
+* 🐛 修复 Upload 开启 multiple 后只能成功上传最后一个文件的问题 ([027a649](https://github.com/zhangyao1990/elegant-wui-uni/commit/027a649ee0b9d36220587f74af45cdd8085f566d))
+
 ## [0.4.0](https://github.com/zhangyao1990/elegant-wui-uni/compare/v0.3.5...v0.4.0) (2025-07-14)
 
 

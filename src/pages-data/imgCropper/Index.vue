@@ -23,7 +23,7 @@
 
     <demo-block title="自定义裁剪比例" style="text-align: center">
       <view class="profile-grid">
-        <view v-for="(ratio, index) in ['1:1', '3:2', '16:9']" :key="index" class="profile-item">
+        <view v-for="(ratio, index) in ['3:2', '16:9', '16:10']" :key="index" class="profile-item">
           <wui-img-cropper
             v-model="showCustom[index]"
             :img-src="srcCustom[index]"
@@ -36,7 +36,7 @@
           </view>
           <wui-img
             v-if="imgSrcCustom[index]"
-            :width="ratio === '1:1' ? '200px' : '300px'"
+            width="300px"
             :height="getHeight(ratio)"
             :src="imgSrcCustom[index]"
             mode="aspectFit"
@@ -253,13 +253,7 @@ function getHeight(ratio: string): string {
   position: relative;
 }
 
-.profile-item:first-child .img {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-}
-
-.profile-item:nth-child(2) .img {
+.profile-item:nth-child(1) .img {
   height: 200px;
 }
 </style>

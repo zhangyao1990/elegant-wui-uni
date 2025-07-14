@@ -48,8 +48,8 @@
     </view>
     <!-- 绘制的图片canvas -->
     <canvas
-      canvas-id="wui-img-cropper-canvas"
-      id="wui-img-cropper-canvas"
+      :canvas-id="canvasId"
+      :id="canvasId"
       class="wui-img-cropper__canvas"
       :disable-scroll="true"
       :style="`width: ${Number(canvasWidth) * canvasScale}px; height: ${Number(canvasHeight) * canvasScale}px;`"
@@ -80,10 +80,11 @@ export default {
 import wuiIcon from '../wui-icon/wui-icon.vue'
 import wuiButton from '../wui-button/wui-button.vue'
 import { computed, getCurrentInstance, ref, watch } from 'vue'
-import { addUnit, objToStyle } from '../common/util'
+import { addUnit, objToStyle, uuid } from '../common/util'
 import { useTranslate } from '../composables/useTranslate'
 import { imgCropperProps, type ImgCropperExpose } from './types'
 
+const canvasId = ref<string>(`cropper${uuid()}`) // canvas 组件的唯一标识符
 // 延时动画设置
 let CHANGE_TIME: any | null = null
 // 移动节流
@@ -373,7 +374,7 @@ function computeImgSize() {
  */
 function initCanvas() {
   if (!ctx.value) {
-    ctx.value = uni.createCanvasContext('wui-img-cropper-canvas', proxy)
+    ctx.value = uni.createCanvasContext(canvasId.value, proxy)
   }
 }
 
@@ -575,7 +576,7 @@ function canvasToImage() {
       destHeight: Math.round(cutHeight.value * exportScale),
       fileType,
       quality,
-      canvasId: 'wui-img-cropper-canvas',
+      canvasId: canvasId.value,
       success: (res: any) => {
         const result = { tempFilePath: res.tempFilePath, width: cutWidth.value * exportScale, height: cutHeight.value * exportScale }
         // #ifdef MP-DINGTALK

@@ -223,8 +223,8 @@
 
 ## Grid Attributes
 
-| 参数        | 说明                           | 类型    | 可选值 | 默认值                             | 最低版本         |
-| ----------- | ------------------------------ | ------- | ------ |---------------------------------| ---------------- |
+| 参数        | 说明                           | 类型    | 可选值 | 默认值                          | 最低版本         |
+| ----------- | ------------------------------ | ------- | ------ | ------------------------------- | ---------------- |
 | column      | 列数                           | number  | -      | -                               | -                |
 | border      | 是否显示边框                   | boolean | -      | false                           | -                |
 | gutter      | 格子之间的间距，默认单位为`px` | number  | -      | -                               | -                |
@@ -249,7 +249,7 @@
 | use-icon-slot | 是否开启 `GridItem` icon 插槽                                                                                             | boolean        | -                                           | false  | -        |
 | use-text-slot | 是否开启 `GridItem` text 内容插槽                                                                                         | boolean        | -                                           | false  | -        |
 | icon-size     | 图标大小                                                                                                                  | string         | -                                           | 26px   | -        |
-| badge-props   | 自定义徽标的属性，传入的对象会被透传给 [Badge 组件的 props](/component/badge#attributes)                                  | BadgeProps     | -                                           | -      | -        |
+| badge-props   | 自定义徽标的属性，传入的对象会被透传给 [Badge 组件的 props](/component/pages-data/badge#attributes)                       | BadgeProps     | -                                           | -      | -        |
 
 ## GridItem Events
 

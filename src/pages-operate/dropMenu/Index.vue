@@ -1,7 +1,9 @@
 <template>
   <page-wraper>
-    <wui-message-box></wui-message-box>
-    <view class="demo-body" @click="closeOutside">
+    <view @click.stop="">
+      <wui-message-box></wui-message-box>
+    </view>
+    <view class="demo-body">
       <demo-block title="基本用法" transparent>
         <wui-drop-menu>
           <wui-drop-menu-item v-model="value1" :options="option1" @change="handleChange1" />
@@ -61,10 +63,9 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 
-import { useMessage, useQueue } from '@/uni_modules/elegant-wui-uni'
+import { useMessage } from '@/uni_modules/elegant-wui-uni'
 import type { SliderInstance } from '@/uni_modules/elegant-wui-uni/components/wui-slider/types'
 import type { DropMenuItemBeforeToggle } from '@/uni_modules/elegant-wui-uni/components/wui-drop-menu-item/types'
-const { closeOutside } = useQueue()
 const messageBox = useMessage()
 
 const dropMenu = ref()

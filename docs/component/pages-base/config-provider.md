@@ -1,5 +1,3 @@
-<frame/>
-
 # ConfigProvider 全局配置
 
 用于全局配置 `Wui` 组件，提供深色模式、主题定制等能力。
@@ -107,10 +105,10 @@ export default {
 
 ### 在 TypeScript 中使用
 
-在 TypeScript 中定义 `themeVars` 时，建议使用 **elegant-wui-uni** 提供的 **ConfigProviderThemeVars** 类型，可以提供完善的类型提示：
+在 TypeScript 中定义 `themeVars` 时，建议使用 **wui-design-uni** 提供的 **ConfigProviderThemeVars** 类型，可以提供完善的类型提示：
 
 ```ts
-import type { ConfigProviderThemeVars } from 'elegant-wui-uni'
+import type { ConfigProviderThemeVars } from 'wui-design-uni'
 
 const themeVars: ConfigProviderThemeVars = {
   colorTheme: 'red'
@@ -121,19 +119,103 @@ const themeVars: ConfigProviderThemeVars = {
 注意：ConfigProvider 仅影响它的子组件的样式，不影响全局 root 节点。
 :::
 
-编写控制主题组合式函数
+## 全局共享
+
+> 需要配合虚拟根组件([uni-ku-root](https://github.com/uni-ku/root)) 来做全局共享
+
+### 安装
+
+::: code-group
+
+```bash [npm]
+npm i -D @uni-ku/root
+```
+
+```bash [yarn]
+yarn add -D @uni-ku/root
+```
+
+```bash [pnpm]
+pnpm add -D @uni-ku/root
+```
+
+:::
+
+### 引入
+
+- CLI 项目: 直接编辑 根目录下的 vite.config.(js|ts)
+- HBuilderX 项目: 需要在根目录下 创建 vite.config.(js|ts)
 
 ```ts
-// src/hooks/useTheme.ts
+// vite.config.(js|ts)
+
+import { defineConfig } from 'vite'
+import UniKuRoot from '@uni-ku/root'
+import Uni from '@dcloudio/vite-plugin-uni'
+
+export default defineConfig({
+  plugins: [
+    // ...plugins
+    UniKuRoot(),
+    Uni()
+  ]
+})
+```
+
+:::tip
+若存在改变 pages.json 的插件，需要将 UniKuRoot 放置其后
+:::
+
+### 使用
+
+1. 创建根组件并处理全局配置组件
+
+- CLI 项目: 在 **src** 目录下创建下 App.ku.vue
+- HBuilderX 项目: 在 **根** 目录下创建 App.ku.vue
+
+:::tip
+在 App.ku.vue 中标签 `<KuRootView />` 代表指定视图存放位置
+:::
+
+```vue
+<!-- src/App.ku.vue | App.ku.vue -->
+
+<script setup lang="ts">
+import { useTheme } from './composables/useTheme'
+
+const { theme, themeVars } = useTheme({
+  buttonPrimaryBgColor: '#07c160',
+  buttonPrimaryColor: '#07c160'
+})
+</script>
+
+<template>
+  <div>Hello AppKuVue</div>
+  <!-- 需要确保已注册 WuiConfigProvider 组件 -->
+  <wui-config-provider :theme="theme" :theme-vars="themeVars">
+    <KuRootView />
+  </wui-config-provider>
+</template>
+```
+
+2. 编写控制主题组合式函数
+
+```ts
+// src/composables/useTheme.ts
+
 import type { ConfigProviderThemeVars } from 'elegant-wui-uni'
 import { ref } from 'vue'
-const theme = ref<'light' | 'dark'>(false)
+
+const theme = ref<'light' | 'dark'>()
 const themeVars = ref<ConfigProviderThemeVars>()
+
 export function useTheme(vars?: ConfigProviderThemeVars) {
   vars && (themeVars.value = vars)
+
   function toggleTheme(mode?: 'light' | 'dark') {
     theme.value = mode || (theme.value === 'light' ? 'dark' : 'light')
   }
+
   return {
     theme,
     themeVars,
@@ -142,14 +224,17 @@ export function useTheme(vars?: ConfigProviderThemeVars) {
 }
 ```
 
-在任意视图文件中使用切换主题模式
+3. 在任意视图文件中使用切换主题模式
 
 ```vue
 <!-- src/pages/*.vue -->
+
 <script setup lang="ts">
-import { useTheme } from '@/hooks/useTheme'
+import { useTheme } from '@/composables/useTheme'
+
 const { theme, toggleTheme } = useTheme()
 </script>
+
 <template>
   <button @click="toggleTheme">切换主题，当前模式：{{ theme }}</button>
 </template>

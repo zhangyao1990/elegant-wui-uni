@@ -49,10 +49,10 @@ export default {
 </script>
 
 <script lang="ts" setup>
-import wdIcon from '../wui-icon/wui-icon.vue'
-import wdLoading from '../wui-loading/wui-loading.vue'
-import wdOverlay from '../wui-overlay/wui-overlay.vue'
-import wdTransition from '../wui-transition/wui-transition.vue'
+import wuiIcon from '../wui-icon/wui-icon.vue'
+import wuiLoading from '../wui-loading/wui-loading.vue'
+import wuiOverlay from '../wui-overlay/wui-overlay.vue'
+import wuiTransition from '../wui-transition/wui-transition.vue'
 
 import { computed, inject, onBeforeMount, ref, watch, type CSSProperties } from 'vue'
 import base64 from '../common/base64'

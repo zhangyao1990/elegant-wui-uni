@@ -11,6 +11,8 @@
 export { useToast } from './components/wui-toast'
 export { useMessage } from './components/wui-message-box'
 export { useQueue } from './components/composables/useQueue'
+export { useUpload } from './components/composables/useUpload'
+export { useTouch } from './components/composables/useTouch'
 export * from './components/wui-notify'
 
 export { dayjs } from './components/common/dayjs'

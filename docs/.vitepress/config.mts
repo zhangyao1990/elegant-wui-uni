@@ -121,6 +121,9 @@ export default defineConfig({
           }  ,  {
             text: '拓展组件',
             link: '/component/pages-expand/cubicBezier'
+          } , {
+            text: '组合式API',
+            link: '/component/pages-use/use-upload'
           }
         ]
       },
@@ -520,6 +523,15 @@ export default defineConfig({
             },
           ]
         },
+        {
+          text: '组合式API',
+          items: [
+            { text: 'useUpload', link: '/component/pages-use/use-upload' },
+            { text: 'useCountDown', link: '/component/pages-use/use-count-down' },
+            { text: 'useToast', link: '/component/pages-use/use-toast' },
+            { text: 'useMessage', link: '/component/pages-use/use-message' }
+          ]
+        }
       ]
     }
   }

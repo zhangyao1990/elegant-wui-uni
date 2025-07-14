@@ -5,8 +5,8 @@
     custom-class="wui-overlay"
     :duration="duration"
     :custom-style="`z-index: ${zIndex}; ${customStyle}`"
+    :disable-touch-move="lockScroll"
     @click="handleClick"
-    @touchmove.stop.prevent="lockScroll ? noop : ''"
   >
     <slot></slot>
   </wui-transition>
@@ -36,8 +36,6 @@ const emit = defineEmits(['click'])
 function handleClick() {
   emit('click')
 }
-
-function noop() {}
 
 // #ifdef H5
 useLockScroll(() => props.show && props.lockScroll)

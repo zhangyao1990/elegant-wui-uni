@@ -43,10 +43,10 @@
 
 ## Attributes
 
-| 参数        | 说明               | 类型              | 可选值 | 默认值 | 最低版本 |
-| ----------- | ------------------ | ----------------- | ------ | ------ | -------- |
-| show        | 是否展示遮罩层     | `boolean`         | true   | false  | -        |
-| duration    | 动画时长，单位毫秒 | `string / number` | -      | 300    | -        |
-| lockScroll  | 是否锁定滚动       | `boolean`         | false  | true   | -        |
-| zIndex      | 层级               | `number`          | -      | 10     | -        |
-| customStyle | 自定义样式         | `string`          | -      | -      | -        |
+| 参数        | 说明                                             | 类型              | 可选值 | 默认值 | 最低版本 |
+| ----------- | ------------------------------------------------ | ----------------- | ------ | ------ | -------- |
+| show        | 是否展示遮罩层                                   | `boolean`         | true   | false  | -        |
+| duration    | 动画时长，单位毫秒                               | `string / number` | -      | 300    | -        |
+| lockScroll  | 是否锁定背景滚动，锁定时蒙层里的内容也将无法滚动 | `boolean`         | false  | true   | -        |
+| zIndex      | 层级                                             | `number`          | -      | 10     | -        |
+| customStyle | 自定义样式                                       | `string`          | -      | -      | -        |

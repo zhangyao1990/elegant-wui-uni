@@ -1,5 +1,15 @@
 <template>
-  <view v-if="!lazyRender || inited" :class="rootClass" :style="style" @transitionend="onTransitionEnd" @click="handleClick">
+  <view
+    :class="rootClass"
+    :style="style"
+    @transitionend="onTransitionEnd"
+    @click="handleClick"
+    @touchmove.stop.prevent="noop"
+    v-if="isShow && disableTouchMove"
+  >
+    <slot />
+  </view>
+  <view :class="rootClass" :style="style" @transitionend="onTransitionEnd" @click="handleClick" v-else-if="isShow && !disableTouchMove">
     <slot />
   </view>
 </template>
@@ -81,7 +91,9 @@ const style = computed(() => {
 const rootClass = computed(() => {
   return `wui-transition ${props.customClass}  ${classes.value}`
 })
-
+const isShow = computed(() => {
+  return !props.lazyRender || inited.value
+})
 onBeforeMount(() => {
   if (props.show) {
     enter()
@@ -210,6 +222,7 @@ function onTransitionEnd() {
     display.value = false
   }
 }
+function noop() {}
 </script>
 <style lang="scss" scoped>
 @import './index.scss';

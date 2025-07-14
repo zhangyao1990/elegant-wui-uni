@@ -1,7 +1,12 @@
 <template>
   <view :class="`wui-input-number ${customClass} ${disabled ? 'is-disabled' : ''} ${withoutInput ? 'is-without-input' : ''}`" :style="customStyle">
     <!-- 减号按钮 -->
-    <view :class="`wui-input-number__action ${minDisabled || disableMinus ? 'is-disabled' : ''}`" @click="sub">
+    <view
+      :class="`wui-input-number__action ${minDisabled || disableMinus ? 'is-disabled' : ''}`"
+      @click="handleClick('sub')"
+      @touchstart="handleTouchStart('sub')"
+      @touchend.stop="handleTouchEnd"
+    >
       <wui-icon name="decrease" custom-class="wui-input-number__action-icon"></wui-icon>
     </view>
     <!-- 输入框 -->
@@ -21,7 +26,12 @@
       <view class="wui-input-number__input-border"></view>
     </view>
     <!-- 加号按钮 -->
-    <view :class="`wui-input-number__action ${maxDisabled || disablePlus ? 'is-disabled' : ''}`" @click="add">
+    <view
+      :class="`wui-input-number__action ${maxDisabled || disablePlus ? 'is-disabled' : ''}`"
+      @click="handleClick('add')"
+      @touchstart="handleTouchStart('add')"
+      @touchend.stop="handleTouchEnd"
+    >
       <wui-icon name="add" custom-class="wui-input-number__action-icon"></wui-icon>
     </view>
   </view>
@@ -42,12 +52,13 @@ export default {
 import wuiIcon from '../wui-icon/wui-icon.vue'
 import { computed, nextTick, ref, watch } from 'vue'
 import { isDef, isEqual } from '../common/util'
-import { inputNumberProps, InputNumberEventType } from './types'
+import { inputNumberProps, InputNumberEventType, type OperationType } from './types'
 import { callInterceptor } from '../common/interceptor'
 
 const props = defineProps(inputNumberProps)
 const emit = defineEmits(['focus', 'blur', 'change', 'update:modelValue'])
 const inputValue = ref<string | number>(getInitValue()) // 输入框的值
+let longPressTimer: ReturnType<typeof setTimeout> | null = null // 长按定时器
 
 /**
  * 判断数字是否达到最小值限制
@@ -218,14 +229,10 @@ function changeValue(step: number) {
   updateValue(value, InputNumberEventType.Button)
 }
 
-// 减少值
-function sub() {
-  changeValue(-props.step)
-}
-
-// 增加值
-function add() {
-  changeValue(props.step)
+// 增减值
+function handleClick(type: OperationType) {
+  const diff = type === 'add' ? props.step : -props.step
+  changeValue(diff)
 }
 
 // 处理输入事件
@@ -238,6 +245,39 @@ function handleBlur(event: any) {
   const value = event.detail.value || ''
   updateValue(value, InputNumberEventType.Blur)
   emit('blur', { value })
+}
+
+// 每隔一段时间，重新调用自身，达到长按加减效果
+function longPressStep(type: OperationType) {
+  clearLongPressTimer()
+  longPressTimer = setTimeout(() => {
+    handleClick(type)
+    longPressStep(type)
+  }, 250)
+}
+
+// 按下一段时间后，达到长按状态
+function handleTouchStart(type: OperationType) {
+  if (!props.longPress) return
+  clearLongPressTimer()
+  longPressTimer = setTimeout(() => {
+    handleClick(type)
+    longPressStep(type)
+  }, 600)
+}
+
+// 触摸结束，清除定时器，停止长按加减
+function handleTouchEnd() {
+  if (!props.longPress) return
+  clearLongPressTimer()
+}
+
+// 清除定时器
+function clearLongPressTimer() {
+  if (longPressTimer) {
+    clearTimeout(longPressTimer)
+    longPressTimer = null
+  }
 }
 
 // 处理聚焦事件

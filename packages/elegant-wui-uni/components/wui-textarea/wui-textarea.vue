@@ -177,7 +177,10 @@ const isRequired = computed(() => {
 
 // 当前文本域文字长度
 const currentLength = computed(() => {
-  return String(formatValue(props.modelValue) || '').length
+  /**
+   * 使用Array.from处理多码元字符以获取正确的长度
+   */
+  return Array.from(String(formatValue(props.modelValue) || '')).length
 })
 
 const rootClass = computed(() => {
@@ -282,4 +285,7 @@ function onClickPrefixIcon() {
 
 <style lang="scss" scoped>
 @import './index.scss';
+</style>
+<style lang="scss">
+@import './placeholder.scss';
 </style>

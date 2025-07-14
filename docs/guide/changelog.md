@@ -1,6 +1,37 @@
 # 更新日志 
 
 
+### [0.3.5](https://github.com/zhangyao1990/elegant-wui-uni/compare/v0.3.4...v0.3.5) (2025-07-14)
+
+
+### ⚠ BREAKING CHANGES
+
+* 🧨 更新了wd-picker，当列为空时重置pickerValue和showValue、更新了wd-
+pickerview，当列为空时清除formatColumns和selectedIndex、-增强selectWithValue处理空列的情况
+
+### ✏️ Documentation | 文档
+
+* ✏️  drop-menu 文档类型调整 ([99b8f06](https://github.com/zhangyao1990/elegant-wui-uni/commit/99b8f06a138aa3db01c2e994f18c0ad2661b5eca))
+* ✏️  修复部分文档拼写错误 ([c75b896](https://github.com/zhangyao1990/elegant-wui-uni/commit/c75b89602fdb68e37e20c73b7690180b45be276f))
+
+
+### ✨ Features | 新功能
+
+* ✨ img 组件添加 preview-src 属性 ([56214e0](https://github.com/zhangyao1990/elegant-wui-uni/commit/56214e0c5cc29aa889893e6058b5e0c655374d7f))
+* ✨ 废弃 DateTimePicker 开启插槽开关use-label-slot和use-default-slot ([5e4c305](https://github.com/zhangyao1990/elegant-wui-uni/commit/5e4c3053acdd5f14ed61e71438813dee7aea2ded))
+* ✨ 扩展wd-fab组件，增加4个新位置并更新文档 ([dae9783](https://github.com/zhangyao1990/elegant-wui-uni/commit/dae978363c7a628818a05143b210938dd3826077))
+* ✨ 新增 InputNumber 组件支持长按加减功能 ([9d5c115](https://github.com/zhangyao1990/elegant-wui-uni/commit/9d5c115e914f5a4f7565533b17f229695ae8b558))
+
+
+### 🐛 Bug Fixes | Bug 修复
+
+* 🐛 修复 DateTimePicker 区域选择时边界值处理错误的问题 ([9c2cb28](https://github.com/zhangyao1990/elegant-wui-uni/commit/9c2cb28fb229f70e0f56d6bd7268652d7b43eb23))
+* 🐛 修复 drop-menu-item 有选项值为空字符串时导致新值错误并触发组件内部警告的问题 ([368b265](https://github.com/zhangyao1990/elegant-wui-uni/commit/368b265b2500720093f5a2199e4b203c64b1d2fe))
+* 🐛 修复 Navbar 文档部分标题显示 Tabbar 的问题 ([796bbc4](https://github.com/zhangyao1990/elegant-wui-uni/commit/796bbc49a39ac4b7fb7500545ac887efa4a34f05))
+* 🐛 修复input、textarea组件placeholder样式在微信小程序无效的问题 ([5aec77a](https://github.com/zhangyao1990/elegant-wui-uni/commit/5aec77a8f66d2941b3819e5685bfe4563f620b04))
+* 🐛 修复textarea统计多码元字符长度错误的问题 ([4780043](https://github.com/zhangyao1990/elegant-wui-uni/commit/478004365c153e9198dfed579d93fcb7ea58b023))
+* 🐛 清空列时清除选定的值和选项 ([4e134a5](https://github.com/zhangyao1990/elegant-wui-uni/commit/4e134a5f26a93fe18e2e7e2cf069d8dfef512acd))
+
 ### [0.3.4](https://github.com/zhangyao1990/elegant-wui-uni/compare/v0.3.3...v0.3.4) (2025-04-08)
 
 ### [0.3.3](https://github.com/zhangyao1990/elegant-wui-uni/compare/v0.3.2...v0.3.3) (2025-04-07)

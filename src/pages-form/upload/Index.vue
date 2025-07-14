@@ -44,7 +44,7 @@
       <wui-upload :file-list="fileList8" disabled :action="action" @change="handleChange8"></wui-upload>
     </demo-block>
     <demo-block title="多选">
-      <wd-upload :file-list="fileList2" multiple :action="action" @change="handleChange2"></wd-upload>
+      <wui-upload :file-list="fileList2" multiple :action="action" @change="handleChange2"></wui-upload>
     </demo-block>
     <demo-block title="自定义唤起上传样式并限制上传5张">
       <wui-upload :file-list="fileList9" :action="action" @change="handleChange9" :limit="5">

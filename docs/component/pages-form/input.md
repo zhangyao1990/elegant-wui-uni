@@ -72,7 +72,7 @@ function handleChange(event) {
 
 ## 前后 icon
 
-设置前置 icon `prefix-icon`，设置后置 icon `suffix-icon`，icon 为 [icon](/component/icon) 章节中的图标，如果没有你需要的图标，则使用 `prefix`、`suffix` 插槽进行自定义插入。
+设置前置 icon `prefix-icon`，设置后置 icon `suffix-icon`，icon 为 [icon](/component/pages-base/icon) 章节中的图标，如果没有你需要的图标，则使用 `prefix`、`suffix` 插槽进行自定义插入。
 
 ```html
 <wui-input v-model="value" prefix-icon="dong" suffix-icon="list" @change="handleChange" />

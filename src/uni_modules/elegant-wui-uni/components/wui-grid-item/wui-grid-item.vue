@@ -1,6 +1,10 @@
 <template>
   <view :class="`wui-grid-item ${border && !gutter ? itemClass : ''} ${customClass}`" @click="click" :style="`${style};${customStyle}`">
-    <view :class="`wui-grid-item__content ${square ? 'is-square' : ''} ${border && gutter > 0 ? 'is-round' : ''}`" :style="gutterContentStyle">
+    <view
+      :class="`wui-grid-item__content ${square ? 'is-square' : ''} ${border && gutter > 0 ? 'is-round' : ''}`"
+      :style="gutterContentStyle"
+      :hover-class="hoverClass"
+    >
       <slot v-if="useSlot" />
       <block v-else>
         <view :style="'width:' + iconSize + '; height: ' + iconSize" class="wui-grid-item__wrapper">
@@ -153,6 +157,13 @@ function click() {
 function setiIemClass(classes: string) {
   itemClass.value = classes
 }
+
+const hoverClass = computed(() => {
+  if (grid?.props.clickable) {
+    return grid.props.hoverClass ? grid.props.hoverClass : 'wui-grid-item__content--hover'
+  }
+  return 'none'
+})
 
 defineExpose({
   setiIemClass,

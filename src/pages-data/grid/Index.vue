@@ -4,7 +4,7 @@
       <wui-toast />
       <view class="grid">
         <demo-block title="基本用法" transparent>
-          <wui-grid>
+          <wui-grid clickable>
             <wui-grid-item icon="picture" text="文字" />
             <wui-grid-item icon="picture" text="文字" />
             <wui-grid-item icon="picture" text="文字" />

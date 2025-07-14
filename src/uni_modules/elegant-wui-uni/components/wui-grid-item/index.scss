@@ -1,9 +1,8 @@
-@import "../common/abstracts/variable";
-@import "../common/abstracts/mixin";
+@import '../common/abstracts/variable';
+@import '../common/abstracts/mixin';
 
 .wui-theme-dark {
   @include b(grid-item) {
-
     @include when(border) {
       &::before {
         background-color: $-dark-border-color;
@@ -13,16 +12,18 @@
       }
     }
 
-      // 第一行元素
-  @include when(first) {
-    &::after {
-      background-color: $-dark-border-color;
+    // 第一行元素
+    @include when(first) {
+      &::after {
+        background-color: $-dark-border-color;
+      }
     }
-  }
-
 
     @include e(content) {
       background-color: $-dark-background2;
+      @include m(hover) {
+        background-color: $-grid-item-hover-bg-dark !important;
+      }
     }
   }
 }
@@ -43,7 +44,7 @@
 
   @include when(border) {
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       width: 100%;
       height: 1px;
@@ -54,7 +55,7 @@
       z-index: 1;
     }
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       width: 1px;
       transform: scaleX(0.5);
@@ -68,7 +69,7 @@
   // 第一行元素
   @include when(first) {
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       width: 1px;
       transform: scaleX(0.5);
@@ -117,7 +118,7 @@
 
     @include when(round) {
       &::after {
-        content: " ";
+        content: ' ';
         position: absolute;
         top: 0;
         left: 0;
@@ -128,6 +129,9 @@
         transform: scale(0.5);
         box-sizing: border-box;
       }
+    }
+    @include m(hover) {
+      background-color: $-grid-item-hover-bg !important;
     }
   }
 

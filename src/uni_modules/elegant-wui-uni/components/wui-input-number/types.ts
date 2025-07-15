@@ -1,13 +1,4 @@
-/*
- * @Author: Mr zhang
- * @Date: 2024-03-15 20:40:34
- * @LastEditTime: 2024-09-18 09:49:12
- * @LastEditors: Mr zhang
- * @Description:
- * @FilePath: /elegant-wui-uni/src/uni_modules/elegant-wui-uni/components/wui-input-number/types.ts
- * 记得注释
- */
-import type { PropType } from 'vue'
+import type { ExtractPropTypes, PropType } from 'vue'
 import { baseProps, makeBooleanProp, makeNumberProp, makeNumericProp, makeRequiredProp, makeStringProp, numericProp } from '../common/props'
 
 /**
@@ -17,19 +8,6 @@ import { baseProps, makeBooleanProp, makeNumberProp, makeNumericProp, makeRequir
  */
 export type InputNumberBeforeChange = (value: number | string) => boolean | Promise<boolean>
 export type OperationType = 'add' | 'sub'
-/**
- * 输入数字组件事件类型枚举
- * Input: 用户输入事件
- * Blur: 失焦事件
- * Watch: 监听值变化事件
- * Button: 按钮点击事件
- */
-export enum InputNumberEventType {
-  Input = 'input',
-  Blur = 'blur',
-  Watch = 'watch',
-  Button = 'button'
-}
 
 export const inputNumberProps = {
   ...baseProps,
@@ -100,5 +78,22 @@ export const inputNumberProps = {
   /**
    * 是否开启长按加减手势
    */
-  longPress: makeBooleanProp(false)
+  longPress: makeBooleanProp(false),
+  /**
+   * 是否立即响应输入变化，false 时仅在失焦和按钮点击时更新
+   */
+  immediateChange: makeBooleanProp(true),
+  /**
+   * 是否在初始化时更新 v-model 为修正后的值
+   * true: 自动修正并更新 v-model
+   * false: 保持原始值不修正，但仍会进行显示格式化
+   */
+  updateOnInit: makeBooleanProp(true),
+  /**
+   * 输入框类型
+   * number: 数字输入
+   * digit: 整数输入
+   */
+  inputType: makeStringProp<'number' | 'digit'>('digit')
 }
+export type InputNumberProps = ExtractPropTypes<typeof inputNumberProps>

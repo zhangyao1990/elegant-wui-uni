@@ -47,7 +47,7 @@
       </demo-block>
       <demo-block title="向上弹出" transparent>
         <wui-drop-menu direction="up">
-          <wui-drop-menu-item v-model="value6" :options="option1" @change="handleChange6" />
+          <wui-drop-menu-item v-model="value6" :options="option1" @change="handleChange6" custom-title="custom-title" custom-icon="custom-icon" />
           <wui-drop-menu-item v-model="value7" :options="option2" @change="handleChange7" />
         </wui-drop-menu>
       </demo-block>
@@ -152,6 +152,7 @@ const handleBeforeToggle: DropMenuItemBeforeToggle = ({ status, resolve }) => {
     background: $-dark-background2;
   }
 }
+
 .demo-body {
   height: 100vh;
 }
@@ -160,5 +161,13 @@ const handleBeforeToggle: DropMenuItemBeforeToggle = ({ status, resolve }) => {
   display: flex;
   background: #fff;
   text-align: center;
+}
+
+:deep(.custom-title) {
+  color: red;
+}
+
+:deep(.custom-icon) {
+  color: red;
 }
 </style>

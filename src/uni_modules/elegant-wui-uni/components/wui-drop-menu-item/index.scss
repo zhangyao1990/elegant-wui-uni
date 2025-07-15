@@ -20,8 +20,8 @@
   color: $-drop-menu-item-color;
   width: 100%;
   z-index: 101;
-  
-  .wui-drop-item__popup {
+
+  @include e(popup) {
     position: absolute;
     max-height: 80%;
   }
@@ -33,14 +33,14 @@
     padding: 0 $-drop-menu-side-padding;
     justify-content: space-between;
     align-items: center;
-    transition: color .2s;
+    transition: color 0.2s;
 
     @include when(active) {
       color: $-drop-menu-item-color-active;
     }
   }
 
-  @include e(title){
+  @include e(title) {
     display: block;
   }
 
@@ -51,7 +51,7 @@
     margin-left: 2px;
   }
 
-  @include edeep(icon){
+  @include edeep(icon) {
     display: block;
     font-size: $-drop-menu-option-check-size;
   }

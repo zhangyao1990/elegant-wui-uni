@@ -4,7 +4,9 @@
     <demo-block title="日期选择" transparent>
       <wui-datetime-picker-view v-model="value1" @change="onChange1" />
     </demo-block>
-
+    <demo-block title="日期选择（带秒）" transparent>
+      <wui-datetime-picker-view v-model="value8" use-second />
+    </demo-block>
     <demo-block title="年月日" transparent>
       <wui-datetime-picker-view type="date" v-model="value2" @change="onChange2" />
     </demo-block>
@@ -20,7 +22,9 @@
     <demo-block title="时分" transparent>
       <wui-datetime-picker-view type="time" v-model="value4" @change="onChange4" />
     </demo-block>
-
+    <demo-block title="时间选择（带秒）" transparent>
+      <wui-datetime-picker-view type="time" v-model="value9" use-second @change="onChange4" />
+    </demo-block>
     <demo-block title="内部格式" transparent>
       <wui-datetime-picker-view v-model="value5" :formatter="formatter" @change="onChange5" />
     </demo-block>
@@ -42,6 +46,8 @@ const value4 = ref<string>('11:12')
 const value5 = ref<number>(Date.now())
 const value6 = ref<number>(Date.now())
 const value7 = ref<string>('')
+const value8 = ref<number>(Date.now())
+const value9 = ref<string>('11:12:13')
 const formatter: DatetimePickerViewFormatter = (type, value) => {
   switch (type) {
     case 'year':

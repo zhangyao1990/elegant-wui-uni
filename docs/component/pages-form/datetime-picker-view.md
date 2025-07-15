@@ -72,6 +72,30 @@ const value = ref<number>(Date.now())
 const value4 = ref<string>('11:12')
 ```
 
+## time 类型（带秒）
+
+`time` 类型设置 `use-second` 属性可以展示时分秒，绑定值为 `HH:mm:ss` 格式。
+
+```html
+<wui-datetime-picker-view type="time" v-model="value" label="时分秒" use-second />
+```
+```typescript
+const value = ref<string>('11:12:30')
+```
+
+## datetime 类型（带秒）
+
+`datetime` 类型设置 `use-second` 属性可以展示年月日时分秒，绑定值为时间戳。
+
+```html
+<wui-datetime-picker-view type="datetime" v-model="value" label="年月日时分秒" use-second />
+```
+```typescript
+const value = ref<number>(Date.now())
+```
+
+## 修改内部格式
+
 ## 修改内部格式
 
 给 `formatter` 属性传入一个函数，接收 `type` 和 `value` 值，返回展示的文本内容。`type` 有 `year`、`month`、`date`、`hour`、`minute` 类型，`value` 为 `number` 类型。
@@ -139,6 +163,8 @@ const filter = (type, values) => {
 | minMinute        | 最小分钟，time 类型时生效                                                                                                           | number                 | -                               | 0                | -        |
 | maxMinute        | 最大分钟，time 类型时生效                                                                                                           | number                 | -                               | 59               | -        |
 | immediate-change | 是否在手指松开时立即触发 picker-view 的 change 事件。若不开启则会在滚动动画结束后触发 change 事件，仅微信小程序和支付宝小程序支持。 | boolean                | -                               | false            | -        |
+| use-second | 是否显示秒选择，仅在 time 和 datetime 类型下生效 | boolean | - | false | $LOWEST_VERSION$ |
+
 
 ## Events
 

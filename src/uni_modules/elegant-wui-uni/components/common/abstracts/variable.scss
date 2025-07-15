@@ -134,6 +134,7 @@ $-fw-semibold: var(--wui-fw-semibold, 600) !default; // PingFangSC-Semibold
 
 /* 尺寸 */
 $-size-side-padding: var(--wui-size-side-padding, 15px) !default; // 屏幕两边留白
+$-size-side-padding-small: var(--wui-size-side-padding-small, 6px) !default; // 屏幕两边留白小值
 
 /*-------------------------------- Theme color application size.  end --------------------------------*/
 
@@ -484,7 +485,7 @@ $-picker-column-height: var(--wui-picker-column-height, 210px) !default; // 列�
 $-picker-column-item-height: var(--wui-picker-column-item-height, 35px) !default; // 列高 滚筒外部的高度
 $-picker-column-select-bg: var(--wui-picker-column-select-bg, #f5f5f5) !default;
 $-picker-loading-button-color: var(--wui-picker-loading-button-color, rgba(0, 0, 0, 0.25)) !default; // loading 背景颜色
-$-picker-column-padding: var(--wui-picker-column-padding, 0 $-size-side-padding) !default; // 选项内间距
+$-picker-column-padding: var(--wui-picker-column-padding, 0 $-size-side-padding-small) !default; // 选项内间距
 
 $-picker-column-disabled-color: var(--wui-picker-column-disabled-color, rgba(0, 0, 0, 0.25)) !default; // 选择器选项禁用的颜色
 $-picker-mask: var(--wui-picker-mask, linear-gradient(180deg, hsla(0, 0%, 100%, 0.9), hsla(0, 0%, 100%, 0.25)))

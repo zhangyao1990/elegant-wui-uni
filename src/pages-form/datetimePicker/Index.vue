@@ -4,10 +4,12 @@
     <demo-block transparent>
       <wui-cell-group border>
         <wui-datetime-picker label="日期选择" v-model="value1" @confirm="handleConfirm1" />
+        <wui-datetime-picker label="日期选择（带秒）" use-second v-model="value18" />
         <wui-datetime-picker label="年月日" v-model="value2" type="date" @confirm="handleConfirm2" />
         <wui-datetime-picker label="年月" v-model="value3" type="year-month" @confirm="handleConfirm3" />
         <wui-datetime-picker label="年" v-model="value16" type="year" @confirm="handleConfirm16" />
         <wui-datetime-picker label="时分" v-model="value4" type="time" @confirm="handleConfirm4" />
+        <wui-datetime-picker label="日期选择（带秒）" v-model="value19" type="time" use-second />
         <wui-datetime-picker label="展示格式" v-model="value5" :display-format="displayFormat" @confirm="handleConfirm5" />
         <wui-datetime-picker label="内部格式" v-model="value6" :formatter="formatter" @confirm="handleConfirm6" />
         <wui-datetime-picker label="过滤选项" v-model="value7" :filter="filter" @confirm="handleConfirm7" />
@@ -29,6 +31,13 @@
     </demo-block>
     <demo-block title="区域选择" transparent>
       <wui-datetime-picker label="日期选择" title="请选择区间" v-model="value14" @confirm="handleConfirm14" />
+      <wui-datetime-picker
+        label="日期选择"
+        title="请选择区间"
+        v-model="value14"
+        use-second
+        @confirm="handleConfirm14"
+      />
     </demo-block>
     <demo-block title="范围tab展示格式" transparent>
       <wui-datetime-picker label="日期选择" v-model="value15" @confirm="handleConfirm15" :display-format-tab-label="displayFormatTabLabel" />
@@ -62,6 +71,8 @@ const value14 = ref<any[]>(['', ''])
 const value15 = ref<any[]>(['', Date.now()])
 const value16 = ref(Date.now())
 const value17 = ref(Date.now())
+const value18 = ref(Date.now())
+const value19 = ref('09:20:26')
 
 const minDate = ref<number>(Date.now())
 const maxDate = ref<number>(new Date(new Date().getFullYear() + 1, new Date().getMonth(), new Date().getDate()).getTime())

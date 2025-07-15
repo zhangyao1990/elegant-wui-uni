@@ -10,7 +10,7 @@
     @click-modal="handleClose"
   >
     <view :class="`wui-number-keyboard ${customClass}`" :style="customStyle">
-      <view class="wd-number-keyboard__header" v-if="showHeader">
+      <view class="wui-number-keyboard__header" v-if="showHeader">
         <slot name="title" v-if="showTitle">
           <text class="wui-number-keyboard__title">{{ title }}</text>
         </slot>

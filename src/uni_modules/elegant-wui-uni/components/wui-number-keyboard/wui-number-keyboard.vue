@@ -10,8 +10,8 @@
     @click-modal="handleClose"
   >
     <view :class="`wui-number-keyboard ${customClass}`" :style="customStyle">
-      <view class="wui-number-keyboard__header" v-if="showTitle">
-        <slot name="title">
+      <view class="wd-number-keyboard__header" v-if="showHeader">
+        <slot name="title" v-if="showTitle">
           <text class="wui-number-keyboard__title">{{ title }}</text>
         </slot>
         <view class="wui-number-keyboard__close" hover-class="wui-number-keyboard__close--hover" v-if="showClose" @click="handleClose">
@@ -43,7 +43,7 @@ export default {
 
 <script lang="ts" setup>
 import wuiPopup from '../wui-popup/wui-popup.vue'
-import { computed, ref, watch } from 'vue'
+import { computed, ref, useSlots, watch } from 'vue'
 import WuiKey from './key/index.vue'
 import { numberKeyboardProps, type Key } from './types'
 import type { NumberKeyType } from './key/types'
@@ -51,6 +51,7 @@ import type { NumberKeyType } from './key/types'
 const props = defineProps(numberKeyboardProps)
 const emit = defineEmits(['update:visible', 'input', 'close', 'delete', 'update:modelValue'])
 
+const slots = useSlots()
 const show = ref(props.visible)
 watch(
   () => props.visible,
@@ -66,7 +67,11 @@ const showClose = computed(() => {
 })
 
 const showTitle = computed(() => {
-  return props.title || showClose.value
+  return !!props.title || !!slots.title
+})
+
+const showHeader = computed(() => {
+  return showTitle.value || showClose.value
 })
 
 /**

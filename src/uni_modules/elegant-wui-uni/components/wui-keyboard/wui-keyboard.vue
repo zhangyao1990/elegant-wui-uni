@@ -10,8 +10,8 @@
     @click-modal="handleClose"
   >
     <view :class="`wui-keyboard ${customClass}`" :style="customStyle">
-      <view class="wui-keyboard__header" v-if="showTitle">
-        <slot name="title">
+      <view class="wui-keyboard__header" v-if="showHeader">
+        <slot name="title" v-if="showTitle">
           <text class="wui-keyboard__title">{{ title }}</text>
         </slot>
         <view class="wui-keyboard__close" hover-class="wui-keyboard__close--hover" v-if="showClose" @click="handleClose">
@@ -51,15 +51,16 @@ export default {
 </script>
 
 <script lang="ts" setup>
-import { computed, ref, watch } from 'vue'
+import { computed, ref, watch, useSlots } from 'vue'
 import wuiPopup from '../wui-popup/wui-popup.vue'
-import WuiKey from './key/index.vue'
+import wuiKey from './key/index.vue'
 import { keyboardProps, type Key } from './types'
 import type { NumberKeyType } from './key/types'
 import { CAR_KEYBOARD_AREAS, CAR_KEYBOARD_KEYS } from './constants'
 
 const props = defineProps(keyboardProps)
 const emit = defineEmits(['update:visible', 'input', 'close', 'delete', 'update:modelValue'])
+const slots = useSlots()
 
 const show = ref(props.visible)
 watch(
@@ -77,7 +78,11 @@ const showClose = computed(() => {
 })
 
 const showTitle = computed(() => {
-  return props.title || showClose.value
+  return !!props.title || !!slots.title
+})
+
+const showHeader = computed(() => {
+  return showTitle.value || showClose.value
 })
 
 /**
@@ -91,7 +96,7 @@ function shuffleArray<T>(arr: T[]): T[] {
     // 生成一个随机索引 j，范围是 [0, i]
     const j = Math.floor(Math.random() * (i + 1))
 
-    // 交换索引 i 和 j 处的元素
+      // 交换索引 i 和 j 处的元素
     ;[newArr[i], newArr[j]] = [newArr[j], newArr[i]]
   }
   return newArr

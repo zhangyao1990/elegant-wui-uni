@@ -17,13 +17,12 @@
 
     @include m(disabled) {
       color: $-dark-color-gray;
-  
+
       &:active {
         background-color: $-dark-background2;
       }
     }
   }
-
 }
 
 @include b(sidebar-item) {
@@ -74,7 +73,6 @@
     border-top-right-radius: $-sidebar-border-radius;
   }
 
-
   @include m(disabled) {
     color: $-sidebar-disabled-color;
     cursor: not-allowed;
@@ -86,11 +84,11 @@
 
   @include edeep(badge) {
     z-index: 2;
+    word-break: break-all;
   }
 
   @include edeep(icon) {
     font-size: $-sidebar-icon-size;
     margin-right: 2px;
   }
-
 }

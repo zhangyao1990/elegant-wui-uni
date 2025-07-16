@@ -95,7 +95,13 @@ export const transitionProps = {
    * 离开过渡的结束状态
    * 类型：string
    */
-  leaveToClass: makeStringProp('')
+  leaveToClass: makeStringProp(''),
+  /**
+   * 是否阻止触摸滚动
+   * 类型：boolean
+   * 默认值：false
+   */
+  disableTouchMove: makeBooleanProp(false)
 }
 
 export type TransitionProps = ExtractPropTypes<typeof transitionProps>

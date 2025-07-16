@@ -163,7 +163,7 @@ const filter = (type, values) => {
 | minMinute        | 最小分钟，time 类型时生效                                                                                                           | number                 | -                               | 0                | -        |
 | maxMinute        | 最大分钟，time 类型时生效                                                                                                           | number                 | -                               | 59               | -        |
 | immediate-change | 是否在手指松开时立即触发 picker-view 的 change 事件。若不开启则会在滚动动画结束后触发 change 事件，仅微信小程序和支付宝小程序支持。 | boolean                | -                               | false            | -        |
-| use-second | 是否显示秒选择，仅在 time 和 datetime 类型下生效 | boolean | - | false | $LOWEST_VERSION$ |
+| use-second | 是否显示秒选择，仅在 time 和 datetime 类型下生效 | boolean | - | false | 0.4.2 |
 
 
 ## Events

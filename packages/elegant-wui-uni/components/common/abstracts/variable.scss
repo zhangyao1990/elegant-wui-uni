@@ -134,6 +134,7 @@ $-fw-semibold: var(--wui-fw-semibold, 600) !default; // PingFangSC-Semibold
 
 /* 尺寸 */
 $-size-side-padding: var(--wui-size-side-padding, 15px) !default; // 屏幕两边留白
+$-size-side-padding-small: var(--wui-size-side-padding-small, 6px) !default; // 屏幕两边留白小值
 
 /*-------------------------------- Theme color application size.  end --------------------------------*/
 
@@ -484,7 +485,7 @@ $-picker-column-height: var(--wui-picker-column-height, 210px) !default; // 列�
 $-picker-column-item-height: var(--wui-picker-column-item-height, 35px) !default; // 列高 滚筒外部的高度
 $-picker-column-select-bg: var(--wui-picker-column-select-bg, #f5f5f5) !default;
 $-picker-loading-button-color: var(--wui-picker-loading-button-color, rgba(0, 0, 0, 0.25)) !default; // loading 背景颜色
-$-picker-column-padding: var(--wui-picker-column-padding, 0 $-size-side-padding) !default; // 选项内间距
+$-picker-column-padding: var(--wui-picker-column-padding, 0 $-size-side-padding-small) !default; // 选项内间距
 
 $-picker-column-disabled-color: var(--wui-picker-column-disabled-color, rgba(0, 0, 0, 0.25)) !default; // 选择器选项禁用的颜色
 $-picker-mask: var(--wui-picker-mask, linear-gradient(180deg, hsla(0, 0%, 100%, 0.9), hsla(0, 0%, 100%, 0.25)))
@@ -684,16 +685,19 @@ $-tag-close-color: var(--wui-tag-close-color, $-tag-info-color) !default; // 关
 $-tag-close-active-color: var(--wui-tag-close-active-color, rgba(0, 0, 0, 0.45)) !default; // 关闭按钮 active 颜色
 
 /* toast */
+$-toast-color: var(--wui-toast-color, $-color-white) !default; // 文字颜色
 $-toast-padding: var(--wui-toast-padding, 10px 24px) !default; // padding
 $-toast-max-width: var(--wui-toast-max-width, 300px) !default; // 最大宽度
 $-toast-radius: var(--wui-toast-radius, 8px) !default; // 圆角大小
 $-toast-bg: var(--wui-toast-bg, $-overlay-bg) !default; // 背景色
 $-toast-fs: var(--wui-toast-fs, $-fs-content) !default; // 字号
+$-toast-line-height: var(--wui-toast-line-height, 20px) !default; // 行高
 $-toast-with-icon-min-width: var(--wui-toast-with-icon-min-width, 150px) !default; // 有图标的情况下最小宽度
 $-toast-icon-size: var(--wui-toast-icon-size, 25px) !default; // 图标大小
 $-toast-icon-margin-right: var(--wui-toast-icon-margin-right, 12px) !default; // 图标右边距
 $-toast-icon-margin-bottom: var(--wui-toast-icon-margin-bottom, 12px) !default; // 图标下边距
-$-toast-loading-padding: var(--wui-toast-loading-padding, 10px) !default; // loading 下的padding
+$-toast-loading-padding: var(--wui-toast-loading-padding, 10px) !default; // loading状态下的padding
+$-toast-loading-margin-bottom: var(--wui-toast-loading-margin-bottom, 16px) !default; // loading动画的margin-bottom
 $-toast-box-shadow: var(--wui-toast-box-shadow, 0px 6px 16px 0px rgba(0, 0, 0, 0.08)) !default; // 外部阴影
 
 /* loading */

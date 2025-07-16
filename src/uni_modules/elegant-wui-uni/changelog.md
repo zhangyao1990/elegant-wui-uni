@@ -1,6 +1,29 @@
 # 更新日志 
 
 
+### [0.4.2](https://github.com/zhangyao1990/elegant-wui-uni/compare/v0.4.1...v0.4.2) (2025-07-16)
+
+
+### ✨ Features | 新功能
+
+* ✨ DatetimePicker 支持time和date-time类型下配置选择到秒 ([02bbb2e](https://github.com/zhangyao1990/elegant-wui-uni/commit/02bbb2ecacf6ccd97e5c7c88cfc2b289ee45977d))
+
+
+### 🐛 Bug Fixes | Bug 修复
+
+* 🐛 优化 InputNumbe 处理中间状态值的逻辑，支持配置不立即响应输入变化 ([00e1748](https://github.com/zhangyao1990/elegant-wui-uni/commit/00e17484405ac2df0a9c4d551af4fb513def73bd))
+* 🐛 修复 DropDownItem 自定义样式类 CustomIcon 无效的问题 ([380b9aa](https://github.com/zhangyao1990/elegant-wui-uni/commit/380b9aaa77d5119547427c0d6a2ef2a22e5c718f))
+* 🐛 修复 DropMenu 设置 Modal 无效的问题 ([98847e9](https://github.com/zhangyao1990/elegant-wui-uni/commit/98847e96078c9d56bd8e80d34d66c1ce32dd96d7))
+* 🐛 修复 Input、Textarea、Search 组件设置清空后不聚焦时无法触发失焦事件的问题 ([8b4b0e9](https://github.com/zhangyao1990/elegant-wui-uni/commit/8b4b0e901a58aea9d215bb8f79acedce96b94376))
+* 🐛 修复 Overlay 组件锁定背景滚动属性 lock-scroll 无法取消的问题 ([5eada49](https://github.com/zhangyao1990/elegant-wui-uni/commit/5eada49fb23fa890503c5c26593dab4a7a11fc09))
+* 🐛 修复 Slider 处理边界值异常的问题，优化样式和事件处理逻辑 ([9d7f115](https://github.com/zhangyao1990/elegant-wui-uni/commit/9d7f115b49358d2730586c1c2c640efa8cc8d0a2))
+* 🐛 修复 Toast 断行样式错误问题 ([00a80a8](https://github.com/zhangyao1990/elegant-wui-uni/commit/00a80a8b0fdff022dba84a511e03fbd5d8066fde))
+* 🐛 修复 wui-slider 滑块不跟手的问题、新增自定义滑块按钮 ([21baead](https://github.com/zhangyao1990/elegant-wui-uni/commit/21baeadd0154d6ab1f61923420b7272156ebbaa3))
+* 🐛 修复 wui-upload 组件的 formData 属性的 ts 类型为 void 的问题 ([ff03641](https://github.com/zhangyao1990/elegant-wui-uni/commit/ff036418213c49894925a6c56429ee8c0bc5efb8))
+* 🐛 修复NumberKeyboard组件使用 title 插槽未传入关闭文本时不展示头部的问题 ([d9d4a47](https://github.com/zhangyao1990/elegant-wui-uni/commit/d9d4a47e31ce2b9687ff81b02707ab657a9db9e4))
+* 🐛 单词拼错 ([49925f9](https://github.com/zhangyao1990/elegant-wui-uni/commit/49925f93518b0e99e5836aeae8c757cc47767512))
+* 🐛 去掉upload util文件 ([214d777](https://github.com/zhangyao1990/elegant-wui-uni/commit/214d7772de023b2a45d01ddfc44bbb19225f8e65))
+
 ### [0.4.1](https://github.com/zhangyao1990/elegant-wui-uni/compare/v0.4.0...v0.4.1) (2025-07-14)
 
 

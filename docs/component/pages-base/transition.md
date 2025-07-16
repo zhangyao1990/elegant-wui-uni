@@ -82,7 +82,7 @@
 | name               | 动画类型         | string           | `TransitionName` | -       | -                |
 | duration           | 动画执行时间     | number / boolean | -                | 300(ms) | -                |
 | custom-style       | 自定义样式       | string           | -                | -       | -                |
-| disable-touch-move | 是否阻止触摸滚动 | boolean          | -                | false   | $LOWEST_VERSION$ |
+| disable-touch-move | 是否阻止触摸滚动 | boolean          | -                | false   | 0.4.2 |
 
 ### TransitionName 动画类型
 

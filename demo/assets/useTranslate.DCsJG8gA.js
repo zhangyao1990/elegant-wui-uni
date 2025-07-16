@@ -1,0 +1,1 @@
+import{G as s,L as a,H as r,D as t,n as e}from"./page-wraper.DMME2CXH.js";const n=n=>{const o=n?s(n)+".":"";return{translate:(s,...n)=>{const p=a.messages(),c=r(p,o+s);return t(c)?c(...n):e(c)?c:`${o}${s}`}}};export{n as u};

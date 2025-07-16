@@ -17,9 +17,7 @@
               @touchcancel="onSliderTouchEnd"
             >
               <view class="wui-slider__label" v-if="!hideLabel">{{ firstValue }}</view>
-              <view class="wui-slider__button">
-                <slot name="button"></slot>
-              </view>
+              <view class="wui-slider__button"></view>
             </view>
             <!-- 右边滑块 -->
             <view
@@ -44,7 +42,9 @@
             @touchcancel="onSliderTouchEnd"
           >
             <view class="wui-slider__label" v-if="!hideLabel">{{ firstValue }}</view>
-            <view class="wui-slider__button" />
+            <view class="wui-slider__button">
+              <slot name="button"></slot>
+            </view>
           </view>
         </view>
       </view>

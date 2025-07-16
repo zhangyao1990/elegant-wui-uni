@@ -1,6 +1,13 @@
 # 更新日志 
 
 
+### [0.4.3](https://github.com/zhangyao1990/elegant-wui-uni/compare/v0.4.2...v0.4.3) (2025-07-16)
+
+
+### 🐛 Bug Fixes | Bug 修复
+
+* 🐛 Slider按钮插槽放入非双滑块模式 ([da8dc2e](https://github.com/zhangyao1990/elegant-wui-uni/commit/da8dc2eedc711d813f6a00ada719a730067ebd9e))
+
 ### [0.4.2](https://github.com/zhangyao1990/elegant-wui-uni/compare/v0.4.1...v0.4.2) (2025-07-16)
 
 
